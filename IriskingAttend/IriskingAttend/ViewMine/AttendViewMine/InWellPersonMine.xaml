@@ -1,0 +1,94 @@
+﻿<navigation:Page x:Class="IriskingAttend.ViewMine.InWellPersonMine" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"  HorizontalAlignment="Left" VerticalAlignment="Top"
+           xmlns:vmmodel="clr-namespace:IriskingAttend.ViewModel.SafeManager"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="800" d:DesignHeight="480"
+           Title="当前在岗人员" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    
+    <!--<navigation:Page.Resources>
+        <vmmodel:VmInWellPerson x:Key="vmInWellPerson"></vmmodel:VmInWellPerson>
+    </navigation:Page.Resources>-->
+    <Grid x:Name="LayoutRoot" Style="{StaticResource GridStyle}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <!--DataContext="{StaticResource vmInWellPerson}"-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <!--<sdk:Label HorizontalAlignment="Stretch" Name="labTitle"   VerticalAlignment="Stretch" Grid.Row="0" 
+        Content="当前在岗人员"  Style="{StaticResource MyLableTitleStyle}" Grid.ColumnSpan="2" />-->
+            <StackPanel HorizontalAlignment="Center" Name="stackPanel1" Orientation="Horizontal" VerticalAlignment="Stretch" Height="28"  Grid.Column="0">
+                <sdk:Label Content="  在岗类型  " ></sdk:Label>
+                <RadioButton Content="在岗人员 " Click="RadioButton_Click" Name="rbtnAll" Margin="0,5,0,0" />
+                <RadioButton Content="井下人员 " Click="RadioButton_Click" Name="rbtnInWell" Margin="0,5,0,0"/>
+                <RadioButton Content="地面人员 " Click="RadioButton_Click" Name="rbtnOutWell"  Margin="0,5,0,0"/>
+                
+                <!--<RadioButton Content="事故" Click="RadioButton_Click" />-->
+                <sdk:Label Content="   部门 " ></sdk:Label>
+                <ComboBox Height="23" HorizontalAlignment="Right" Name="cmbDepart" Width="120" Margin="0,0,10,0" SelectionChanged="cmbDepart_SelectionChanged" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"   Style="{StaticResource MyStackPanelStyle}" HorizontalAlignment="Right" Margin="5" Grid.Column="1">
+                <sdk:Label Content="当前在岗超时人数：" Foreground="#FFF50909" BorderBrush="#FFEF1515" Name="labOverPerson" />
+                <HyperlinkButton Name="hbtnOverInWell" Content="" Click="hbtnOverInWell_Click" Foreground="#FFF50909" BorderThickness="0,0,2,0" />
+                <sdk:Label Content="人   " Foreground="#FFF50909"/>
+                <sdk:Label  Content="当前在岗总人数：" FlowDirection="LeftToRight" FontSize="12" FontStretch="Condensed" FontWeight="Normal"
+                        Foreground="#FF3D831D" HorizontalAlignment="Stretch"  Name="labPerson" VerticalAlignment="Stretch" Visibility="Visible"
+                        HorizontalContentAlignment="Right" Margin="4,0,0,0" />
+            <sdk:Label  FlowDirection="LeftToRight" FontSize="12" FontStretch="Condensed" FontWeight="Normal" Foreground="#FF3D831D"
+                        HorizontalAlignment="Left" Name="labInWellPersonCount" Visibility="Visible"  BorderThickness="0,0,2,0" 
+                        HorizontalContentAlignment="Center"  />
+            <sdk:Label Content="人" FlowDirection="LeftToRight" FontSize="12" FontStretch="Condensed" FontWeight="Normal" 
+                       Foreground="#FF3D831D" HorizontalAlignment="Stretch"  Name="lab6" VerticalAlignment="Stretch" 
+                       Visibility="Visible"   />
+        </StackPanel>
+            
+            <!--<StackPanel Orientation="Horizontal" Grid.Column="2" HorizontalAlignment="Right">
+            <sdk:Label Content="部门   "></sdk:Label>
+            <ComboBox Height="23" HorizontalAlignment="Right"  Name="cmbDepart" Width="120" Margin="0,0,10,0" 
+                      SelectionChanged="cmbDepart_SelectionChanged" />
+        </StackPanel>-->
+        </Grid>
+        <sdk:DataGrid Style="{StaticResource DataGridStyle}" Grid.Row="1" CanUserSortColumns="False"  
+                      MouseLeftButtonDown="dgInWellPerson_MouseLeftButtonDown"   AutoGenerateColumns="False"  Name="dgInWellPerson"  
+                      CanUserResizeColumns="False" Foreground="Black" Grid.ColumnSpan="2" MouseMove="dgInWellPerson_MouseMove" 
+                      LayoutUpdated="dgInWellPerson_LayoutUpdated">
+                <sdk:DataGrid.Columns>
+                    <!--<sdk:DataGridTemplateColumn Header="序号" Width="0.09*">
+                        <sdk:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock  TextAlignment="Center" VerticalAlignment="Center"/>
+                            </DataTemplate>
+                        </sdk:DataGridTemplateColumn.CellTemplate>
+                    </sdk:DataGridTemplateColumn>-->
+
+                <sdk:DataGridTextColumn  Binding="{Binding}"  Header="序  号" Width="0.09*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn  Binding="{Binding work_sn, Mode=TwoWay}" Header="工  号" IsReadOnly="True" Width="0.1*"/>
+                <sdk:DataGridTextColumn Binding="{Binding person_name, Mode=TwoWay}" Header="姓  名" IsReadOnly="True" Width="0.1*"/>
+                <sdk:DataGridTextColumn Binding="{Binding depart_name, Mode=TwoWay}" Header="部  门" IsReadOnly="True" Width="0.11*"/>
+                <sdk:DataGridTextColumn Binding="{Binding class_order_name, Mode=TwoWay}" Header="班  次" IsReadOnly="True" Width="0.15*" />
+                <sdk:DataGridTextColumn Binding="{Binding dev_group, Mode=TwoWay}" Header="在岗类型" IsReadOnly="True" Width="0.09*"/>
+                <sdk:DataGridTextColumn   Binding="{Binding in_time,StringFormat='yyyy-MM-dd HH:mm:ss', Mode=TwoWay}" Header="上岗时间"
+                                          IsReadOnly="True" Width="0.21*"/>
+                <sdk:DataGridTextColumn  Binding="{Binding work_time,Mode=TwoWay}" Header="工作时间(小时)" IsReadOnly="True" Width="0.15*"/>
+                </sdk:DataGrid.Columns>
+            </sdk:DataGrid>
+        <Button Grid.Row="2" Grid.Column="1"  Name="btnExportExl" Style="{StaticResource ExportExcelButtonStyle}"
+                HorizontalAlignment="Center" Click="btnExportExl_Click" >
+
+        </Button>
+       
+    </Grid>
+</navigation:Page>

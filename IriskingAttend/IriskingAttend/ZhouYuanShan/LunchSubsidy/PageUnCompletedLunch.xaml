@@ -1,0 +1,166 @@
+﻿<navigation:Page x:Class="IriskingAttend.ZhouYuanShan.LunchSubsidy.PageUnCompletedLunch" 
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:Primitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Data"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:local="clr-namespace:IriskingAttend.View"
+           xmlns:local1="clr-namespace:IriskingAttend.ZhouYuanShan.LunchSubsidy"
+           d:DesignWidth="1040" d:DesignHeight="480"
+           Title="" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+    <UserControl.Resources>
+        <local:MarkObject x:Key="MarkObjectUnCompleted" />
+        <local:MarkObject x:Key="MarkObjectCompleted" />
+        <local1:StringArrayConverter x:Key="StringArrayConverter" MaxLenth="8"/>
+        <local1:VisibleObject x:Key="VisibleObject" />
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Style="{StaticResource GridStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="时间："  Margin="10,0,0,0" VerticalAlignment="Center"> </TextBlock>
+            <sdk:DatePicker Name="dateBegin" Height="23" Margin="5,0,0,0" 
+                            SelectedDate="{Binding BeginTime,Mode=TwoWay}"
+                            CalendarClosed="dateBegin_CalendarClosed" 
+                            DateValidationError="dateBegin_DateValidationError"/>
+            <TextBlock Text="~" VerticalAlignment="Center" Foreground="Red" FontSize="16" />
+            <sdk:DatePicker Name="dateEnd" Height="23" Margin="2,0,0,0" 
+                            SelectedDate="{Binding EndTime,Mode=TwoWay}"
+                            CalendarClosed="dateEnd_CalendarClosed" 
+                            DateValidationError="dateBegin_DateValidationError"/>
+            <Button Command="{Binding QueryCmd}"  
+                        Height="25" MinWidth="70" Name="btnQuery" Style="{StaticResource ButtonStyle}"
+                    HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="20,5,5,5" Width="70">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/binoculars.png" />
+                    <TextBlock Text="查  询"   Margin="0,2,0,0"/>
+                </StackPanel>
+            </Button>
+
+        </StackPanel>
+        <sdk:TabControl SelectedIndex="{Binding TabSelectedIndex,Mode=TwoWay}"  Grid.Row="1">
+            <sdk:TabItem Header="未完成班中餐" >
+                <sdk:DataGrid  ItemsSource="{Binding ReportRecordInfosOnDepart}" SelectedItem="{Binding SelectedRecordInfoOnDepart,Mode=TwoWay}" 
+                       CanUserSortColumns="False"
+                       Name="dataGridUnCompletedLunch" Style="{StaticResource DataGridStyle}"
+                       ColumnWidth="Auto" Grid.Row="1" MouseLeftButtonDown="dataGridUnCompletedLunch_MouseLeftButtonDown"
+                       MouseMove="dataGrid_MouseMove" LoadingRow="dataGridUnCompletedLunch_LoadingRow" 
+                       LayoutUpdated="dataGrid_LayoutUpdated">
+                    <sdk:DataGrid.Columns >
+                        <sdk:DataGridCheckBoxColumn Header="全选" IsReadOnly="True"  CanUserReorder="False" CanUserResize="True" CanUserSort="False" MinWidth="70" Binding="{Binding isSelected, Mode=TwoWay}" Width="auto">
+                            <sdk:DataGridCheckBoxColumn.HeaderStyle>
+                                <Style TargetType="Primitives:DataGridColumnHeader">
+                                    <Setter Property="ContentTemplate">
+                                        <Setter.Value>
+                                            <DataTemplate>
+                                                <StackPanel>
+                                                    <!-- 如何在代码中控制该CheckBox的状态 -->
+                                                    <CheckBox Content="全选" Name="chkSelectAll" IsChecked="{Binding Selected,Mode=TwoWay,Source={StaticResource MarkObjectUnCompleted}}" Click="chkSelectAllUnCompleted_Click">
+                                                        <!--Command="{Binding SelectAllDepartCommand}" CommandParameter="{Binding ElementName=chkSelectAll}"-->
+                                                    </CheckBox>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </sdk:DataGridCheckBoxColumn.HeaderStyle>
+                        </sdk:DataGridCheckBoxColumn>
+                        <sdk:DataGridTextColumn Header="序 号" Binding="{Binding }" IsReadOnly="True"  MinWidth="60" Width="*" />
+                        <sdk:DataGridTextColumn Header="部 门" Binding="{Binding depart_name}" IsReadOnly="True" MinWidth="70" Width="2*" />
+                        <sdk:DataGridTextColumn Header="日 期" Binding="{Binding attend_day,StringFormat=yyyy-MM-dd}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                        <sdk:DataGridTextColumn Header="班 次" Binding="{Binding attend_sign}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                        <sdk:DataGridTextColumn Header="当班考勤人数" Binding="{Binding attend_person_count}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                        <sdk:DataGridTextColumn Header="人员名单" Binding="{Binding attend_person_names,Converter={StaticResource StringArrayConverter}}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                        <sdk:DataGridTextColumn Header="上报人数" Binding="{Binding reported_count}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                        <sdk:DataGridTextColumn Header="差异人员" Binding="{Binding diff_person_names,Converter={StaticResource StringArrayConverter}}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                        <sdk:DataGridTextColumn Header="状态" Binding="{Binding state}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                        <sdk:DataGridTemplateColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="操作" MinWidth="100" Width="3*"  >
+                            <sdk:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <!--<HyperlinkButton Content=" [查看]" Margin="5"  Name="btnShowDetails" Click="btnShowDetails_Click" />-->
+                                        <HyperlinkButton Content=" [编辑]" VerticalAlignment="Center"  Margin="5,0"  Name="btnModify" Click="btnModify_Click" Visibility="{Binding EditVisible,Mode=TwoWay,Source={StaticResource VisibleObject}}"/>
+                                        <HyperlinkButton Content=" [生成]" VerticalAlignment="Center"  Margin="5,0"  Name="btnCreate" Click="btnCreate_Click" Visibility="{Binding CreateVisible,Mode=TwoWay,Source={StaticResource VisibleObject}}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </sdk:DataGridTemplateColumn.CellTemplate>
+                        </sdk:DataGridTemplateColumn>
+                    </sdk:DataGrid.Columns>
+                </sdk:DataGrid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="已完成班中餐" >
+                <sdk:DataGrid   ItemsSource="{Binding CompletedReportInfosOnDepart}" SelectedItem="{Binding SelectedCompletedRecordInfoOnDepart,Mode=TwoWay}" 
+                       CanUserSortColumns="False"
+                       Name="dataGridCompletedLunch" Style="{StaticResource DataGridStyle}"
+                       ColumnWidth="Auto" Grid.Row="1" MouseLeftButtonDown="dataGridCompletedLunch_MouseLeftButtonDown"
+                       MouseMove="dataGrid_MouseMove" LoadingRow="dataGridCompletedLunch_LoadingRow" 
+                       LayoutUpdated="dataGrid_LayoutUpdated">
+                    <sdk:DataGrid.Columns >
+                        <sdk:DataGridCheckBoxColumn Header="全选" IsReadOnly="True"  CanUserReorder="False" CanUserResize="True" CanUserSort="False" MinWidth="70" Binding="{Binding isSelected, Mode=TwoWay}" Width="auto">
+                            <sdk:DataGridCheckBoxColumn.HeaderStyle>
+                                <Style TargetType="Primitives:DataGridColumnHeader">
+                                    <Setter Property="ContentTemplate">
+                                        <Setter.Value>
+                                            <DataTemplate>
+                                                <StackPanel>
+                                                    <!-- 如何在代码中控制该CheckBox的状态 -->
+                                                    <CheckBox Content="全选" Name="chkSelectAll" IsChecked="{Binding Selected,Mode=TwoWay,Source={StaticResource MarkObjectCompleted}}" Click="chkSelectAllCompleted_Click">
+                                                        <!--Command="{Binding SelectAllDepartCommand}" CommandParameter="{Binding ElementName=chkSelectAll}"-->
+                                                    </CheckBox>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </sdk:DataGridCheckBoxColumn.HeaderStyle>
+                        </sdk:DataGridCheckBoxColumn>
+                        <sdk:DataGridTextColumn Header="序 号" Binding="{Binding }" IsReadOnly="True"  MinWidth="60" Width="*" />
+                        <sdk:DataGridTextColumn Header="部 门" Binding="{Binding depart_name}" IsReadOnly="True" MinWidth="70" Width="2*" />
+                        <sdk:DataGridTextColumn Header="日 期" Binding="{Binding attend_day,StringFormat=yyyy-MM-dd}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                        <sdk:DataGridTextColumn Header="班 次" Binding="{Binding attend_sign}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                        <sdk:DataGridTextColumn Header="当班考勤人数" Binding="{Binding attend_person_count}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                        <sdk:DataGridTextColumn Header="人员名单" Binding="{Binding attend_person_names,Converter={StaticResource StringArrayConverter}}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                        <sdk:DataGridTextColumn Header="上报人数" Binding="{Binding reported_count}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                        <sdk:DataGridTextColumn Header="差异人员" Binding="{Binding diff_person_names,Converter={StaticResource StringArrayConverter}}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                        <sdk:DataGridTextColumn Header="状态" Binding="{Binding state}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                        <sdk:DataGridTemplateColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="操作" MinWidth="100" Width="3*"  >
+                            <sdk:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <!--<HyperlinkButton Content=" [查看]" Margin="5"  Name="btnShowDetails" Click="btnShowDetails_Click" />-->
+                                        <HyperlinkButton Content=" [查看]" VerticalAlignment="Center"  Margin="5,0"  Name="btnShow" Click="btnShow_Click" Visibility="{Binding ShowVisible,Mode=TwoWay,Source={StaticResource VisibleObject}}"/>
+                                        <HyperlinkButton Content=" [撤消]" VerticalAlignment="Center"  Margin="5,0"  Name="btnUndo" Click="btnUndo_Click" Visibility="{Binding UndoVisible,Mode=TwoWay,Source={StaticResource VisibleObject}}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </sdk:DataGridTemplateColumn.CellTemplate>
+                        </sdk:DataGridTemplateColumn>
+                    </sdk:DataGrid.Columns>
+                </sdk:DataGrid>
+
+            </sdk:TabItem>
+        </sdk:TabControl>
+       
+        <!--<StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button IsEnabled="{Binding IsBatchBtnEnable}" 
+                    Command ="{Binding BatchDeleteCommand}" HorizontalAlignment="Center" 
+                    Style="{StaticResource DelButtonStyle}" />
+            <Button Command="{Binding AddCommand}" HorizontalAlignment="Center" 
+                    Style="{StaticResource AddButtonStyle}" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/Add.png"/>
+                    <TextBlock FontSize="12" Text="添加工种" Margin="0,2,0,0" />
+                </StackPanel>
+            </Button>
+            <Button Name="ExportExl" HorizontalAlignment="Right"  Style="{StaticResource ExportExcelButtonStyle}" Click="ExportExl_Click" />
+        </StackPanel>-->
+
+    </Grid>
+</navigation:Page>

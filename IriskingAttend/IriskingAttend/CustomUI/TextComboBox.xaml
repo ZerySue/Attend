@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="IriskingAttend.CustomUI.TextComboBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="23" d:DesignWidth="80">
+    
+    <Grid x:Name="LayoutRoot" Background="White" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <ComboBox Name="comboBox"/>
+        <TextBox IsReadOnly="True"  Name="textBox" Grid.Column="1" />
+    </Grid>
+    
+    
+</UserControl>

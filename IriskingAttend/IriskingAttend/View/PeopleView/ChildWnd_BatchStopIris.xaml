@@ -1,0 +1,116 @@
+﻿<controls:ChildWindow xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           x:Class="IriskingAttend.View.PeopleView.ChildWnd_BatchStopIris"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:Primitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Data"
+           xmlns:local="clr-namespace:IriskingAttend.View"
+           Width="800" Height="450" 
+           Title="停用虹膜" FontSize="12" Padding="0" >
+
+    <controls:ChildWindow.Resources>
+        <local:MarkObject x:Key="MarkObject" />
+    </controls:ChildWindow.Resources>
+    
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*" />
+            <ColumnDefinition Width="362*" />  
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <sdk:DataGrid IsReadOnly="True"   Style="{StaticResource DataGridStyle}" 
+                      Name="dgSelectedPerson" VerticalAlignment="Stretch" AutoGenerateColumns="False" 
+                      Grid.RowSpan="2" Margin="5,5" FontSize="12" IsEnabled="True" IsHitTestVisible="True">
+            <sdk:DataGrid.Columns >
+                <sdk:DataGridTextColumn Header="人员工号" Binding="{Binding work_sn}" IsReadOnly="True" Width="2*"  />
+                <sdk:DataGridTextColumn Header="人员姓名" Binding="{Binding person_name}" IsReadOnly="True"  Width="2*"/>
+                <sdk:DataGridTextColumn Header="部门" Binding="{Binding depart_name}" IsReadOnly="True"  Width="2.5*"/>
+                <sdk:DataGridTextColumn Binding="{Binding Path=Nothing}" MinWidth="0" MaxWidth="0" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>  
+        <StackPanel Grid.Column="1" Margin="5,0,5,0">
+             <StackPanel>
+                <StackPanel Orientation="Horizontal"  Margin="0,0,0,0">
+                    <sdk:Label Content="设置虹膜停用开始日期" FontSize="12" />
+                    <sdk:DatePicker Height="23" Width="120" Name="dateBegin" Margin="5,5" SelectedDateChanged="dateBegin_SelectedDateChanged" FontSize="12" />
+                    <sdk:Label Content="*" Padding="10,0,0,0" Foreground="Red" />
+                    <sdk:Label Content="(0点)" Padding="0,0,0,0"  />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                    <sdk:Label Content="设置虹膜停用结束日期" FontSize="12" />
+                    <sdk:DatePicker Height="23" Width="120" Name="dateEnd" Margin="5,5" FontSize="12" />
+                    <sdk:Label Content="*" Padding="0,0,0,0" Visibility="Collapsed"  Foreground="Red" />
+                    <sdk:Label Content="(24点)" Padding="10,0,0,0"  />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"   Margin="0,0,0,0">
+                    <sdk:Label Content="超出虹膜停用日期"  FontSize="12" Margin="24,5,0,5" />
+                    <ComboBox Name="comb_option"  SelectedIndex="0" Width="140" Margin="5,5" FontSize="12">
+                        <ComboBoxItem Content="自动变为启用" />
+                        <ComboBoxItem Content="删除该用户虹膜信息" />
+                        <ComboBoxItem Content="删除该用户人员信息" />
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"  Margin="0,0,0,0" >
+                    <Button Name="Btn_Add"  Height="23" Width="100"  Margin="80,5,0,5" FontSize="12" Click="Btn_Add_Click" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/IriskingAttend;component/images/Down.png"/>
+                            <TextBlock FontSize="12" Text=" 添 加" Margin="0,2,0,0" />
+                        </StackPanel>
+                    </Button>
+                </StackPanel> 
+            </StackPanel>
+        </StackPanel>
+        <sdk:DataGrid Style="{StaticResource DataGridStyle}" ItemsSource="{Binding PersonStopIrisInfo,Mode=TwoWay}" AutoGenerateColumns="False" Grid.Row="1" Grid.Column="1" Name="DG_PersonStopIrisData" Margin="5,5" FontSize="12" LoadingRow="DG_PersonStopIrisData_LoadingRow" MinHeight="100">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridCheckBoxColumn IsReadOnly="True"  CanUserReorder="True"   CanUserResize="True" CanUserSort="True"   Header="全选" Width="Auto" Binding="{Binding isSelected, Mode=OneWay}" >
+                    <sdk:DataGridCheckBoxColumn.HeaderStyle>
+                        <Style TargetType="Primitives:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <CheckBox Content="全选" Name="chkSelectAll" IsChecked="{Binding Selected,Mode=TwoWay,Source={StaticResource MarkObject}}"  Click="chkSelectAll_Click" IsEnabled="True">
+                                            </CheckBox>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridCheckBoxColumn.HeaderStyle>
+                </sdk:DataGridCheckBoxColumn>
+                <!--<sdk:DataGridTextColumn CanUserReorder="True" Header="序号" Binding="{Binding index, Mode=TwoWay}" CanUserResize="True" CanUserSort="True" Width="0.7*" />-->
+                <!--<sdk:DataGridTextColumn CanUserReorder="True" Header="员工工号" Binding="{Binding work_sn, Mode=TwoWay}" CanUserResize="True" CanUserSort="True" Width="*" />
+                <sdk:DataGridTextColumn CanUserReorder="True" Header="员工姓名" Binding="{Binding person_name, Mode=TwoWay}" CanUserResize="True" CanUserSort="True" Width="*" />-->
+                <sdk:DataGridTextColumn CanUserReorder="True" Header="虹膜停用开始日期" Binding="{Binding begin_time, Mode=TwoWay}" CanUserResize="True" CanUserSort="True" Width="2*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="True" Header="虹膜停用结束日期" Binding="{Binding end_time, Mode=TwoWay}" CanUserResize="True" CanUserSort="True" Width="2*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="True" Header="超出停用日期" Binding="{Binding policy, Mode=TwoWay}" CanUserResize="True" CanUserSort="True" Width="2*" IsReadOnly="True" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="2">
+            <Button  Command="{Binding OkBtnCmd}" Style="{StaticResource ButtonStyle}"  IsEnabled="{Binding OkBtnIsEnabled}">
+                <StackPanel Orientation="Horizontal" Margin="5,0">
+                    <Image Source="/IriskingAttend;component/Images/Succeed.png"/>
+                    <TextBlock FontSize="12" Text="提 交" Margin="5,0,0,0" />
+                </StackPanel>
+            </Button>
+            <Button IsEnabled="{Binding IsBatchOperateBtnEnable}"   Style="{StaticResource DelButtonStyle}" Command="{Binding BatchDeleteSelectedCmd}">
+                
+            </Button>
+            <!-- Click="Btn_DelSelectenIrisRecord_Click" Command="{Binding BatchDeleteSelectedCommand}"-->
+            <Button Width="160" Visibility="{Binding DelAllStopIrisVisibility}" Style="{StaticResource ButtonStyle}" Command="{Binding DelAllStopIrisRecordsCmd}" >
+                <StackPanel Orientation="Horizontal" Margin="5,0">
+                    <Image Source="/IriskingAttend;component/Images/StopIris.png"/>
+                    <TextBlock FontSize="12" Text="删除所有虹膜停用记录" Margin="5,0,0,0" />
+                </StackPanel>
+            </Button>
+            <Button x:Name="CancelButton" Click="CancelButton_Click"  Style="{StaticResource CancelButtonStyle}">
+              
+            </Button>
+        </StackPanel>
+    </Grid>
+</controls:ChildWindow>

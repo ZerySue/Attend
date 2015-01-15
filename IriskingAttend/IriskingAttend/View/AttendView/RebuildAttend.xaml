@@ -1,0 +1,154 @@
+﻿<navigation:Page x:Class="IriskingAttend.View.AttendView.RebuildAttend" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="800" d:DesignHeight="400"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:Primitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Data"
+           HorizontalAlignment="Left" VerticalAlignment="Top"
+           xmlns:local="clr-namespace:IriskingAttend.View"
+           Title="考勤重构" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit">
+
+    <UserControl.Resources>
+        <local:MarkObject x:Key="MarkObject" />      
+        <Style TargetType="sdk:DataGridColumnHeader"
+               x:Name="HeaderStyle">
+            <Setter Property="ContentTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <CheckBox IsChecked="{Binding Selected,Mode=TwoWay,Source={StaticResource MarkObject}}"
+                                  Content="全选"
+                                  VerticalContentAlignment="Center"
+                                  VerticalAlignment="Center" />
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <DataTemplate x:Name="CellTemplate">
+            <CheckBox IsChecked="{Binding is_select,Mode=TwoWay}" 
+                      Click="CheckBox_Click"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center" />
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Style="{StaticResource GridStyle}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500*" MinWidth="800"/>
+            <ColumnDefinition Width="200*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Name="gSelectRegion">            
+            <StackPanel Name="spDateTime" Orientation="Horizontal" Style="{StaticResource MyStackPanelStyle}" Margin="5,5,0,5">
+            <sdk:Label Content="重构起始时间" Margin="2,0" FontWeight="Normal" />
+                <StackPanel Margin="5,0,0,0" Name="stackPanelDateTimeBegin" Orientation="Horizontal">
+                    <sdk:DatePicker Background="{x:Null}"  Height="22" Margin="0" Name="datePickerDate" Width="110" />
+                    <toolkit:TimePicker Culture="zh-CN" Grid.Column="1"  MinWidth="0" Name="timeBegin">
+                        <toolkit:TimePicker.Format>
+                            <toolkit:CustomTimeFormat Format="HH:mm:ss" />
+                        </toolkit:TimePicker.Format>
+                    </toolkit:TimePicker>
+                </StackPanel>
+            <sdk:Label Content="*" Foreground="#FFF50909" Name="label1" />
+
+            <sdk:Label Name="lbDepart" Content="选择部门" Margin="2,0" FontWeight="Normal"></sdk:Label>
+                <ComboBox Name="cmbDepart" MinWidth="60" SelectionChanged="cmbDepart_SelectionChanged" Height="25"></ComboBox>
+            <sdk:Label Content="姓名" HorizontalContentAlignment="Right" Name="lblName" Padding="1,0,0,0" Margin="4,0" FontWeight="Normal" />
+                <TextBox Name="tbName" Padding="1" Text="" MinWidth="80" MaxWidth="105" Margin="0,2"/>                 
+            <sdk:Label Content="工号" Name="lblWorkSN" Padding="1,0,0,0" Margin="4,0" FontWeight="Normal" />
+                <TextBox Name="tbWorkSN" Padding="1" Text="" Margin="0,2" MinWidth="80" MaxWidth="105" />                 
+            <Button Click="btnQuery_Click" Height="25" MinWidth="85" Name="btnQuery" Style="{StaticResource ButtonStyle}" Margin="5,0">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/binoculars.png" />
+                    <TextBlock Text="查  询" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        
+        </Grid>
+        
+
+        <sdk:DataGrid Style="{StaticResource DataGridStyle}" DataContext="{Binding}" CanUserReorderColumns="True"
+                      CanUserSortColumns="False"
+                      Name="dgRebuildPerson" AutoGenerateColumns="False" Grid.Row="2" LoadingRow="dgRebuildPerson_LoadingRow"
+                      MouseLeftButtonDown="dgRebuildPerson_MouseLeftButtonDown" MouseMove="dgRebuildPerson_MouseMove"
+                      LayoutUpdated="dgRebuildPerson_LayoutUpdated">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn CanUserReorder="False" CanUserResize="True" CanUserSort="False" MinWidth="65"  
+                                            >
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="Primitives:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <!-- 如何在代码中控制该CheckBox的状态 -->
+                                            <CheckBox Content="全选" Name="chkSelectAll" 
+                                                      IsChecked="{Binding Selected,Mode=TwoWay,Source={StaticResource MarkObject}}"
+                                                      Click="chkSelectAll_Click" OpacityMask="{x:Null}">
+                                                <CheckBox.BorderBrush>
+                                                    <LinearGradientBrush>
+                                                        <GradientStop Color="#FFA3AEB9" Offset="0" />
+                                                        <GradientStop Color="#FF8399A9" Offset="0.375" />
+                                                        <GradientStop Color="#FF718597" Offset="0.375" />
+                                                        <GradientStop Color="#FF0E5B97" Offset="1" />
+                                                    </LinearGradientBrush>
+                                                </CheckBox.BorderBrush>
+                                            </CheckBox>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <!--<CheckBox  IsChecked="{Binding is_select, Mode= TwoWay}"  HorizontalAlignment="Center" Click="CheckBox_Click"
+                                          VerticalAlignment="Center"  />-->
+                                <CheckBox  IsChecked="{Binding is_select, Mode= TwoWay}"  HorizontalAlignment="Center" IsEnabled="False"
+                                          VerticalAlignment="Center"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                
+                <!--<sdk:DataGridCheckBoxColumn HeaderStyle="{StaticResource HeaderStyle}"  CanUserReorder="False" CanUserResize="True" 
+                CanUserSort="False" Width="80" Binding="{Binding is_select, Mode=TwoWay}"  >
+                </sdk:DataGridCheckBoxColumn>--> 
+                <sdk:DataGridTextColumn Binding="{Binding work_sn,Mode=TwoWay}" Header="工  号" IsReadOnly="True" Width="0.1*"/>
+                <sdk:DataGridTextColumn Binding="{Binding person_name,Mode=TwoWay}" Header="姓  名" IsReadOnly="True" Width="0.15*" />
+                <sdk:DataGridTextColumn Binding="{Binding depart_name,Mode=TwoWay}" Header="部  门" IsReadOnly="True" Width="0.3*"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center" Margin="0">
+            <Button Style="{StaticResource ButtonStyle}"  HorizontalAlignment="Stretch" Name="btnRebuild"   Grid.Column="0" Padding="0">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/ReBuild.png" Width="20"/>
+                    <TextBlock FontSize="12" Text="重构" Margin="0,2" />
+                </StackPanel>
+            </Button>
+            <Button Style="{StaticResource ButtonStyle}" HorizontalAlignment="Stretch" Name="btnStopRebuild"   
+                    Click="btnStopRebuild_Click" Margin="100,1,1,1" Padding="0">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/Strop.png" Width="20"/>
+                    <TextBlock FontSize="12" Text="停止重构" Margin="0,2" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <ProgressBar Grid.Row="1" Name="pBarRebuild" Foreground="#FF068C0B" Margin="0,3" 
+                     
+                     Grid.ColumnSpan="1" Height="8" HorizontalAlignment="Stretch"  />
+        <!--Value="{Binding BarValue}" Maximum="{Binding BarMaximun}"  Visibility="{Binding BarVisibility}"-->
+        
+    </Grid>
+</navigation:Page>

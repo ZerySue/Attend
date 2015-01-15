@@ -1,0 +1,25 @@
+﻿<controls:ChildWindow xmlns:my="clr-namespace:IriskingAttend.ZhouYuanShan"  x:Class="IriskingAttend.ZhouYuanShan.ChildWndSelectObj"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="533" Height="500" 
+           Title="选择查询对象" HasCloseButton="True">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+     
+        </Grid.RowDefinitions>
+  
+        <controls:TabControl HorizontalAlignment="Stretch" Margin="0,10,0,0" Name="tabControl" VerticalAlignment="Stretch">
+            
+        </controls:TabControl>
+
+        <Button x:Name="OKButton"  Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,3,90,0" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/IriskingAttend;component/Images/Succeed.png"/>
+                <TextBlock FontSize="12" Text="保 存" Margin="0,0,0,0" />
+            </StackPanel>
+        </Button>
+        <Button x:Name="CancelButton" Style="{StaticResource CancelButtonStyle}"  Content="取消" Click="CancelButton_Click" Width="75" Height="23" 
+                HorizontalAlignment="Right" Margin="0,3,8,0" VerticalAlignment="Top"/>
+    </Grid>
+</controls:ChildWindow>

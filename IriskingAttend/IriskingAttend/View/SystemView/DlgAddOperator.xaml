@@ -1,0 +1,41 @@
+﻿<controls:ChildWindow x:Class="IriskingAttend.Dialog.DlgAddOperator" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           d:DesignWidth="400"                     
+           FontSize="12" Title="添加操作员">
+    <Grid x:Name="LayoutRoot" Background="{StaticResource UserDomainBackgroundColorBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="0.5*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />                   
+        </Grid.RowDefinitions>
+        <sdk:Label  Grid.Column="0" Grid.Row="0" Content="用户名"  Margin="10,20,10,5" HorizontalContentAlignment="Right" FontSize="12"/>
+        <sdk:Label  Grid.Column="0" Grid.Row="1" Content="真实姓名"  Margin="10,5,10,5"  HorizontalContentAlignment="Right"  FontSize="12"/>
+        <sdk:Label  Grid.Column="0" Grid.Row="2" Content="密码"  Margin="10,5,10,5"  HorizontalContentAlignment="Right"  FontSize="12"/>
+        <sdk:Label  Grid.Column="0" Grid.Row="3" Content="重复密码"  Margin="10,5,10,5"  HorizontalContentAlignment="Right"  FontSize="12"/>
+        <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding OperatInfo.logname,Mode=TwoWay}" HorizontalAlignment="Center" Margin="0,20,0,5" MinWidth="220" MinHeight="23" />
+        <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding OperatInfo.realityname,Mode=TwoWay}" HorizontalAlignment="Center" Margin="0,5,0,5" MinWidth="220" MinHeight="23"/>
+        <PasswordBox Grid.Column="1" Grid.Row="2" Password="{Binding InputPassword,Mode=TwoWay}" HorizontalAlignment="Center" Margin="0,5,0,5" MinWidth="220" MinHeight="23"/>
+        <PasswordBox Grid.Column="1" Grid.Row="3" Password="{Binding InputPasswordRepeat,Mode=TwoWay}" HorizontalAlignment="Center" Margin="0,5,0,5" MinWidth="220" MinHeight="23"/>
+        <sdk:Label  Grid.Column="3" Grid.Row="0" Content="*" Foreground="#FFF80000" HorizontalAlignment="Left" Margin="10,20,10,5"/>
+        <sdk:Label  Grid.Column="3" Grid.Row="2" Content="*" Foreground="#FFF80000" HorizontalAlignment="Left" Margin="10,5,10,5"/>
+        <sdk:Label  Grid.Column="3" Grid.Row="3" Content="*" Foreground="#FFF80000" HorizontalAlignment="Left" Margin="10,5,10,5"/>        
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3" HorizontalAlignment="Center" Margin="10,5,0,5">
+            <Button Height="23" Width="75" HorizontalAlignment="Left" Margin="0,20,0,20" FontSize="12" Command="{Binding AddOperatorCommand}" Style="{StaticResource OkButtonStyle}"/>
+            <Button Height="23" Name="btnCancel" Width="75" HorizontalAlignment="Left" Margin="20,20,0,20" FontSize="12" Click="btnCancel_Click" Style="{StaticResource CancelButtonStyle}"/>                
+        </StackPanel>
+    </Grid> 
+</controls:ChildWindow>

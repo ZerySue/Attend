@@ -1,0 +1,834 @@
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ResolveAssemblyReference.cache
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\App.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\CustomCursor\MovableMouse.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\CustomUI\DropDownCheckList.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\CustomUI\TextComboBox.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\Dialog\AboutSystem.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\Dialog\AddAttendLeaveDialog.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\Dialog\AddRecog.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\Dialog\AttendRecordDetail.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\Dialog\ContinueAddAttendLeaveDialog.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\Dialog\LeaveTypeManage.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\Dialog\OverInWellDialog.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\Dialog\AttendRecordSignDetail.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\HuFeng\HuFengDayAttend.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\HuFeng\HuFengMonthAttend.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\HuFeng\SelectInfo.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\LinZhouZhuDuan\ZhuDuanMonthAttend.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\LiuHuangGou\ReportLiuhuangGouAttendMonth.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\LiuHuangGou\MonthAttendUnderRule.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\LiuHuangGou\ReportLiuhuangGouYearAttend.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\AttendanceDetailList.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\AbnormalAttendInfo.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\AttendPersonList.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\IrisAttendQuery.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\IrisAttendQueryDetails.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\SelectDepart.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\SelectPrincipal.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\SelectWorkType.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\ShowDetailsWuHuShan.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\LocateRecordAdded.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\GuoDian\GuoDianReport.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ShenShuoRailway\SelectDepartPrivilege.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ShenShuoRailway\SelectPerson.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ShenShuoRailway\ShenShuoAttendCollect.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ShenShuoRailway\PersonAttendCollect.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ViewMine\AttendViewMine\AttendRecordMine.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ViewMine\AttendViewMine\InWellPersonMine.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ViewMine\AttendViewMine\RecogManageMine.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ViewMine\PeopleView\ChildWnd_BatchModify_Mine.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ViewMine\PeopleView\ChildWnd_OperatePerson_Mine.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ViewMine\PeopleView\PageWorkTypeMng.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ViewMine\PeopleView\ChildWndOperateWorkType.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\AttendView\AttendLeaveManage.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\AttendView\DlgFestivalItemMng.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\AttendView\FestivalMng.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\MainFrmView\FrameNavigate.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\Dialog\MsgBoxWindow.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWndOperatePrincipal.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWndOperatePrincipalType.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWnd_OperateClassOrderSign.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\ReportView\IkReport.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\ListStackPanel.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\ListStackPanelItem.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\PagePrincipalMng.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\PagePrincipalTypeMng.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\Page_ClassTypeAndClassOrderMng.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\PageDepartAndPeopleMng.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\DepartAttendCollect.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\PageDepartAndPeopleMng_WuhuShan.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\DlgAddOperator.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\Dialog\RecogInfo.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\DlgModifyOperatorInfo.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\DlgModifyOperatorPwd.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\AttendView\RebuildAttend.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\MainFrmView\Login.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\MainFrmView\MainPage.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\MainFrmView\Welcome.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\Page_classOrderMng.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWnd_OperateClassOrder.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\MainFrmView\DlgModifyCurPwd.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\AttendView\AttendRecord.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\AttendView\AttendLeave.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\AttendView\RecogManage.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\ErrorPage\ErrorWindow.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWnd_AddChildDepart.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWnd_BatchStopIris.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWnd_BatchModify.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWnd_OperateClassType.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWnd_OperateDepart.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWnd_OperatePerson.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\Page_childDepartMng.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\Page_classTypeMng.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\Page_departMng.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\AttendView\InWellPerson.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\DlgPrivilege.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\OperatorLog.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\OperatorManage.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\ParameterConfig.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\DeviceManage.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\ReportView\Xls_OriginRecSumReport.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\BackupConfig.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\DlgDeviceItemMng.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\DlgLogDetail.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\XiBeiDianLan\DlgPersonAttendRecord.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\XiBeiDianLan\XiBeiDianLanAttendCollect.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\XiGouYiKuang\XiGouInWellPersonDetail.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\XiGouYiKuang\XiGouInWellPersonReport.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\XiGouYiKuang\XiGouDayAttend.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\XiGouYiKuang\XiGouMonthAttend.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\XiGouYiKuang\LeaderScheduling.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\XiGouYiKuang\XiGouLeaderAttendRec.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\XiGouYiKuang\XiGouLeaderScheduleRec.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\XiGouYiKuang\XiGouPersonDetailAttendRec.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\XiGouYiKuang\XiGouPersonDetailScheduleRec.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\XinJuLong\AttendDepartInWellCollect.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\XinJuLong\AttendPersonInWellCollect.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\XinJuLong\AttendInCompleteQuery.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\XinJuLong\ReportXinJuLongPersonMonth.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\XinJuLong\DlgInCompleteRecord.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\XinJuLong\DlgDepartInWellDetail.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\AddRecog.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\AttendRecord.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\LeakageAttendanceQuery.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\OriginRecSumList.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\PersonFullAttend.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\PersonLatearrivalList.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\PersonLeaveList.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\PersonMealSupplement.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\PersonTimeProblemList.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\SelectPersonName.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\ChildWndReportQuery.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\ChildWndSelectObj.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\LunchSubsidy\ChildWndUnCompletedLunch.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\LunchSubsidy\CompletedDiffPersonUI.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\LunchSubsidy\PageUnCompletedLunch.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\LunchSubsidy\PageQueryLunchRecord.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\PersonDayReport.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\SelectObjUI.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\DepartMonthReport.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\PersonAttendStatisticsReport.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\DepartDetailReport.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\IriskingAttend.g.resources
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWnd_OperateClassOrderJiGongShi.g.i.cs
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\IriskingAttend.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\IriskingAttend.pdb
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\AppManifest.xaml
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\IriskingAttend.xap
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\IriskingAttendTestPage.html
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\AsyncControl.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\Cellbi.SvZLib.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\GalaSoft.MvvmLight.Extras.SL4.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\GalaSoft.MvvmLight.SL4.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\IkReportWCFRia.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\IriskingAttendBase.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\Lite.ExcelLibrary.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\Lite.Library.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\Microsoft.Practices.Prism.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\Microsoft.Practices.Prism.Interactivity.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\Microsoft.Practices.Prism.MefExtensions.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\Microsoft.Practices.Prism.UnityExtensions.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\Microsoft.Practices.ServiceLocation.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\Microsoft.Practices.Unity.Silverlight.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ReportTemplate.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\Silverlight.OutlookBar.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\SilverlightReport.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.ComponentModel.Composition.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.ComponentModel.DataAnnotations.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.ServiceModel.DomainServices.Client.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.ServiceModel.DomainServices.Client.Web.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.ServiceModel.Web.Extensions.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.Data.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.Data.Input.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.Navigation.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.Toolkit.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.Xml.Serialization.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\Microsoft.CSharp.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Data.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.Toolkit.Internals.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.ComponentModel.Composition.xml
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.ComponentModel.DataAnnotations.xml
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.ServiceModel.DomainServices.Client.xml
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.ServiceModel.DomainServices.Client.Web.xml
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.ServiceModel.Web.Extensions.xml
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.xml
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.Data.xml
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.Data.Input.xml
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.Navigation.xml
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.Xml.Serialization.xml
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\Microsoft.CSharp.xml
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Data.xml
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\de\System.ComponentModel.Composition.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\es\System.ComponentModel.Composition.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.ComponentModel.Composition.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\it\System.ComponentModel.Composition.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.ComponentModel.Composition.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.ComponentModel.Composition.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.ComponentModel.Composition.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.ComponentModel.Composition.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.ComponentModel.Composition.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ar\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\bg\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ca\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\cs\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\da\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\de\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\el\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\es\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\et\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\eu\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\fi\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\he\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\hr\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\hu\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\id\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\it\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\lt\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\lv\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ms\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\nl\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\no\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\pl\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\pt\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\pt-BR\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ro\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sk\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sl\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sr-Cyrl-CS\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sr-Latn-CS\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sv\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\th\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\tr\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\uk\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\vi\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.ComponentModel.DataAnnotations.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\de\System.ServiceModel.DomainServices.Client.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\es\System.ServiceModel.DomainServices.Client.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.ServiceModel.DomainServices.Client.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\it\System.ServiceModel.DomainServices.Client.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.ServiceModel.DomainServices.Client.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.ServiceModel.DomainServices.Client.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.ServiceModel.DomainServices.Client.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.ServiceModel.DomainServices.Client.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.ServiceModel.DomainServices.Client.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\de\System.ServiceModel.DomainServices.Client.Web.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\es\System.ServiceModel.DomainServices.Client.Web.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.ServiceModel.DomainServices.Client.Web.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\it\System.ServiceModel.DomainServices.Client.Web.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.ServiceModel.DomainServices.Client.Web.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.ServiceModel.DomainServices.Client.Web.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.ServiceModel.DomainServices.Client.Web.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.ServiceModel.DomainServices.Client.Web.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.ServiceModel.DomainServices.Client.Web.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\de\System.ServiceModel.Web.Extensions.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\es\System.ServiceModel.Web.Extensions.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.ServiceModel.Web.Extensions.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\it\System.ServiceModel.Web.Extensions.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.ServiceModel.Web.Extensions.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.ServiceModel.Web.Extensions.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.ServiceModel.Web.Extensions.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.ServiceModel.Web.Extensions.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.ServiceModel.Web.Extensions.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ar\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\bg\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ca\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\cs\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\da\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\de\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\el\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\es\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\et\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\eu\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\fi\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\he\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\hr\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\hu\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\id\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\it\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\lt\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\lv\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ms\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\nl\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\no\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\pl\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\pt\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\pt-BR\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ro\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sk\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sl\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sr-Cyrl-CS\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sr-Latn-CS\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sv\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\th\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\tr\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\uk\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\vi\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ar\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\bg\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ca\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\cs\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\da\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\de\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\el\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\es\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\et\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\eu\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\fi\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\he\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\hr\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\hu\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\id\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\it\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\lt\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\lv\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ms\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\nl\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\no\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\pl\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\pt\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\pt-BR\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ro\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sk\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sl\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sr-Cyrl-CS\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sr-Latn-CS\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sv\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\th\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\tr\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\uk\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\vi\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.Windows.Controls.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ar\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\bg\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ca\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\cs\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\da\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\de\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\el\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\es\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\et\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\eu\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\fi\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\he\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\hr\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\hu\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\id\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\it\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\lt\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\lv\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ms\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\nl\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\no\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\pl\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\pt\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\pt-BR\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ro\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sk\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sl\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sr-Cyrl-CS\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sr-Latn-CS\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\sv\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\th\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\tr\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\uk\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\vi\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.Windows.Controls.Data.Input.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\de\System.Windows.Controls.Navigation.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\es\System.Windows.Controls.Navigation.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.Windows.Controls.Navigation.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\it\System.Windows.Controls.Navigation.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.Windows.Controls.Navigation.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.Windows.Controls.Navigation.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.Windows.Controls.Navigation.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.Windows.Controls.Navigation.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.Windows.Controls.Navigation.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\de\System.Xml.Serialization.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\es\System.Xml.Serialization.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.Xml.Serialization.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\it\System.Xml.Serialization.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.Xml.Serialization.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.Xml.Serialization.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.Xml.Serialization.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.Xml.Serialization.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.Xml.Serialization.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\de\Microsoft.CSharp.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\es\Microsoft.CSharp.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\fr\Microsoft.CSharp.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\it\Microsoft.CSharp.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ja\Microsoft.CSharp.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ko\Microsoft.CSharp.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ru\Microsoft.CSharp.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\Microsoft.CSharp.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\Microsoft.CSharp.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\de\System.Windows.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\es\System.Windows.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.Windows.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\it\System.Windows.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.Windows.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.Windows.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.Windows.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.Windows.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.Windows.Data.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\IriskingAttend.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\IriskingAttend.pdb
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend\obj\Debug\XapCacheFile.xml
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\IriskingAttend.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\IriskingAttend.pdb
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\AppManifest.xaml
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\IriskingAttend.xap
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\IriskingAttendTestPage.html
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\AsyncControl.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\Cellbi.SvZLib.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\GalaSoft.MvvmLight.Extras.SL4.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\GalaSoft.MvvmLight.SL4.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\IkReportWCFRia.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\IriskingAttendBase.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\Lite.ExcelLibrary.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\Lite.Library.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\Microsoft.Practices.Prism.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\Microsoft.Practices.Prism.Interactivity.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\Microsoft.Practices.Prism.MefExtensions.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\Microsoft.Practices.Prism.UnityExtensions.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\Microsoft.Practices.ServiceLocation.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\Microsoft.Practices.Unity.Silverlight.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ReportTemplate.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\Silverlight.OutlookBar.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\SilverlightReport.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.ComponentModel.Composition.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.ComponentModel.DataAnnotations.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.ServiceModel.DomainServices.Client.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.ServiceModel.DomainServices.Client.Web.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.ServiceModel.Web.Extensions.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.Data.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.Data.Input.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.Navigation.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.Toolkit.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.Xml.Serialization.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\Microsoft.CSharp.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Data.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.Toolkit.Internals.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.ComponentModel.Composition.xml
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.ComponentModel.DataAnnotations.xml
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.ServiceModel.DomainServices.Client.xml
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.ServiceModel.DomainServices.Client.Web.xml
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.ServiceModel.Web.Extensions.xml
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.xml
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.Data.xml
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.Data.Input.xml
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Controls.Navigation.xml
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.Xml.Serialization.xml
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\Microsoft.CSharp.xml
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\System.Windows.Data.xml
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\de\System.ComponentModel.Composition.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\es\System.ComponentModel.Composition.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.ComponentModel.Composition.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\it\System.ComponentModel.Composition.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.ComponentModel.Composition.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.ComponentModel.Composition.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.ComponentModel.Composition.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.ComponentModel.Composition.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.ComponentModel.Composition.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ar\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\bg\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ca\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\cs\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\da\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\de\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\el\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\es\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\et\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\eu\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\fi\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\he\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\hr\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\hu\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\id\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\it\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\lt\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\lv\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ms\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\nl\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\no\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\pl\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\pt\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\pt-BR\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ro\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sk\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sl\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sr-Cyrl-CS\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sr-Latn-CS\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sv\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\th\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\tr\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\uk\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\vi\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.ComponentModel.DataAnnotations.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\de\System.ServiceModel.DomainServices.Client.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\es\System.ServiceModel.DomainServices.Client.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.ServiceModel.DomainServices.Client.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\it\System.ServiceModel.DomainServices.Client.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.ServiceModel.DomainServices.Client.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.ServiceModel.DomainServices.Client.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.ServiceModel.DomainServices.Client.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.ServiceModel.DomainServices.Client.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.ServiceModel.DomainServices.Client.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\de\System.ServiceModel.DomainServices.Client.Web.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\es\System.ServiceModel.DomainServices.Client.Web.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.ServiceModel.DomainServices.Client.Web.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\it\System.ServiceModel.DomainServices.Client.Web.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.ServiceModel.DomainServices.Client.Web.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.ServiceModel.DomainServices.Client.Web.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.ServiceModel.DomainServices.Client.Web.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.ServiceModel.DomainServices.Client.Web.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.ServiceModel.DomainServices.Client.Web.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\de\System.ServiceModel.Web.Extensions.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\es\System.ServiceModel.Web.Extensions.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.ServiceModel.Web.Extensions.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\it\System.ServiceModel.Web.Extensions.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.ServiceModel.Web.Extensions.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.ServiceModel.Web.Extensions.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.ServiceModel.Web.Extensions.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.ServiceModel.Web.Extensions.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.ServiceModel.Web.Extensions.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ar\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\bg\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ca\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\cs\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\da\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\de\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\el\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\es\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\et\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\eu\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\fi\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\he\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\hr\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\hu\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\id\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\it\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\lt\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\lv\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ms\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\nl\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\no\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\pl\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\pt\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\pt-BR\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ro\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sk\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sl\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sr-Cyrl-CS\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sr-Latn-CS\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sv\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\th\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\tr\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\uk\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\vi\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ar\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\bg\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ca\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\cs\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\da\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\de\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\el\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\es\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\et\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\eu\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\fi\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\he\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\hr\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\hu\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\id\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\it\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\lt\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\lv\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ms\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\nl\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\no\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\pl\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\pt\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\pt-BR\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ro\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sk\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sl\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sr-Cyrl-CS\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sr-Latn-CS\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sv\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\th\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\tr\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\uk\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\vi\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.Windows.Controls.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ar\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\bg\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ca\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\cs\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\da\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\de\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\el\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\es\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\et\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\eu\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\fi\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\he\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\hr\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\hu\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\id\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\it\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\lt\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\lv\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ms\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\nl\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\no\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\pl\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\pt\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\pt-BR\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ro\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sk\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sl\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sr-Cyrl-CS\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sr-Latn-CS\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\sv\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\th\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\tr\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\uk\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\vi\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.Windows.Controls.Data.Input.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\de\System.Windows.Controls.Navigation.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\es\System.Windows.Controls.Navigation.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.Windows.Controls.Navigation.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\it\System.Windows.Controls.Navigation.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.Windows.Controls.Navigation.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.Windows.Controls.Navigation.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.Windows.Controls.Navigation.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.Windows.Controls.Navigation.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.Windows.Controls.Navigation.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\de\System.Xml.Serialization.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\es\System.Xml.Serialization.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.Xml.Serialization.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\it\System.Xml.Serialization.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.Xml.Serialization.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.Xml.Serialization.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.Xml.Serialization.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.Xml.Serialization.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.Xml.Serialization.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\de\Microsoft.CSharp.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\es\Microsoft.CSharp.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\fr\Microsoft.CSharp.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\it\Microsoft.CSharp.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ja\Microsoft.CSharp.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ko\Microsoft.CSharp.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ru\Microsoft.CSharp.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\Microsoft.CSharp.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\Microsoft.CSharp.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\de\System.Windows.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\es\System.Windows.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\fr\System.Windows.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\it\System.Windows.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ja\System.Windows.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ko\System.Windows.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\ru\System.Windows.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hans\System.Windows.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\Bin\Debug\zh-Hant\System.Windows.Data.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\IriskingAttend.csprojResolveAssemblyReference.cache
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\App.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\CustomCursor\MovableMouse.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\CustomUI\DropDownCheckList.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\CustomUI\TextComboBox.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\Dialog\AboutSystem.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\Dialog\AddAttendLeaveDialog.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\Dialog\AddRecog.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\Dialog\AttendRecordDetail.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\Dialog\ContinueAddAttendLeaveDialog.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\Dialog\LeaveTypeManage.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\Dialog\OverInWellDialog.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\Dialog\AttendRecordSignDetail.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\HuFeng\HuFengDayAttend.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\HuFeng\HuFengMonthAttend.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\HuFeng\SelectInfo.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\LinZhouZhuDuan\ZhuDuanMonthAttend.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\LiuHuangGou\ReportLiuhuangGouAttendMonth.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\LiuHuangGou\MonthAttendUnderRule.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\LiuHuangGou\ReportLiuhuangGouYearAttend.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\AttendanceDetailList.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\AbnormalAttendInfo.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\AttendPersonList.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\IrisAttendQuery.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\IrisAttendQueryDetails.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\SelectDepart.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\SelectPrincipal.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\SelectWorkType.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\ShowDetailsWuHuShan.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\LocateRecordAdded.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\GuoDian\GuoDianReport.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ShenShuoRailway\SelectDepartPrivilege.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ShenShuoRailway\SelectPerson.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ShenShuoRailway\ShenShuoAttendCollect.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ShenShuoRailway\PersonAttendCollect.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ViewMine\AttendViewMine\AttendRecordMine.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ViewMine\AttendViewMine\InWellPersonMine.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ViewMine\AttendViewMine\RecogManageMine.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ViewMine\PeopleView\ChildWnd_BatchModify_Mine.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ViewMine\PeopleView\ChildWnd_OperatePerson_Mine.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ViewMine\PeopleView\PageWorkTypeMng.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ViewMine\PeopleView\ChildWndOperateWorkType.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\AttendView\AttendLeaveManage.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\AttendView\DlgFestivalItemMng.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\AttendView\FestivalMng.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\MainFrmView\FrameNavigate.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\Dialog\MsgBoxWindow.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWndOperatePrincipal.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWndOperatePrincipalType.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWnd_OperateClassOrderJiGongShi.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWnd_OperateClassOrderSign.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\ReportView\IkReport.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\ListStackPanel.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\ListStackPanelItem.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\PagePrincipalMng.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\PagePrincipalTypeMng.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\Page_ClassTypeAndClassOrderMng.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\PageDepartAndPeopleMng.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\DepartAttendCollect.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\NewWuHuShan\PageDepartAndPeopleMng_WuhuShan.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\DlgAddOperator.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\Dialog\RecogInfo.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\DlgModifyOperatorInfo.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\DlgModifyOperatorPwd.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\AttendView\RebuildAttend.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\MainFrmView\Login.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\MainFrmView\MainPage.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\MainFrmView\Welcome.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\Page_classOrderMng.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWnd_OperateClassOrder.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\MainFrmView\DlgModifyCurPwd.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\AttendView\AttendRecord.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\AttendView\AttendLeave.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\AttendView\RecogManage.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\ErrorPage\ErrorWindow.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWnd_AddChildDepart.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWnd_BatchStopIris.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWnd_BatchModify.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWnd_OperateClassType.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWnd_OperateDepart.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\ChildWnd_OperatePerson.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\Page_childDepartMng.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\Page_classTypeMng.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\PeopleView\Page_departMng.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\AttendView\InWellPerson.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\DlgPrivilege.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\OperatorLog.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\OperatorManage.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\ParameterConfig.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\DeviceManage.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\ReportView\Xls_OriginRecSumReport.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\BackupConfig.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\DlgDeviceItemMng.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\View\SystemView\DlgLogDetail.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\XiBeiDianLan\DlgPersonAttendRecord.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\XiBeiDianLan\XiBeiDianLanAttendCollect.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\XiGouYiKuang\XiGouInWellPersonDetail.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\XiGouYiKuang\XiGouInWellPersonReport.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\XiGouYiKuang\XiGouDayAttend.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\XiGouYiKuang\XiGouMonthAttend.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\XiGouYiKuang\LeaderScheduling.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\XiGouYiKuang\XiGouLeaderAttendRec.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\XiGouYiKuang\XiGouLeaderScheduleRec.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\XiGouYiKuang\XiGouPersonDetailAttendRec.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\XiGouYiKuang\XiGouPersonDetailScheduleRec.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\XinJuLong\AttendDepartInWellCollect.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\XinJuLong\AttendPersonInWellCollect.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\XinJuLong\AttendInCompleteQuery.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\XinJuLong\ReportXinJuLongPersonMonth.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\XinJuLong\DlgInCompleteRecord.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\XinJuLong\DlgDepartInWellDetail.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\AddRecog.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\AttendRecord.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\LeakageAttendanceQuery.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\OriginRecSumList.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\PersonFullAttend.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\PersonLatearrivalList.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\PersonLeaveList.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\PersonMealSupplement.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\PersonTimeProblemList.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhongKeHongBa\SelectPersonName.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\ChildWndReportQuery.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\ChildWndSelectObj.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\LunchSubsidy\ChildWndUnCompletedLunch.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\LunchSubsidy\CompletedDiffPersonUI.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\LunchSubsidy\PageUnCompletedLunch.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\LunchSubsidy\PageQueryLunchRecord.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\PersonDayReport.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\SelectObjUI.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\DepartMonthReport.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\PersonAttendStatisticsReport.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\ZhouYuanShan\DepartDetailReport.g.i.cs
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\IriskingAttend.g.resources
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\IriskingAttend.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\IriskingAttend.pdb
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend\obj\Debug\XapCacheFile.xml

@@ -1,0 +1,2 @@
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend
+Generated_Code\IriskingAttend.Web.g.cs

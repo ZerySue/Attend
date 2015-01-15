@@ -1,0 +1,56 @@
+﻿<navigation:Page xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"  x:Class="IriskingAttend.XiGouYiKuang.XiGouInWellPersonReport" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"  HorizontalAlignment="Left" VerticalAlignment="Top"
+           xmlns:vmmodel="clr-namespace:IriskingAttend.ViewModel.SafeManager"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="800" d:DesignHeight="480"
+           Title="西沟一矿井下人员统计汇总表" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot" Style="{StaticResource GridStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Grid.Row="0" >
+            <sdk:Label Content="开始时间" FontSize="12"  Margin="2" />
+            <sdk:DatePicker Name="dtpBegin" Margin="2" /><toolkit:TimePicker Name="timeBegin" Format="HH:mm:ss" />
+            <sdk:Label Content="*" Foreground="#FFF50909" />
+            <sdk:Label Content="结束时间" FontSize="12"  Margin="2" />
+            <sdk:DatePicker Name="dtpEnd" Margin="2" />
+            <toolkit:TimePicker Name="timeEnd" Format="HH:mm:ss" />
+            <sdk:Label Content="*" Foreground="#FFF50909" />
+            <Button Name="btnQuery" Height="23" Width="75" Margin="2" FontSize="12" Click="btnQuery_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/binoculars.png" />
+                    <TextBlock FontSize="12" Text="查  询" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <!--<StackPanel Orientation="Horizontal" Grid.Row="0"  Grid.Column="1" HorizontalAlignment="Right">
+            <sdk:Label Content="部门   "></sdk:Label>
+            <ComboBox Height="23" HorizontalAlignment="Right"  Name="cmbDepart" Width="120" Margin="0,3,10,3" 
+                      SelectionChanged="cmbDepart_SelectionChanged" />
+        </StackPanel>-->
+        <sdk:DataGrid Style="{StaticResource DataGridStyle}" Grid.Row="1" CanUserSortColumns="False"  
+                      MouseLeftButtonDown="dgInWellPerson_MouseLeftButtonDown"   AutoGenerateColumns="False"  Name="dgInWellPerson"  
+                      CanUserResizeColumns="False" Foreground="Black" MouseMove="dgInWellPerson_MouseMove" 
+                      LayoutUpdated="dgInWellPerson_LayoutUpdated">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn  Binding="{Binding BeginTime, Mode=TwoWay}" Header="查询开始时间" IsReadOnly="True" Width="1*"/>
+                <sdk:DataGridTextColumn Binding="{Binding EndTime, Mode=TwoWay}" Header="查询结束时间" IsReadOnly="True" Width="1*"/>
+                <sdk:DataGridTextColumn Binding="{Binding InWellNum, Mode=TwoWay}" Header="入井人员总数（人）" IsReadOnly="True" Width="1*"/>
+                <sdk:DataGridTextColumn Binding="{Binding DownWellNum, Mode=TwoWay}" Header="井下人员总数（人）" IsReadOnly="True" Width="1*" />
+                <sdk:DataGridTextColumn Binding="{Binding OutWellNum, Mode=TwoWay}" Header="升井人员总数（人）" IsReadOnly="True" Width="1*"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Grid.Row="2"  Name="btnExportExl" Style="{StaticResource ExportExcelButtonStyle}"
+                HorizontalAlignment="Center" Click="btnExportExl_Click" >
+        </Button>
+
+    </Grid>
+</navigation:Page>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="gb2312"?>
+<backupdatabase>
+  <backup>
+    <!--服务器IP地址 建议写为0.0.0.0 用于监听-->
+    <BackUpServerIP>0.0.0.0</BackUpServerIP>
+    <!--服务器端口号-->
+    <BackUpServerPort>4530</BackUpServerPort>
+    <!--数据库IP地址-->
+    <DBHost>127.0.0.1</DBHost>
+    <!--数据库端口号-->
+    <DBPort>5432</DBPort>
+    <!--数据库密码-->
+    <DBPassword>123456</DBPassword>
+    <!--**********************考勤库自动备份参数***********************-->
+    <!--标志手动还是自动，0-手动，1-自动-->
+    <irisApp_Mark>1</irisApp_Mark>
+    <!--要备份的数据库名字-->
+    <irisAppDatabaseName>irisNewAttend</irisAppDatabaseName>
+    <!--备份的路径-->
+    <irisAppPath>C:\BackUp</irisAppPath>
+    <!--备份周期-->
+    <irisAppPeriod>1</irisAppPeriod>
+    <!--备份日期-->
+    <irisAppSubPeriod>7</irisAppSubPeriod>
+    <!--备份具体时间-->
+    <irisAppConcreteTime>0001/1/1 00:00:00</irisAppConcreteTime>
+    <!--**********************虹膜库自动备份参数***********************-->
+    <!--标志手动还是自动，0-手动，1-自动-->
+    <irisData_Mark>1</irisData_Mark>
+    <!--要备份的数据库名字-->
+    <irisDataDatabaseName>irisData</irisDataDatabaseName>
+    <!--备份的路径-->
+    <irisDataPath>C:\BackUp</irisDataPath>
+    <!--备份周期-->
+    <irisDataPeriod>0</irisDataPeriod>
+    <!--备份日期-->
+    <irisDataSubPeriod>1</irisDataSubPeriod>
+    <!--备份具体时间-->
+    <irisDataConcreteTime>0001/1/1 0:00:00</irisDataConcreteTime>
+  </backup>
+</backupdatabase>

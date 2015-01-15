@@ -1,0 +1,48 @@
+﻿<navigation:Page x:Class="IriskingAttend.View.SystemView.OperatorManage" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           d:DesignWidth="800" d:DesignHeight="405"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:Primitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Data"
+           Title="操作员管理" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" HorizontalAlignment="Left" VerticalAlignment="Top">
+    
+<Grid Style="{StaticResource GridStyle}">            
+    <Grid.RowDefinitions>        
+        <RowDefinition Height="10*" />
+        <RowDefinition Height="auto" />
+    </Grid.RowDefinitions>
+        <sdk:DataGrid Grid.Row="0"  DataContext="{Binding}" SelectedItem="{Binding SelectOperatorInfoItem}" 
+                    Name="dgOperator"  Style="{StaticResource DataGridStyle}" CanUserReorderColumns="False" CanUserSortColumns="False"
+                     MouseLeftButtonDown="dgOperator_MouseLeftButtonDown" MouseMove="dgOperator_MouseMove" LayoutUpdated="dgOperator_LayoutUpdated">
+        <sdk:DataGrid.Columns >
+                <sdk:DataGridTextColumn Header="序号" Binding="{Binding }" IsReadOnly="True" Width="0.5*" MinWidth="60"/>  
+                <sdk:DataGridTextColumn Header="用户名" Binding="{Binding logname}" IsReadOnly="True" Width="1*" MinWidth="120"/>
+                <sdk:DataGridTextColumn Header="真实姓名" Binding="{Binding realityname}" IsReadOnly="True"  Width="1*" MinWidth="120"/>            
+                <sdk:DataGridTemplateColumn Header="操作" IsReadOnly="True" Width="3*" MinWidth="120" >
+                <sdk:DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                                <HyperlinkButton Content=" [修改信息] " Margin="5"  Name="hbtnModifyOperatorInfo" Click="hbtnModifyOperatorInfo_Click" />
+                                <HyperlinkButton Content=" [修改密码] " Margin="5"  Name="hbtnModifyOperatorPwd" Click="hbtnModifyOperatorPwd_Click" />
+                                <HyperlinkButton Content=" [修改权限] " Margin="5"  Name="hbtnModifyOperatorPurview" Click="hbtnModifyOperatorPurview_Click" />
+                                <HyperlinkButton Content=" [删除] " Margin="5"  Name="hbtnDeleteOperator" Click="hbtnDeleteOperator_Click" />
+                        </StackPanel>
+                    </DataTemplate>
+                </sdk:DataGridTemplateColumn.CellTemplate>
+            </sdk:DataGridTemplateColumn>                     
+        </sdk:DataGrid.Columns>
+    </sdk:DataGrid>
+    <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+            <Button  Name="btnAddOperator"  HorizontalAlignment="Right" Style="{StaticResource AddButtonStyle}" Click="btnAddOperator_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/IriskingAttend;component/images/Add.png"/>
+                <TextBlock FontSize="12" Text="添加操作员" Margin="0,2,0,0" />
+            </StackPanel>
+        </Button>
+            <Button Name="btnExportExcel" Click="btnExportExcel_Click" Style="{StaticResource ExportExcelButtonStyle}" />
+     </StackPanel>    
+ </Grid>  
+</navigation:Page>

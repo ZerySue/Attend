@@ -1,0 +1,125 @@
+﻿<navigation:Page xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"  
+                 x:Class="IriskingAttend.View.ReportView.ReportQuery" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:leaderbehavior ="clr-namespace:IriskingAttend.BehaviorSelf"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:Primitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Data"
+           d:DesignWidth="800" d:DesignHeight="405"
+           Title="查询界面" 
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           Margin="0,2,0,0"
+                 Background="#FF2C3D5A">
+
+    <Grid x:Name="LayoutRoot"  >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="0.5*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="329*" />
+            <RowDefinition Height="55*" />
+        </Grid.RowDefinitions>
+        <sdk:Label Grid.Row="0"  x:Name="lbBack" HorizontalContentAlignment="Stretch" FontSize="14" FontWeight="Bold" 
+                   Foreground="White" Visibility="Visible" Grid.ColumnSpan="2" >
+            <sdk:Label.Content>
+                <StackPanel Orientation="Horizontal" Style="{StaticResource MyStackPanelStyle}" >
+                    <Image  Source="/IriskingAttend;component/images/binoculars.png" Height="20"></Image>
+                    <!--<sdk:Label  Content="查询条件" Foreground="#FF800A0A"></sdk:Label>-->
+                </StackPanel>
+            </sdk:Label.Content>
+        </sdk:Label>
+        <sdk:Label Grid.Row="0"  Content="查询条件" x:Name="lblTitle"
+                  Style="{StaticResource MyLableTitleStyle}"  Visibility="Visible" Grid.ColumnSpan="2" Margin="25,0,0,0">
+        </sdk:Label>
+        <!-- Rectangle Stroke="Black" / -->
+        <Grid Grid.Row="1"  Grid.ColumnSpan="2" Margin="0,0,0,10" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="40*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="0.5*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.ColumnSpan="2" x:Name="spDateTime" Orientation="Horizontal" Margin="0,3">
+                <sdk:Label Content="时间：" Margin="5,0,0,0" />
+                <StackPanel Orientation="Horizontal" x:Name="spDateTimeBegin" Margin="10,0,0,0">
+                    <sdk:DatePicker Height="22" Name="dateBegin" CalendarClosed="dateBegin_CalendarClosed" DateValidationError="dateBegin_DateValidationError" KeyUp="dateBegin_KeyUp" Width="110" Margin="0" />
+                    <toolkit:TimePicker Name="timeBegin"  MinWidth="0" Culture="zh-CN">
+                        <toolkit:TimePicker.Format>
+                            <toolkit:CustomTimeFormat Format="HH:mm:ss" />
+                        </toolkit:TimePicker.Format>
+                    </toolkit:TimePicker>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" x:Name="spDateTimeEnd" >
+                    <sdk:Label Content="～" Margin="5,0" Foreground="Crimson" />
+                    <sdk:DatePicker Height="22" Name="dateEnd" DateValidationError="dateBegin_DateValidationError" SelectedDateChanged="dateEnd_SelectedDateChanged" Width="110" />
+                    <toolkit:TimePicker MinWidth="0" Culture="zh-CN" Name="timeEnd" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <toolkit:TimePicker.Format>
+                            <toolkit:CustomTimeFormat Format="HH:mm:ss" />
+                        </toolkit:TimePicker.Format>
+                    </toolkit:TimePicker>
+                </StackPanel>
+                <Button Name="btnQuery" Click="btnQuery_Click" MinWidth="85" Height="25" Margin="50,0,0,0">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/LeaderAttend;component/images/find.png"></Image>
+                            <TextBlock Text="查  询" FontSize="12"></TextBlock>
+                        </StackPanel>
+                    </Button.Content>
+                    <!--Command="{Binding QueryCommand,Source={StaticResource vmPerson}}"-->
+                    <!--<Button.CommandParameter>
+                 <leaderbehavior:MultiDelegateObjects>
+                     <leaderbehavior:DelegateObject Key="kDateBegin" Value="{Binding ElementName=dateBegin}"/>
+                     <leaderbehavior:DelegateObject Key="kTimeBegin" Value="{Binding ElementName=timeBegin}"/>
+                     <leaderbehavior:DelegateObject Key="kDateEnd" Value="{Binding ElementName=dateEnd}"/>
+                     <leaderbehavior:DelegateObject Key="kTimeEnd" Value="{Binding ElementName=timeEnd}"/>
+                     <leaderbehavior:DelegateObject Key="klistBoxAttendType" Value="{Binding ElementName=listBoxAttendType}"/>
+                     <leaderbehavior:DelegateObject Key="klistBoxDepartment" Value="{Binding ElementName=listBoxDepartment}"/>
+                     <leaderbehavior:DelegateObject Key="kTxtBoxWorkSn" Value="{Binding ElementName=txtBoxWorkSn}"/>
+                     <leaderbehavior:DelegateObject Key="kTxtBoxName" Value="{Binding ElementName=txtBoxName}"/>
+                  </leaderbehavior:MultiDelegateObjects>
+              </Button.CommandParameter>-->
+                </Button>
+            </StackPanel>
+            <sdk:Label Grid.Row="2" Name="lbDepart" Grid.Column="0" Content="部门" HorizontalContentAlignment="Center" Margin="0" BorderThickness="1,1,1,0"  Style="{StaticResource MyLableStyle}">
+            </sdk:Label>
+            <ListBox MinHeight="80" Grid.Row="3" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="1,2,3,3" SelectionMode="Single"  Name="listBoxDepartment"   BorderThickness="1,0,1,1" VerticalAlignment="Stretch" Padding="3"></ListBox>
+            <sdk:Label  Grid.Column="1" Grid.Row="2" Content="考勤类型" BorderThickness="1,1,1,0"  Style="{StaticResource MyLableStyle}" VerticalContentAlignment="Top" Name="lbPrincipal" HorizontalContentAlignment="Center" ></sdk:Label>
+            <ListBox MinHeight="80" Grid.Row="3" Grid.Column="1"  ScrollViewer.VerticalScrollBarVisibility="Visible"  SelectionMode="Single"  Name="listBoxAttendType"  BorderThickness="1,0,1,1" Margin="0,0,0,3">
+            </ListBox>
+            <StackPanel Orientation="Horizontal"  Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Stretch" Name="stackPanel1" VerticalAlignment="Stretch" Margin="0,3">
+                <sdk:Label Content="工号：" Name="lblWorkSn" Padding="5,0,0,0" />
+                <TextBox Name="txtBoxWorkSn" Padding="1" Text="" Width="100" Margin="10,0,0,0" />
+                <sdk:Label Content="姓名：" HorizontalContentAlignment="Right" Name="lblName" Padding="50,0,0,0" />
+                <TextBox Name="txtBoxName" Padding="1" Text="" Width="100" Margin="10,0,0,0" />
+            </StackPanel>
+        </Grid>
+        <!--<Button Command="{Binding QueryCommand}" Content="导出Excel"   
+                HorizontalAlignment="Center"  MinWidth="85" Name="btnExcel" VerticalAlignment="Center" 
+                Grid.Row="3" Grid.Column="1" Padding="4" Margin="105,9,105,4" Height="25"/>-->
+            <!--<Button.CommandParameter>
+                <leaderbehavior:MultiDelegateObjects>
+                    <leaderbehavior:DelegateObject Key="kDateBegin" Value="{Binding ElementName=dateBegin}" />
+                    <leaderbehavior:DelegateObject Key="kTimeBegin" Value="{Binding ElementName=timeBegin}" />
+                    <leaderbehavior:DelegateObject Key="kDateEnd" Value="{Binding ElementName=dateEnd}" />
+                    <leaderbehavior:DelegateObject Key="kTimeEnd" Value="{Binding ElementName=timeEnd}" />
+                    <leaderbehavior:DelegateObject Key="kListBoxPrincipal" Value="{Binding ElementName=listBoxPrincipal}" />
+                    <leaderbehavior:DelegateObject Key="kListBoxTechnical" Value="{Binding ElementName=listBoxTechnical}" />
+                    <leaderbehavior:DelegateObject Key="kListBoxWorkType" Value="{Binding ElementName=listBoxWorkType}" />
+                    <leaderbehavior:DelegateObject Key="kComboBoxMine" Value="{Binding ElementName=comboBoxMine}" />
+                    <leaderbehavior:DelegateObject Key="kTxtBoxWorkSn" Value="{Binding ElementName=txtBoxWorkSn}" />
+                    <leaderbehavior:DelegateObject Key="kTxtBoxName" Value="{Binding ElementName=txtBoxName}" />
+            </leaderbehavior:MultiDelegateObjects>
+            </Button.CommandParameter>-->
+        <!--</Button>-->
+
+    </Grid>
+</navigation:Page>

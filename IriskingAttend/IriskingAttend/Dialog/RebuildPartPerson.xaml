@@ -1,0 +1,63 @@
+﻿<controls:ChildWindow x:Class="IriskingAttend.Dialog.RebuildPartPerson"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="672" Height="350" 
+                      xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:Primitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Data"
+          
+          xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+           Title="重构指定人员考勤数据" 
+           >
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="0.5*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="取消" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Center" Margin="0" Grid.Row="2" Grid.Column="1" />
+        <Button x:Name="OKButton" Content="重构" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Center" Margin="0" Grid.Row="2" Grid.Column="0" />
+        <StackPanel Margin="10,10,0,0" Orientation="Horizontal" Grid.ColumnSpan="2">
+            <sdk:Label Content="选择重构起始时间：" Height="23" HorizontalAlignment="Stretch" Margin="2" Padding="2" />
+            <controls:DatePicker Height="23" Margin="2" Name="dateBegin" Padding="2" VerticalAlignment="Center" />
+            <toolkit:TimePicker Culture="zh-CN" Height="23" Margin="2" MinWidth="0" Name="timeBegin" Padding="2" VerticalAlignment="Center">
+                <toolkit:TimePicker.Format>
+                    <toolkit:CustomTimeFormat Format="HH:mm:ss" />
+                </toolkit:TimePicker.Format>
+            </toolkit:TimePicker>
+        </StackPanel>
+        <sdk:DataGrid   ItemsSource="{Binding DepartInfos}"  
+                      AutoGenerateColumns="False" Name="dataGrid1" Background="#FFF2F2F2" Margin="1,0" 
+                      HorizontalContentAlignment="Center" VerticalContentAlignment="Center"   
+                      ColumnWidth="Auto" Grid.Row="1" Grid.ColumnSpan="2">
+            <sdk:DataGrid.Columns >
+                <sdk:DataGridCheckBoxColumn Header="全选" CanUserReorder="False" CanUserResize="True" CanUserSort="False" Width="70" Binding="{Binding isSelected, Mode=TwoWay}">
+                    <sdk:DataGridCheckBoxColumn.HeaderStyle>
+                        <Style TargetType="Primitives:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <CheckBox Content="全选" Name="chkSelectAll" >
+                                                <!--Click="chkSelectAll_Click"-->
+                                            </CheckBox>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridCheckBoxColumn.HeaderStyle>
+                </sdk:DataGridCheckBoxColumn>
+                <sdk:DataGridTextColumn Header="序号" Binding="{Binding index}" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Header="姓名" Binding="{Binding depart_sn}" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Header="工号" Binding="{Binding depart_name}" IsReadOnly="True"  />
+                <sdk:DataGridTextColumn Header="部门" Binding="{Binding parent_depart_name}" IsReadOnly="True"  />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+    </Grid>
+</controls:ChildWindow>

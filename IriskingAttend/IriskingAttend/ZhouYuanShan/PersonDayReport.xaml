@@ -1,0 +1,47 @@
+﻿<navigation:Page x:Class="IriskingAttend.ZhouYuanShan.PersonDayReport" 
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="800" d:DesignHeight="480"
+           xmlns:local="clr-namespace:IriskingAttend.ZhouYuanShan"
+           Title="周源山矿当日考勤报表" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <UserControl.Resources>
+        <local:MinuteToHourConverter x:Key="MinuteToHourConverter"/>        
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="#FFDBDBDB">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text ="周源山矿当日考勤报表(" FontSize="18"></TextBlock>
+            <TextBlock Name="txtDateDuration" FontSize="18"></TextBlock>
+            <TextBlock Text=")" FontSize="18"></TextBlock>
+        </StackPanel>
+        <sdk:DataGrid Style="{StaticResource DataGridStyle}" Name="dgDayPersonAttend" Margin="2" Grid.Row="1" CanUserSortColumns="False" AutoGenerateColumns="False" MinHeight="100" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding AttendDay,Mode=TwoWay}" Header="日期" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding DepartName, Mode=TwoWay}" Header="部门名称" Width="1*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding WorkSn, Mode=TwoWay}" Header="人员编码" Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding PersonName, Mode=TwoWay}" Header="姓  名"  Width="1*" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding Principal, Mode=TwoWay}" Header="职  位" Width="1*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding InWellTime, Mode=TwoWay}" Header="入井时间" Width="2*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding OutWellTime,Mode=TwoWay}" Header="升井时间" Width="2*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding WorkTime, Converter={StaticResource MinuteToHourConverter}, Mode=TwoWay}" Header="工  时" Width="1*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding WorkCnt, Mode=TwoWay}" Header="记  工" Width="1*" IsReadOnly="True" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="2" HorizontalAlignment="Right">
+            <Button Name="btnExportExcel"   FontSize="12" Click="btnExportExcel_Click" Margin="10,0" Padding="2" MinWidth="80" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/ExportExcel.png" Width="20"/>
+                    <TextBlock FontSize="12" Text="导出Excel" Margin="0,2" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Grid>
+</navigation:Page>

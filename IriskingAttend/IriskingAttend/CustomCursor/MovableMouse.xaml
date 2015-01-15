@@ -1,0 +1,41 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d" Width="80"
+	x:Class="CustomCursor.MovableMouse">
+    <UserControl.Resources>
+        <Storyboard x:Name="storyboard">
+            <!--x坐标动画-->
+            <DoubleAnimationUsingKeyFrames BeginTime="0" Storyboard.TargetName="trans" Storyboard.TargetProperty="X">
+                <!--多键补间-->
+                <SplineDoubleKeyFrame Value="500" KeyTime="00:00:0.5"
+                  KeySpline="0.5,1.0,0.9,1.0" />
+            </DoubleAnimationUsingKeyFrames>
+            <!--y坐标动画-->
+            <DoubleAnimationUsingKeyFrames BeginTime="0" Storyboard.TargetName="trans" Storyboard.TargetProperty="Y">
+                <!--多键补间-->
+                <SplineDoubleKeyFrame Value="100" KeyTime="00:00:0.5"
+                  KeySpline="0.8,1.0,1.0,0.94" />
+            </DoubleAnimationUsingKeyFrames>
+            <!--透明度动画-->
+            <DoubleAnimationUsingKeyFrames BeginTime="0" Storyboard.TargetName="image" Storyboard.TargetProperty="Opacity">
+                <!--多键补间-->
+                <SplineDoubleKeyFrame Value="0.2" KeyTime="00:00:0.5"
+                  KeySpline="0.9,0.2,1.0,0.4" />
+            </DoubleAnimationUsingKeyFrames>
+            
+        </Storyboard>
+    </UserControl.Resources>
+
+
+    <Grid x:Name="LayoutRoot" Opacity="1">
+        <Grid.RenderTransform>
+            <TranslateTransform x:Name="trans" X="0" Y="0"/>
+        </Grid.RenderTransform>
+       
+        <Image x:Name="image" Opacity="1"  Source="/IriskingAttend;component/Images/DragPersons.png" Stretch="Uniform" OpacityMask="{x:Null}" Margin="0,0,0,0"></Image>
+        
+    </Grid>
+</UserControl>

@@ -1,0 +1,5 @@
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\DBInstaller\bin\Debug\DBInstaller.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\DBInstaller\bin\Debug\DBInstaller.pdb
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\DBInstaller\obj\Debug\ResolveAssemblyReference.cache
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\DBInstaller\obj\Debug\DBInstaller.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\DBInstaller\obj\Debug\DBInstaller.pdb

@@ -1,0 +1,95 @@
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\opt3.ico
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\IriskingAttend.Web.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\IriskingAttend.Web.pdb
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\Cellbi.SvZLib.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\DataBaseOperate.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\IkReportWCFRia.Web.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\Mono.Security.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\Npgsql.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\ServerCommunicationLib.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\System.ComponentModel.DataAnnotations.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\System.Runtime.Serialization.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\System.ServiceModel.DomainServices.Hosting.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\System.ServiceModel.DomainServices.Hosting.OData.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\System.ServiceModel.DomainServices.Server.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\IkReportBase.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\System.ServiceModel.DomainServices.Hosting.xml
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\System.ServiceModel.DomainServices.Hosting.OData.xml
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\System.ServiceModel.DomainServices.Server.xml
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\de\System.ServiceModel.DomainServices.Hosting.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\es\System.ServiceModel.DomainServices.Hosting.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\fr\System.ServiceModel.DomainServices.Hosting.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\it\System.ServiceModel.DomainServices.Hosting.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\ja\System.ServiceModel.DomainServices.Hosting.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\ko\System.ServiceModel.DomainServices.Hosting.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\ru\System.ServiceModel.DomainServices.Hosting.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Hosting.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Hosting.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\de\System.ServiceModel.DomainServices.Hosting.OData.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\es\System.ServiceModel.DomainServices.Hosting.OData.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\fr\System.ServiceModel.DomainServices.Hosting.OData.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\it\System.ServiceModel.DomainServices.Hosting.OData.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\ja\System.ServiceModel.DomainServices.Hosting.OData.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\ko\System.ServiceModel.DomainServices.Hosting.OData.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\ru\System.ServiceModel.DomainServices.Hosting.OData.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Hosting.OData.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Hosting.OData.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\de\System.ServiceModel.DomainServices.Server.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\es\System.ServiceModel.DomainServices.Server.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\fr\System.ServiceModel.DomainServices.Server.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\it\System.ServiceModel.DomainServices.Server.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\ja\System.ServiceModel.DomainServices.Server.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\ko\System.ServiceModel.DomainServices.Server.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\ru\System.ServiceModel.DomainServices.Server.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Server.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Server.resources.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\obj\Debug\ResolveAssemblyReference.cache
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\obj\Debug\IriskingAttend.Web.dll
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\IriskingAttend.Web\obj\Debug\IriskingAttend.Web.pdb
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\opt3.ico
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\IriskingAttend.Web.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\IriskingAttend.Web.pdb
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\Cellbi.SvZLib.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\DataBaseOperate.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\IkReportWCFRia.Web.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\Mono.Security.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\Npgsql.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\ServerCommunicationLib.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\System.ComponentModel.DataAnnotations.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\System.Runtime.Serialization.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\System.ServiceModel.DomainServices.Hosting.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\System.ServiceModel.DomainServices.Hosting.OData.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\System.ServiceModel.DomainServices.Server.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\IkReportBase.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\System.ServiceModel.DomainServices.Hosting.xml
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\System.ServiceModel.DomainServices.Hosting.OData.xml
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\System.ServiceModel.DomainServices.Server.xml
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\de\System.ServiceModel.DomainServices.Hosting.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\es\System.ServiceModel.DomainServices.Hosting.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\fr\System.ServiceModel.DomainServices.Hosting.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\it\System.ServiceModel.DomainServices.Hosting.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\ja\System.ServiceModel.DomainServices.Hosting.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\ko\System.ServiceModel.DomainServices.Hosting.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\ru\System.ServiceModel.DomainServices.Hosting.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Hosting.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Hosting.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\de\System.ServiceModel.DomainServices.Hosting.OData.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\es\System.ServiceModel.DomainServices.Hosting.OData.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\fr\System.ServiceModel.DomainServices.Hosting.OData.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\it\System.ServiceModel.DomainServices.Hosting.OData.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\ja\System.ServiceModel.DomainServices.Hosting.OData.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\ko\System.ServiceModel.DomainServices.Hosting.OData.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\ru\System.ServiceModel.DomainServices.Hosting.OData.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Hosting.OData.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Hosting.OData.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\de\System.ServiceModel.DomainServices.Server.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\es\System.ServiceModel.DomainServices.Server.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\fr\System.ServiceModel.DomainServices.Server.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\it\System.ServiceModel.DomainServices.Server.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\ja\System.ServiceModel.DomainServices.Server.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\ko\System.ServiceModel.DomainServices.Server.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\ru\System.ServiceModel.DomainServices.Server.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\zh-Hans\System.ServiceModel.DomainServices.Server.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\bin\zh-Hant\System.ServiceModel.DomainServices.Server.resources.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\obj\Debug\IriskingAttend.Web.dll
+F:\YangMeiKaoQin打包\IriskingAttend\IriskingAttend.Web\obj\Debug\IriskingAttend.Web.pdb

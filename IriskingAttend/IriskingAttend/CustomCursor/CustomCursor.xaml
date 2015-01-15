@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="CursorTest.CustomCursor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+   >
+
+    <Grid>
+        <Image Name="CustomCursorImg"  Source="/IriskingAttend;component/Images/DragPersons.png" Width="80" Height="80" Margin="-9,-7,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            
+        </Image>
+        
+        
+    </Grid>
+</UserControl>

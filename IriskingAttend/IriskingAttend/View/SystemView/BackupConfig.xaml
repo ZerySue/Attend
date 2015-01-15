@@ -1,0 +1,43 @@
+﻿<navigation:Page x:Class="IriskingAttend.View.SystemView.BackupConfig" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+           Width="800" Height="420"            
+           Title="数据库手动备份" HorizontalAlignment="Left" VerticalAlignment="Top">
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="2.9*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <sdk:Label  Grid.Column="0" Grid.Row="1" Content="考勤库备份输出地址" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,20,10,15" FontSize="12" />
+        <TextBox Name="txtMannualBackupIrisApp" Grid.Column="1" Grid.Row="1" Text="{Binding BackupPathIrisApp, Mode=TwoWay}" HorizontalAlignment="Center" Margin="0,20,0,15" MinWidth="260" Height="23" />
+        <sdk:Label Name="labIrisApp" Grid.Row="1" Grid.Column="2" FontSize="12" Foreground="#FFF80000" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,20,0,15" Height="42"  />
+        <Button Name="btnSubmitIrisApp" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"  HorizontalAlignment="Left" Margin="230,0,0,0" FontSize="12" Height="23" Width="auto" Command="{Binding ManualBackupIrisAppCommand}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/IriskingAttend;component/images/backupApp.png" Width="20"/>
+                <TextBlock FontSize="12" Text="开始考勤库备份" Margin="0,2" />
+            </StackPanel>
+        </Button>
+
+        <sdk:Label  Grid.Column="0" Grid.Row="3" Content="虹膜库备份输出地址" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,20,10,15" FontSize="12" />
+        <TextBox Name="txtMannualBackupIrisData" Grid.Column="1" Grid.Row="3" Text="{Binding BackupPathIrisData, Mode=TwoWay}" HorizontalAlignment="Center" Margin="0,20,0,15" MinWidth="260" Height="23" />
+        <sdk:Label Name="labIrisData" Grid.Row="3" Grid.Column="2" FontSize="12" Foreground="#FFF80000" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,20,0,15" Height="42"  />
+        <Button Name="btnSubmitIrisData" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3"  HorizontalAlignment="Left" Margin="230,0,0,0" FontSize="12" Height="23" Width="auto" Command="{Binding ManualBackupIrisDataCommand}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/IriskingAttend;component/images/backupData.png" Width="20"/>
+                <TextBlock FontSize="12" Text="开始虹膜库备份" Margin="0,2" />
+            </StackPanel> 
+        </Button>
+    </Grid>   
+</navigation:Page>

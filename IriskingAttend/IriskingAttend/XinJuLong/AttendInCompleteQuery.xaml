@@ -1,0 +1,58 @@
+﻿<navigation:Page x:Class="IriskingAttend.XinJuLong.AttendInCompleteQuery" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="800" d:DesignHeight="480" 
+           Title="不完整考勤查询" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot" Background="#FFDBDBDB">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+        <Grid VerticalAlignment="Center" Grid.Row="0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <sdk:Label Content="开始时间" FontSize="12" />
+                <sdk:DatePicker FontSize="12" Height="23" Name="dtpBegin" />
+                <sdk:Label Content="*" Foreground="#FFF50909" />
+                <sdk:Label Content="~" FontSize="12" />
+                <sdk:Label Content="截止时间" FontSize="12" />
+                <sdk:DatePicker FontSize="12" Height="23" Name="dtpEnd" />
+                <sdk:Label Content="部门" FontSize="12" Margin="22,2,2,2" />
+                <TextBox Margin="2" Name="txtDepart" FontSize="12" Height="23" MinWidth="80" MaxWidth="105" IsEnabled="True" IsReadOnly="True" />
+                <Button Name="btnSelectDepart" Height="23" Width="auto" Content="选取" FontSize="12" Margin="2,0,5,0" Click="btnSelectDepart_Click" />
+                <sdk:Label Content="姓名" HorizontalContentAlignment="Right" Name="lblPersonName" Margin="5,0" />
+                <TextBox Name="txtPersonName" Padding="1" Text="" MinWidth="80" MaxWidth="105" />
+                <sdk:Label Content="工号" Name="lblWorkSn" Padding="1,0,0,0" Margin="2,0" />
+                <TextBox Name="txtWorkSn" Padding="2" Text="" Margin="1,0,0,0" MinWidth="80" MaxWidth="105" />               
+            </StackPanel>
+            <Button Name="btnQuery" Height="23" Width="75" Margin="2" FontSize="12" Click="btnQuery_Click" HorizontalAlignment="Right">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/binoculars.png" />
+                    <TextBlock FontSize="12" Text="查  询" />
+                </StackPanel>
+            </Button>
+        </Grid>
+        <sdk:DataGrid Style="{StaticResource DataGridStyle}" AutoGenerateColumns="False" Grid.Row="1" Name="dgInCompleteAttend"
+                      CanUserSortColumns="False" CanUserReorderColumns="False">
+             <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Index,Mode=TwoWay}" Header="序 号"  IsReadOnly="True" MinWidth="60" Width="1*"/>
+                <sdk:DataGridTextColumn Binding="{Binding DepartName, Mode=TwoWay}" Header="部门" IsReadOnly="True" MinWidth="100" Width="2*"/>
+                <sdk:DataGridTextColumn Binding="{Binding PersonName, Mode=TwoWay}" Header="姓名" IsReadOnly="True" MinWidth="60" Width="1*"/>
+                <sdk:DataGridTextColumn Binding="{Binding WorkSn, Mode=TwoWay}" Header="工号" IsReadOnly="True" MinWidth="60" Width="1*"/>
+                <sdk:DataGridTextColumn Binding="{Binding InCompleteCollect, Mode=TwoWay}" Header="总数" IsReadOnly="True" MinWidth="60" Width="1*"/>                
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="2" HorizontalAlignment="Center">            
+            <Button Name="btnExportExcel"   FontSize="12"  Margin="10,0,2,0" Padding="2" MinWidth="80" Click="btnExportExcel_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/ExportExcel.png" Width="20"/>
+                    <TextBlock FontSize="12" Text="导出Excel" Margin="0,2" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Grid>
+</navigation:Page>

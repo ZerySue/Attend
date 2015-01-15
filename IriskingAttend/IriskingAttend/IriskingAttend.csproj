@@ -1,0 +1,1356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E38FFAEC-08E8-4C53-B8E2-13C394720130}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IriskingAttend</RootNamespace>
+    <AssemblyName>IriskingAttend</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>zh-Hans</SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>IriskingAttend.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>IriskingAttend.App</SilverlightAppEntry>
+    <TestPageFileName>IriskingAttendTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>..\IriskingAttend.Web\IriskingAttend.Web.csproj</LinkedServerProject>
+    <TargetFrameworkProfile />
+    <InBrowserSettingsFile>Properties\InBrowserSettings.xml</InBrowserSettingsFile>
+    <RequireInBrowserElevation>true</RequireInBrowserElevation>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseNewAttend|AnyCPU'">
+    <OutputPath>bin\ReleaseNewAttend\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>Bin\Release\IriskingAttend.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <NoConfig>true</NoConfig>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AsyncControl">
+      <HintPath>refDll\AsyncControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Cellbi.SvZLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>refDll\Cellbi.SvZLib.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras.SL4">
+      <HintPath>refDll\GalaSoft.MvvmLight.Extras.SL4.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.SL4, Version=4.0.23.35590, Culture=neutral, PublicKeyToken=cd39e69f7fb3ebff, processorArchitecture=MSIL">
+      <HintPath>refDll\GalaSoft.MvvmLight.SL4.dll</HintPath>
+    </Reference>
+    <Reference Include="IkReportWCFRia, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>refDll\IkReportWCFRia.dll</HintPath>
+    </Reference>
+    <Reference Include="IriskingAttendBase">
+      <HintPath>refDll\IriskingAttendBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Lite.ExcelLibrary">
+      <HintPath>refDll\Lite.ExcelLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Lite.Library">
+      <HintPath>refDll\Lite.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism">
+      <HintPath>refDll\Prism\Microsoft.Practices.Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity">
+      <HintPath>refDll\Prism\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.MefExtensions">
+      <HintPath>refDll\Prism\Microsoft.Practices.Prism.MefExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.UnityExtensions">
+      <HintPath>refDll\Prism\Microsoft.Practices.Prism.UnityExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>refDll\Prism\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Silverlight">
+      <HintPath>refDll\Prism\Microsoft.Practices.Unity.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="ReportTemplate">
+      <HintPath>refDll\ReportTemplate.dll</HintPath>
+    </Reference>
+    <Reference Include="Silverlight.OutlookBar">
+      <HintPath>refDll\Silverlight.OutlookBar.dll</HintPath>
+    </Reference>
+    <Reference Include="SilverlightReport">
+      <HintPath>refDll\SilverlightReport.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=5.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.DomainServices.Client, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.DomainServices.Client.Web, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.Web.Extensions, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.ServiceModel.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Data.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.Data.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Input.Toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>refDll\SilverlightToolkit\System.Windows.Controls.Input.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Navigation, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>refDll\SilverlightToolkit\System.Windows.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Serialization, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Xml.Serialization.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationType\AbstractApp.cs" />
+    <Compile Include="ApplicationType\AppTypePublic.cs" />
+    <Compile Include="ApplicationType\ZhongKeHongBaApp.cs" />
+    <Compile Include="ApplicationType\WuHuShanApp.cs" />
+    <Compile Include="ApplicationType\StandardNotMineApp.cs" />
+    <Compile Include="ApplicationType\StandardMineApp.cs" />
+    <Compile Include="ApplicationType\ShenShuoRailwayApp.cs" />
+    <Compile Include="ApplicationType\ZhouYuanShanApp.cs" />
+    <Compile Include="ApplicationType\XinJuLongApp.cs" />
+    <Compile Include="ApplicationType\XiGouYiKuangApp.cs" />
+    <Compile Include="ApplicationType\XiBeiDianLanApp.cs" />
+    <Compile Include="ApplicationType\GuoDianApp.cs" />
+    <Compile Include="ApplicationType\HuFengApp.cs" />
+    <Compile Include="ApplicationType\LinZhouZhuDuanApp.cs" />
+    <Compile Include="ApplicationType\LiuHuangGouApp.cs" />
+    <Compile Include="BehaviorSelf\ArgumentExceptionGuard.cs" />
+    <Compile Include="BehaviorSelf\BackUpDatabase.cs" />
+    <Compile Include="BehaviorSelf\BloodConvertor.cs" />
+    <Compile Include="BehaviorSelf\SLCookieOperate.cs" />
+    <Compile Include="BehaviorSelf\TreeNode.cs" />
+    <Compile Include="BehaviorSelf\WorkCntData.cs" />
+    <Compile Include="BehaviorSelf\CommunityFun.cs" />
+    <Compile Include="BehaviorSelf\DelegateObject.cs" />
+    <Compile Include="BehaviorSelf\EventInformation.cs" />
+    <Compile Include="BehaviorSelf\MultiDelegateObjects.cs" />
+    <Compile Include="BehaviorSelf\OptionMode.cs" />
+    <Compile Include="BehaviorSelf\Version.cs" />
+    <Compile Include="CustomCursor\CursorEx.cs" />
+    <Compile Include="CustomCursor\DragState.cs" />
+    <Compile Include="CustomCursor\MovableMouse.xaml.cs">
+      <DependentUpon>MovableMouse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUI\DropDownCheckList.xaml.cs">
+      <DependentUpon>DropDownCheckList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUI\TextComboBox.xaml.cs">
+      <DependentUpon>TextComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\AboutSystem.xaml.cs">
+      <DependentUpon>AboutSystem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\AddAttendLeaveDialog.xaml.cs">
+      <DependentUpon>AddAttendLeaveDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\AddRecog.xaml.cs">
+      <DependentUpon>AddRecog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\AttendRecordDetail.xaml.cs">
+      <DependentUpon>AttendRecordDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ContinueAddAttendLeaveDialog.xaml.cs">
+      <DependentUpon>ContinueAddAttendLeaveDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\LeaveTypeManage.xaml.cs">
+      <DependentUpon>LeaveTypeManage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\OverInWellDialog.xaml.cs">
+      <DependentUpon>OverInWellDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BehaviorSelf\PublicMethods.cs" />
+    <Compile Include="Dialog\AttendRecordSignDetail.xaml.cs">
+      <DependentUpon>AttendRecordSignDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GuoDian\VisibilityConverterGuoDian.cs" />
+    <Compile Include="GuoDian\TextToVisibilityConverterGuoDian.cs" />
+    <Compile Include="HuFeng\HuFengDayAttend.xaml.cs">
+      <DependentUpon>HuFengDayAttend.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HuFeng\HuFengMonthAttend.xaml.cs">
+      <DependentUpon>HuFengMonthAttend.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HuFeng\SelectInfo.xaml.cs">
+      <DependentUpon>SelectInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HuFeng\VmHuFengAttend.cs" />
+    <Compile Include="HuFeng\VmSelectInfoFilter.cs" />
+    <Compile Include="LinZhouZhuDuan\ZhuDuanMonthAttend.xaml.cs">
+      <DependentUpon>ZhuDuanMonthAttend.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LinZhouZhuDuan\VmZhuDuanMonthAttend.cs" />
+    <Compile Include="LiuHuangGou\ReportLiuhuangGouAttendMonth.xaml.cs">
+      <DependentUpon>ReportLiuhuangGouAttendMonth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LiuHuangGou\VmLiuhuangGouAttendCollect.cs" />
+    <Compile Include="LiuHuangGou\MonthAttendUnderRule.xaml.cs">
+      <DependentUpon>MonthAttendUnderRule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LiuHuangGou\ReportLiuhuangGouYearAttend.xaml.cs">
+      <DependentUpon>ReportLiuhuangGouYearAttend.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewWuHuShan\AttendanceDetailList.xaml.cs">
+      <DependentUpon>AttendanceDetailList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewWuHuShan\AbnormalAttendInfo.xaml.cs">
+      <DependentUpon>AbnormalAttendInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewWuHuShan\AttendPersonList.xaml.cs">
+      <DependentUpon>AttendPersonList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewWuHuShan\ColorConverterWuHuShan.cs" />
+    <Compile Include="NewWuHuShan\IrisAttendQuery.xaml.cs">
+      <DependentUpon>IrisAttendQuery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewWuHuShan\IrisAttendQueryDetails.xaml.cs">
+      <DependentUpon>IrisAttendQueryDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewWuHuShan\SelectDepart.xaml.cs">
+      <DependentUpon>SelectDepart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewWuHuShan\SelectPrincipal.xaml.cs">
+      <DependentUpon>SelectPrincipal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewWuHuShan\SelectWorkType.xaml.cs">
+      <DependentUpon>SelectWorkType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewWuHuShan\ShowDetailsWuHuShan.xaml.cs">
+      <DependentUpon>ShowDetailsWuHuShan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewWuHuShan\VmAttendanceDetailList.cs" />
+    <Compile Include="NewWuHuShan\VmDepartAndPeopleMng_WuHuShan.cs" />
+    <Compile Include="NewWuHuShan\VmAbnormalAttendInfo.cs" />
+    <Compile Include="NewWuHuShan\VmXlsWuHuShan.cs" />
+    <Compile Include="NewWuHuShan\AttendStateConverterWuHuShan.cs" />
+    <Compile Include="NewWuHuShan\LocateRecordAdded.xaml.cs">
+      <DependentUpon>LocateRecordAdded.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewWuHuShan\VmLocateRecordAdded.cs" />
+    <Compile Include="GuoDian\GuoDianReport.xaml.cs">
+      <DependentUpon>GuoDianReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GuoDian\ColorConverterGuoDian.cs" />
+    <Compile Include="ShenShuoRailway\ColorConverter.cs" />
+    <Compile Include="ShenShuoRailway\SelectDepartPrivilege.xaml.cs">
+      <DependentUpon>SelectDepartPrivilege.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShenShuoRailway\SelectPerson.xaml.cs">
+      <DependentUpon>SelectPerson.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShenShuoRailway\ShenShuoAttendCollect.xaml.cs">
+      <DependentUpon>ShenShuoAttendCollect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShenShuoRailway\PersonAttendCollect.xaml.cs">
+      <DependentUpon>PersonAttendCollect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShenShuoRailway\VmPersonAttendCollect.cs" />
+    <Compile Include="ViewMine\AttendViewMine\AttendRecordMine.xaml.cs">
+      <DependentUpon>AttendRecordMine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMine\AttendViewMine\InWellPersonMine.xaml.cs">
+      <DependentUpon>InWellPersonMine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMine\AttendViewMine\RecogManageMine.xaml.cs">
+      <DependentUpon>RecogManageMine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMine\PeopleView\ChildWnd_BatchModify_Mine.xaml.cs">
+      <DependentUpon>ChildWnd_BatchModify_Mine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMine\PeopleView\ChildWnd_OperatePerson_Mine.xaml.cs">
+      <DependentUpon>ChildWnd_OperatePerson_Mine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMine\PeopleView\PageWorkTypeMng.xaml.cs">
+      <DependentUpon>PageWorkTypeMng.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMine\PeopleView\ChildWndOperateWorkType.xaml.cs">
+      <DependentUpon>ChildWndOperateWorkType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModelMine\PeopleViewModel\VmChildWndOperatePerson_Mine.cs" />
+    <Compile Include="ViewModelMine\PeopleViewModel\VmWorkTypeMng.cs" />
+    <Compile Include="ViewModel\AttendViewModel\VmFestivalItemMng.cs" />
+    <Compile Include="ViewModel\AttendViewModel\VmFestivalManage.cs" />
+    <Compile Include="ViewModel\AttendViewModel\VmDevType.cs" />
+    <Compile Include="ViewModel\AttendViewModel\VmLeaveTypeManagecs.cs" />
+    <Compile Include="ViewModel\PeopleViewModel\VmChildWndOperateClassOrderJiGongShi.cs" />
+    <Compile Include="ViewModel\PeopleViewModel\VmClassOrderMng.cs" />
+    <Compile Include="ViewModel\PeopleViewModel\VmDepartAndPeopleMng.cs" />
+    <Compile Include="ViewModel\PeopleViewModel\VmPrincipalMng.cs" />
+    <Compile Include="ViewModel\PeopleViewModel\VmPrincipalTypeMng.cs" />
+    <Compile Include="ViewModel\PeopleViewModel\VmChildWndOperateClassOrderSign.cs" />
+    <Compile Include="ViewModel\ReportViewModel\VmXlsFilter.cs" />
+    <Compile Include="NewWuHuShan\VmDepartAttendCollect.cs" />
+    <Compile Include="ViewModel\SystemViewModel\VmDBBackup.cs" />
+    <Compile Include="ViewModel\SystemViewModel\VmLoginPublic.cs" />
+    <Compile Include="ViewModel\PeopleViewModel\VmClassTypeAndClassOrderMng.cs" />
+    <Compile Include="ViewModel\SystemViewModel\VmLogin.cs" />
+    <Compile Include="ViewModel\SystemViewModel\VmPrivilege.cs" />
+    <Compile Include="ViewModel\SystemViewModel\VmOperatorLog.cs" />
+    <Compile Include="View\AttendView\AttendLeaveManage.xaml.cs">
+      <DependentUpon>AttendLeaveManage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AttendView\DlgFestivalItemMng.xaml.cs">
+      <DependentUpon>DlgFestivalItemMng.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AttendView\FestivalMng.xaml.cs">
+      <DependentUpon>FestivalMng.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainFrmView\FrameNavigate.xaml.cs">
+      <DependentUpon>FrameNavigate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\MsgBoxWindow.xaml.cs">
+      <DependentUpon>MsgBoxWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainFrmView\MainPagePrivilege.xaml.cs" />
+    <Compile Include="View\MainFrmView\MainPageZhouYuanShan.xaml.cs" />
+    <Compile Include="View\PeopleView\ChildWndOperatePrincipal.xaml.cs">
+      <DependentUpon>ChildWndOperatePrincipal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeopleView\ChildWndOperatePrincipalType.xaml.cs">
+      <DependentUpon>ChildWndOperatePrincipalType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeopleView\ChildWnd_OperateClassOrderJiGongShi.xaml.cs">
+      <DependentUpon>ChildWnd_OperateClassOrderJiGongShi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeopleView\ChildWnd_OperateClassOrderSign.xaml.cs">
+      <DependentUpon>ChildWnd_OperateClassOrderSign.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReportView\IkReport.xaml.cs">
+      <DependentUpon>IkReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SystemView\ListStackPanel.xaml.cs">
+      <DependentUpon>ListStackPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SystemView\ListStackPanelItem.xaml.cs">
+      <DependentUpon>ListStackPanelItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeopleView\PagePrincipalMng.xaml.cs">
+      <DependentUpon>PagePrincipalMng.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeopleView\PagePrincipalTypeMng.xaml.cs">
+      <DependentUpon>PagePrincipalTypeMng.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeopleView\Page_ClassTypeAndClassOrderMng.xaml.cs">
+      <DependentUpon>Page_ClassTypeAndClassOrderMng.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeopleView\PageDepartAndPeopleMng.xaml.cs">
+      <DependentUpon>PageDepartAndPeopleMng.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewWuHuShan\DepartAttendCollect.xaml.cs">
+      <DependentUpon>DepartAttendCollect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewWuHuShan\PageDepartAndPeopleMng_WuhuShan.xaml.cs">
+      <DependentUpon>PageDepartAndPeopleMng_WuhuShan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SystemView\DlgAddOperator.xaml.cs">
+      <DependentUpon>DlgAddOperator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\RecogInfo.xaml.cs">
+      <DependentUpon>RecogInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SystemView\DlgModifyOperatorInfo.xaml.cs">
+      <DependentUpon>DlgModifyOperatorInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SystemView\DlgModifyOperatorPwd.xaml.cs">
+      <DependentUpon>DlgModifyOperatorPwd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPage\PrintControl.cs" />
+    <Compile Include="ViewModel\AttendViewModel\RebuildRecog.cs" />
+    <Compile Include="ViewModel\PeopleViewModel\VmChildWndOperateClassOrder.cs" />
+    <Compile Include="ViewModel\PeopleViewModel\VmClassType.cs" />
+    <Compile Include="ViewModel\ReportViewModel\VmXlsOriginRecSumReport.cs" />
+    <Compile Include="ViewModel\Samples.cs" />
+    <Compile Include="ViewModel\SystemViewModel\VmOperatorManage.cs" />
+    <Compile Include="ViewModel\SystemViewModel\VmOperatorItemMng.cs" />
+    <Compile Include="ViewModel\SystemViewModel\VmSystemParameter.cs" />
+    <Compile Include="View\AttendView\RebuildAttend.xaml.cs">
+      <DependentUpon>RebuildAttend.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainFrmView\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainFrmView\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainFrmView\Welcome.xaml.cs">
+      <DependentUpon>Welcome.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\PeopleView\Page_classOrderMng.xaml.cs">
+      <DependentUpon>Page_classOrderMng.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeopleView\ChildWnd_OperateClassOrder.xaml.cs">
+      <DependentUpon>ChildWnd_OperateClassOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainFrmView\DlgModifyCurPwd.xaml.cs">
+      <DependentUpon>DlgModifyCurPwd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Other\ErrorHandle.cs" />
+    <Compile Include="Other\LogMef.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\AttendViewModel\VmAttend.cs" />
+    <Compile Include="ViewModel\AttendViewModel\VmAttendLeave.cs" />
+    <Compile Include="ViewModel\AttendViewModel\VmDepartment.cs" />
+    <Compile Include="ViewModel\AttendViewModel\VmLeaveType.cs" />
+    <Compile Include="ViewModel\AttendViewModel\VmRecogInfo.cs" />
+    <Compile Include="ViewModel\BaseViewModel\ServiceDomDbAcess.cs" />
+    <Compile Include="ViewModel\PeopleViewModel\VmChildDepartMng.cs" />
+    <Compile Include="ViewModel\PeopleViewModel\VmChildWndAddChildDepart.cs" />
+    <Compile Include="ViewModel\PeopleViewModel\VmChildWndOperateClassType.cs" />
+    <Compile Include="ViewModel\PeopleViewModel\VmChildWndOperateDepart.cs" />
+    <Compile Include="ViewModel\PeopleViewModel\VmClassTypeMng.cs" />
+    <Compile Include="ViewModel\PeopleViewModel\VmDepartMng.cs" />
+    <Compile Include="ViewModel\SafeManager\VmInWellPerson.cs" />
+    <Compile Include="ViewModel\BaseViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\BaseViewModel\BaseViewModelCollection.cs" />
+    <Compile Include="ViewModel\BaseViewModel\DataModel.cs" />
+    <Compile Include="ViewModel\SystemViewModel\VmDeviceManage.cs" />
+    <Compile Include="ViewModel\SystemViewModel\VmDeviceItemMng.cs" />
+    <Compile Include="ViewModel\SystemViewModel\VmModifyCurPwd.cs" />
+    <Compile Include="View\AttendView\AttendRecord.xaml.cs">
+      <DependentUpon>AttendRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AttendView\AttendLeave.xaml.cs">
+      <DependentUpon>AttendLeave.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AttendView\RecogManage.xaml.cs">
+      <DependentUpon>RecogManage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ErrorPage\ErrorWindow.xaml.cs">
+      <DependentUpon>ErrorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeopleView\ChildWnd_AddChildDepart.xaml.cs">
+      <DependentUpon>ChildWnd_AddChildDepart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeopleView\ChildWnd_BatchStopIris.xaml.cs">
+      <DependentUpon>ChildWnd_BatchStopIris.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeopleView\ChildWnd_BatchModify.xaml.cs">
+      <DependentUpon>ChildWnd_BatchModify.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeopleView\ChildWnd_OperateClassType.xaml.cs">
+      <DependentUpon>ChildWnd_OperateClassType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeopleView\ChildWnd_OperateDepart.xaml.cs">
+      <DependentUpon>ChildWnd_OperateDepart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeopleView\ChildWnd_OperatePerson.xaml.cs">
+      <DependentUpon>ChildWnd_OperatePerson.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeopleView\Page_childDepartMng.xaml.cs">
+      <DependentUpon>Page_childDepartMng.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeopleView\Page_classTypeMng.xaml.cs">
+      <DependentUpon>Page_classTypeMng.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeopleView\Page_departMng.xaml.cs">
+      <DependentUpon>Page_departMng.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AttendView\InWellPerson.xaml.cs">
+      <DependentUpon>InWellPerson.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SystemView\DlgPrivilege.xaml.cs">
+      <DependentUpon>DlgPrivilege.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SystemView\OperatorLog.xaml.cs">
+      <DependentUpon>OperatorLog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SystemView\OperatorManage.xaml.cs">
+      <DependentUpon>OperatorManage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SystemView\ParameterConfig.xaml.cs">
+      <DependentUpon>ParameterConfig.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SystemView\DeviceManage.xaml.cs">
+      <DependentUpon>DeviceManage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\PeopleViewModel\VmChildWndBatchStopIris.cs" />
+    <Compile Include="View\ReportView\Xls_OriginRecSumReport.xaml.cs">
+      <DependentUpon>Xls_OriginRecSumReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SystemView\BackupConfig.xaml.cs">
+      <DependentUpon>BackupConfig.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SystemView\DlgDeviceItemMng.xaml.cs">
+      <DependentUpon>DlgDeviceItemMng.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SystemView\DlgLogDetail.xaml.cs">
+      <DependentUpon>DlgLogDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XiBeiDianLan\DlgPersonAttendRecord.xaml.cs">
+      <DependentUpon>DlgPersonAttendRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XiBeiDianLan\VmXiBeiDianLanAttendCollect.cs" />
+    <Compile Include="XiBeiDianLan\XiBeiDianLanAttendCollect.xaml.cs">
+      <DependentUpon>XiBeiDianLanAttendCollect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XiGouYiKuang\XiGouInWellPersonDetail.xaml.cs">
+      <DependentUpon>XiGouInWellPersonDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XiGouYiKuang\VmXiGouInWellPerson.cs" />
+    <Compile Include="XiGouYiKuang\XiGouInWellPersonReport.xaml.cs">
+      <DependentUpon>XiGouInWellPersonReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XiGouYiKuang\XiGouDayAttend.xaml.cs">
+      <DependentUpon>XiGouDayAttend.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XiGouYiKuang\XiGouMonthAttend.xaml.cs">
+      <DependentUpon>XiGouMonthAttend.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XiGouYiKuang\LeaderScheduling.xaml.cs">
+      <DependentUpon>LeaderScheduling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XiGouYiKuang\VmXiGouAttendReport.cs" />
+    <Compile Include="XiGouYiKuang\VmXiGouYiKuang.cs" />
+    <Compile Include="XiGouYiKuang\XiGouLeaderAttendRec.xaml.cs">
+      <DependentUpon>XiGouLeaderAttendRec.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XiGouYiKuang\XiGouLeaderScheduleRec.xaml.cs">
+      <DependentUpon>XiGouLeaderScheduleRec.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XiGouYiKuang\XiGouPersonDetailAttendRec.xaml.cs">
+      <DependentUpon>XiGouPersonDetailAttendRec.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XiGouYiKuang\VmLeaderScheduling.cs" />
+    <Compile Include="XiGouYiKuang\XiGouPersonDetailScheduleRec.xaml.cs">
+      <DependentUpon>XiGouPersonDetailScheduleRec.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XinJuLong\AttendDepartInWellCollect.xaml.cs">
+      <DependentUpon>AttendDepartInWellCollect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XinJuLong\ReportXinJuLongPersonMonth.xaml.cs">
+      <DependentUpon>ReportXinJuLongPersonMonth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XinJuLong\DlgInCompleteRecord.xaml.cs">
+      <DependentUpon>DlgInCompleteRecord.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XinJuLong\VmDepartInWellCollect.cs" />
+    <Compile Include="XinJuLong\AttendPersonInWellCollect.xaml.cs">
+      <DependentUpon>AttendPersonInWellCollect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XinJuLong\VmPersonInWellCollect.cs" />
+    <Compile Include="XinJuLong\AttendInCompleteQuery.xaml.cs">
+      <DependentUpon>AttendInCompleteQuery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XinJuLong\VmInCompleteQuery.cs" />
+    <Compile Include="XinJuLong\VmReportXinJuLongPersonMonth.cs" />
+    <Compile Include="XinJuLong\DlgDepartInWellDetail.xaml.cs">
+      <DependentUpon>DlgDepartInWellDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhongKeHongBa\AddRecog.xaml.cs">
+      <DependentUpon>AddRecog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhongKeHongBa\AttendRecord.xaml.cs">
+      <DependentUpon>AttendRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhongKeHongBa\ColorConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ZhongKeHongBa\LeakageAttendanceQuery.xaml.cs">
+      <DependentUpon>LeakageAttendanceQuery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhongKeHongBa\OriginRecSumList.xaml.cs">
+      <DependentUpon>OriginRecSumList.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ZhongKeHongBa\PersonFullAttend.xaml.cs">
+      <DependentUpon>PersonFullAttend.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ZhongKeHongBa\PersonLatearrivalList.xaml.cs">
+      <DependentUpon>PersonLatearrivalList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhongKeHongBa\PersonLeaveList.xaml.cs">
+      <DependentUpon>PersonLeaveList.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ZhongKeHongBa\PersonMealSupplement.xaml.cs">
+      <DependentUpon>PersonMealSupplement.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ZhongKeHongBa\PersonTimeProblemList.xaml.cs">
+      <DependentUpon>PersonTimeProblemList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhongKeHongBa\SelectPersonName.xaml.cs">
+      <DependentUpon>SelectPersonName.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ZhongKeHongBa\VmLeakgeAttendancelist.cs" />
+    <Compile Include="ZhongKeHongBa\VmPersonFullAttendCollect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ZhongKeHongBa\VmPersonLatearrivalCollect.cs" />
+    <Compile Include="ZhongKeHongBa\VmPersonLeaveListCollect.cs" />
+    <Compile Include="ZhongKeHongBa\VmPersonMealSupplementCollect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ZhongKeHongBa\VmPersonOriginRecCollect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ZhongKeHongBa\VmPersonTimeProblemCollect.cs" />
+    <Compile Include="ZhouYuanShan\ChildWndReportQuery.xaml.cs">
+      <DependentUpon>ChildWndReportQuery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhouYuanShan\ChildWndSelectObj.xaml.cs">
+      <DependentUpon>ChildWndSelectObj.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhouYuanShan\LunchSubsidy\ChildWndUnCompletedLunch.xaml.cs">
+      <DependentUpon>ChildWndUnCompletedLunch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhouYuanShan\LunchSubsidy\CompletedDiffPersonUI.xaml.cs">
+      <DependentUpon>CompletedDiffPersonUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhouYuanShan\LunchSubsidy\SelectUncompletedPersonUI.cs" />
+    <Compile Include="ZhouYuanShan\LunchSubsidy\StringArrayConverter.cs" />
+    <Compile Include="ZhouYuanShan\LunchSubsidy\PageUnCompletedLunch.xaml.cs">
+      <DependentUpon>PageUnCompletedLunch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhouYuanShan\LunchSubsidy\VmUnCompletedLunch.cs" />
+    <Compile Include="ZhouYuanShan\LunchSubsidy\PageQueryLunchRecord.xaml.cs">
+      <DependentUpon>PageQueryLunchRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhouYuanShan\LunchSubsidy\VmQueryLunchRecord.cs" />
+    <Compile Include="ZhouYuanShan\LunchSubsidy\StringArrayConverterMultiRow.cs" />
+    <Compile Include="ZhouYuanShan\LunchSubsidy\ColorToBrushConverter.cs" />
+    <Compile Include="ZhouYuanShan\PersonDayReport.xaml.cs">
+      <DependentUpon>PersonDayReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhouYuanShan\ReportQueryCondition.cs" />
+    <Compile Include="ZhouYuanShan\SelectDepartUI.cs" />
+    <Compile Include="ZhouYuanShan\SelectObjUI.xaml.cs">
+      <DependentUpon>SelectObjUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhouYuanShan\SelectWorkTypeUI.cs" />
+    <Compile Include="ZhouYuanShan\SelectPersonUI.cs" />
+    <Compile Include="ZhouYuanShan\VmZhouYuanShanReport.cs" />
+    <Compile Include="ZhouYuanShan\DepartMonthReport.xaml.cs">
+      <DependentUpon>DepartMonthReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhouYuanShan\PersonAttendStatisticsReport.xaml.cs">
+      <DependentUpon>PersonAttendStatisticsReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhouYuanShan\DepartDetailReport.xaml.cs">
+      <DependentUpon>DepartDetailReport.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="CustomCursor\MovableMouse.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomUI\DropDownCheckList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUI\TextComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialog\AboutSystem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialog\AddAttendLeaveDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialog\AddRecog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialog\AttendRecordDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialog\ContinueAddAttendLeaveDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\LeaveTypeManage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialog\OverInWellDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\AttendRecordSignDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HuFeng\HuFengDayAttend.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HuFeng\HuFengMonthAttend.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HuFeng\SelectInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LinZhouZhuDuan\ZhuDuanMonthAttend.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LiuHuangGou\ReportLiuhuangGouAttendMonth.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LiuHuangGou\MonthAttendUnderRule.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LiuHuangGou\ReportLiuhuangGouYearAttend.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NewWuHuShan\AttendanceDetailList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewWuHuShan\AbnormalAttendInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NewWuHuShan\AttendPersonList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NewWuHuShan\IrisAttendQuery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewWuHuShan\IrisAttendQueryDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewWuHuShan\SelectDepart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewWuHuShan\SelectPrincipal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewWuHuShan\SelectWorkType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewWuHuShan\ShowDetailsWuHuShan.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NewWuHuShan\LocateRecordAdded.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GuoDian\GuoDianReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ShenShuoRailway\SelectDepartPrivilege.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ShenShuoRailway\SelectPerson.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ShenShuoRailway\ShenShuoAttendCollect.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ShenShuoRailway\PersonAttendCollect.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ViewMine\AttendViewMine\AttendRecordMine.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ViewMine\AttendViewMine\InWellPersonMine.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ViewMine\AttendViewMine\RecogManageMine.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ViewMine\PeopleView\ChildWnd_BatchModify_Mine.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ViewMine\PeopleView\ChildWnd_OperatePerson_Mine.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ViewMine\PeopleView\PageWorkTypeMng.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewMine\PeopleView\ChildWndOperateWorkType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AttendView\AttendLeaveManage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AttendView\DlgFestivalItemMng.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AttendView\FestivalMng.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MainFrmView\FrameNavigate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\MsgBoxWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PeopleView\ChildWndOperatePrincipal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PeopleView\ChildWndOperatePrincipalType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PeopleView\ChildWnd_OperateClassOrderJiGongShi.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PeopleView\ChildWnd_OperateClassOrderSign.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ReportView\IkReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SystemView\ListStackPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SystemView\ListStackPanelItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PeopleView\PagePrincipalMng.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PeopleView\PagePrincipalTypeMng.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PeopleView\Page_ClassTypeAndClassOrderMng.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PeopleView\PageDepartAndPeopleMng.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NewWuHuShan\DepartAttendCollect.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NewWuHuShan\PageDepartAndPeopleMng_WuhuShan.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SystemView\DlgAddOperator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\RecogInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SystemView\DlgModifyOperatorInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SystemView\DlgModifyOperatorPwd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AttendView\RebuildAttend.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MainFrmView\Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MainFrmView\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MainFrmView\Welcome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PeopleView\Page_classOrderMng.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PeopleView\ChildWnd_OperateClassOrder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MainFrmView\DlgModifyCurPwd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AttendView\AttendRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AttendView\AttendLeave.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AttendView\RecogManage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ErrorPage\ErrorWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PeopleView\ChildWnd_AddChildDepart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PeopleView\ChildWnd_BatchStopIris.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PeopleView\ChildWnd_BatchModify.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PeopleView\ChildWnd_OperateClassType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PeopleView\ChildWnd_OperateDepart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PeopleView\ChildWnd_OperatePerson.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PeopleView\Page_childDepartMng.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PeopleView\Page_classTypeMng.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PeopleView\Page_departMng.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AttendView\InWellPerson.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SystemView\DlgPrivilege.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SystemView\OperatorLog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SystemView\OperatorManage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SystemView\ParameterConfig.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SystemView\DeviceManage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ReportView\Xls_OriginRecSumReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SystemView\BackupConfig.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SystemView\DlgDeviceItemMng.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SystemView\DlgLogDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XiBeiDianLan\DlgPersonAttendRecord.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XiBeiDianLan\XiBeiDianLanAttendCollect.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XiGouYiKuang\XiGouInWellPersonDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XiGouYiKuang\XiGouInWellPersonReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XiGouYiKuang\XiGouDayAttend.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XiGouYiKuang\XiGouMonthAttend.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XiGouYiKuang\LeaderScheduling.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XiGouYiKuang\XiGouLeaderAttendRec.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XiGouYiKuang\XiGouLeaderScheduleRec.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XiGouYiKuang\XiGouPersonDetailAttendRec.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XiGouYiKuang\XiGouPersonDetailScheduleRec.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XinJuLong\AttendDepartInWellCollect.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XinJuLong\AttendPersonInWellCollect.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XinJuLong\AttendInCompleteQuery.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XinJuLong\ReportXinJuLongPersonMonth.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XinJuLong\DlgInCompleteRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XinJuLong\DlgDepartInWellDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ZhongKeHongBa\AddRecog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ZhongKeHongBa\AttendRecord.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ZhongKeHongBa\LeakageAttendanceQuery.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ZhongKeHongBa\OriginRecSumList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZhongKeHongBa\PersonFullAttend.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZhongKeHongBa\PersonLatearrivalList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ZhongKeHongBa\PersonLeaveList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZhongKeHongBa\PersonMealSupplement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZhongKeHongBa\PersonTimeProblemList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZhongKeHongBa\SelectPersonName.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZhouYuanShan\ChildWndReportQuery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZhouYuanShan\ChildWndSelectObj.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ZhouYuanShan\LunchSubsidy\ChildWndUnCompletedLunch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZhouYuanShan\LunchSubsidy\CompletedDiffPersonUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZhouYuanShan\LunchSubsidy\PageUnCompletedLunch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ZhouYuanShan\LunchSubsidy\PageQueryLunchRecord.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ZhouYuanShan\PersonDayReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZhouYuanShan\SelectObjUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZhouYuanShan\DepartMonthReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ZhouYuanShan\PersonAttendStatisticsReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ZhouYuanShan\DepartDetailReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Assets\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\DataSources\IriskingAttend.Web.DomainServiceIriskingAttend.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Add.png" />
+    <Resource Include="Images\Attend.png" />
+    <Resource Include="Images\background.png" />
+    <Resource Include="Images\BatchTransfer.png" />
+    <Resource Include="Images\binoculars.png" />
+    <Resource Include="Images\bullet-minus.png" />
+    <Resource Include="Images\bullet-plus.png" />
+    <Resource Include="Images\circulation.png" />
+    <Resource Include="Images\Del.png" />
+    <Resource Include="Images\Down.png" />
+    <Resource Include="Images\Error.png" />
+    <Resource Include="Images\ExportExcel.PNG" />
+    <Resource Include="Images\funImage.png" />
+    <Resource Include="Images\Home.png" />
+    <Resource Include="Images\Information.png" />
+    <Resource Include="Images\IrisK.png" />
+    <Resource Include="Images\IrisKing.png" />
+    <Resource Include="Images\LoginBackGround.png" />
+    <Resource Include="Images\loginUser.png" />
+    <Resource Include="Images\NoneImg.png" />
+    <Resource Include="Images\Persons.png" />
+    <Resource Include="Images\Printer.png" />
+    <Resource Include="Images\Question.png" />
+    <Resource Include="Images\ReBuild.png" />
+    <Resource Include="Images\save.png" />
+    <Resource Include="Images\SelectImg.png" />
+    <Resource Include="Images\StopIris.png" />
+    <Resource Include="Images\Strop.png" />
+    <Resource Include="Images\Succeed.png" />
+    <Resource Include="Images\System.png" />
+    <Resource Include="Images\user.png" />
+    <Resource Include="Images\Warning.png" />
+    <Resource Include="Images\welcome.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\directly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\indirectly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DragPersons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DragDeparts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\directly_disable.png" />
+    <Resource Include="Images\generalDepart.png" />
+    <Resource Include="Images\indirectly_disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\goback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ParaSet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\backupApp.png" />
+    <Resource Include="Images\backupData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AboutSystem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NewWuHuShan\Images\wuhushanlog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\InBrowserSettings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\OutOfBrowserSettings.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

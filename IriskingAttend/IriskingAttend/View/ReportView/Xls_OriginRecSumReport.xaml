@@ -1,0 +1,117 @@
+﻿<navigation:Page x:Class="IriskingAttend.Xls_OriginRecSumReport" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="800" d:DesignHeight="480"
+           Title="原始记录汇总表" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot" Background="#FFDBDBDB">
+        <Grid.RowDefinitions> 
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+        <sdk:Label Content="查询时间" FontSize="12" Name="label1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  Margin="2" />
+        <sdk:DatePicker HorizontalAlignment="Stretch" Name="dateBegin" VerticalAlignment="Stretch" Margin="2" />
+            <sdk:Label Content="*" Foreground="#FFF50909" Name="lbMust" />
+        <sdk:Label Content="选择部门" FontSize="12" Name="label2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="2" />
+        <ComboBox HorizontalAlignment="Stretch" Name="listBoxDepart" VerticalAlignment="Stretch" Margin="2" MinWidth="80" Padding="2,2,15,2" />
+        <sdk:Label Content="选择班制" FontSize="12" Name="label3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="2" />
+        <ComboBox HorizontalAlignment="Stretch" Margin="2" Name="comboBoxClassTypeName" VerticalAlignment="Stretch" FontSize="12" Padding="2,2,15,2" MinWidth="60">  
+        </ComboBox>
+        <sdk:Label Content="人员姓名" FontSize="12" Name="label4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="2" />
+        <TextBox HorizontalAlignment="Stretch" Margin="2" Name="txtPersonName" VerticalAlignment="Stretch" FontSize="12" MinWidth="80" MaxWidth="105" />
+        <sdk:Label Content="人员工号" FontSize="12" Name="label5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="2" />
+        <TextBox HorizontalAlignment="Stretch" Margin="2" Name="txtWorkSn" VerticalAlignment="Stretch" FontSize="12" MinWidth="80" MaxWidth="105" />
+        <Button Click="btnQuery_Click" Height="25" Margin="10,0,0,0" MinWidth="85" Name="btnQuery" HorizontalAlignment="Right">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/IriskingAttend;component/images/binoculars.png" />
+                <TextBlock FontSize="12" Text="查  询" />
+            </StackPanel>
+        </Button>
+        </StackPanel>
+
+        <sdk:DataGrid Style="{StaticResource DataGridStyle}" Name="dgXlsAttend" Margin="2" Grid.Row="1" CanUserSortColumns="False" AutoGenerateColumns="False" MinHeight="100" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Index,Mode=TwoWay}" Header="序 号" MinWidth="50" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding WorkSn, Mode=TwoWay}" Header="工  号" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding PersonName, Mode=TwoWay}" Header="姓  名"  IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding DepartName, Mode=TwoWay}" Header="部门名称" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassTypeName, Mode=TwoWay}" Header="班  制" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="01" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="02" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="03" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="04" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="05" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="06" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="07" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="08" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="09" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="10" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="11" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="12" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="13" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="14" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="15" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="16" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="17" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="18" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="19" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="20" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="21" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="22" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="23" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="24" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="25" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="26" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="27" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="28" IsReadOnly="True" />
+                <sdk:DataGridTemplateColumn Header="29" Width="50">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock  TextAlignment="Center" VerticalAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn Header="30" Width="50">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock  TextAlignment="Center" VerticalAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn Header="31" Width="50">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock  TextAlignment="Center" VerticalAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <!--<sdk:DataGridTextColumn Binding="{Binding }" Header="29"  />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="30"  />
+                <sdk:DataGridTextColumn Binding="{Binding }" Header="31"  />-->
+                <sdk:DataGridTextColumn Binding="{Binding SumAttendTimes,Mode=TwoWay}" Header="出勤次数" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding SumWorktimeShow, Mode=TwoWay}" Header="总 工 时" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding AvgWorktimeShow, Mode=TwoWay}" Header="平均工时" IsReadOnly="True" />
+
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="2" HorizontalAlignment="Right">
+            <Button  Name="btnPrint"  Click="btnPrint_Click" FontSize="12" Margin="10,0" Padding="2" MinWidth="80" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/Printer.png" Width="20"/>
+                    <TextBlock FontSize="12" Text="打印预览" Margin="0,2" />
+                </StackPanel>
+            </Button>
+                <Button Name="btnExportExcel"   FontSize="12" Click="btnExportExcel_Click" Margin="10,0" Padding="2" MinWidth="80" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/ExportExcel.png" Width="20"/>
+                    <TextBlock FontSize="12" Text="导出Excel" Margin="0,2" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Grid>
+</navigation:Page>

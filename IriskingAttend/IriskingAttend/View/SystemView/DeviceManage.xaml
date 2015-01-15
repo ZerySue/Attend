@@ -1,0 +1,82 @@
+﻿<navigation:Page x:Class="IriskingAttend.View.SystemView.DeviceManage" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           d:DesignWidth="800" d:DesignHeight="405"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:Primitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Data"
+           xmlns:local="clr-namespace:IriskingAttend.View"
+           Title="设备管理" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+    <UserControl.Resources>
+        <local:MarkObject x:Key="MarkObject" />
+    </UserControl.Resources>
+    <Grid Style="{StaticResource GridStyle}">            
+    <Grid.RowDefinitions>    
+        <RowDefinition Height="10*" />
+        <RowDefinition Height="auto" />
+    </Grid.RowDefinitions>
+        <sdk:DataGrid Grid.Row="0" DataContext="{Binding}" SelectedItem="{Binding SelectDeviceInfoItem}" Name="dgDevice"
+            Style="{StaticResource DataGridStyle}" LoadingRow="dgDevice_LoadingRow" CanUserSortColumns="False" CanUserReorderColumns="False"
+            MouseLeftButtonDown="dgDevice_MouseLeftButtonDown" MouseMove="dgDevice_MouseMove" LayoutUpdated="dgDevice_LayoutUpdated">
+        <sdk:DataGrid.Columns >
+                <sdk:DataGridCheckBoxColumn Header="全选" IsReadOnly="True" CanUserReorder="False" CanUserResize="True" CanUserSort="False" Width="0.5*" MinWidth="70" Binding="{Binding isSelected, Mode=TwoWay}">
+                     <sdk:DataGridCheckBoxColumn.HeaderStyle>
+                    <Style TargetType="Primitives:DataGridColumnHeader">
+                        <Setter Property="ContentTemplate">
+                            <Setter.Value>
+                                <DataTemplate>
+                                    <StackPanel>
+                                            <CheckBox Content="全选" Name="chkSelectAll" IsChecked="{Binding Selected,Mode=TwoWay,Source={StaticResource MarkObject}}" Click="chkSelectAll_Click"/> 
+                                    </StackPanel>
+                                </DataTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </sdk:DataGridCheckBoxColumn.HeaderStyle>
+                </sdk:DataGridCheckBoxColumn>
+                <sdk:DataGridTextColumn Header="序号" Binding="{Binding }" IsReadOnly="True" Width="0.5*" MinWidth="60"/>  
+                <sdk:DataGridTextColumn Header="设备序列号" Binding="{Binding dev_sn}" IsReadOnly="True" Width="1*" MinWidth="120"/>
+                <sdk:DataGridTextColumn Header="所在位置" Binding="{Binding place}" IsReadOnly="True"  Width="1*" MinWidth="120"/>
+                <sdk:DataGridTextColumn Header="设备用途" Binding="{Binding dev_type_strings}" IsReadOnly="True"  Width="1*" MinWidth="80"/>
+                <!--<sdk:DataGridTemplateColumn Header="设备用途" IsReadOnly="True" Width="2*"  MinWidth="120">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <ListBox Background="#FFF2F2F2"  Name="lbDevType" Loaded="ListBox_Loaded" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>-->
+                <sdk:DataGridTemplateColumn Header="操作" IsReadOnly="True" Width="3*"  MinWidth="120">
+                <sdk:DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <HyperlinkButton Content=" [修改信息] " Margin="5"  Name="hbtnModifyDevice" Click="hbtnModifyDevice_Click" />
+                                <HyperlinkButton Content=" [删除] " Margin="5"  Name="hbtnDeleteDevice" Click="hbtnDeleteDevice_Click" />
+                        </StackPanel>
+                    </DataTemplate>
+                </sdk:DataGridTemplateColumn.CellTemplate>
+            </sdk:DataGridTemplateColumn>                     
+        </sdk:DataGrid.Columns>
+    </sdk:DataGrid>
+    <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+            <Button Name="btnBatchModifyDevice" IsEnabled="{Binding IsBatchDeleteEnabled}" HorizontalAlignment="Left" Width="125" Style="{StaticResource ButtonStyle}" Click="btnBatchModifyDevice_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/Images/BatchTransfer.png"/>
+                    <TextBlock FontSize="12" Text="批量修改设备用途" Margin="0,2,0,0"   />
+                </StackPanel>
+            </Button>
+            <Button Name="btnBatchDeleteDevice" IsEnabled="{Binding IsBatchDeleteEnabled}" HorizontalAlignment="Left"  Style="{StaticResource DelButtonStyle}" Click="btnBatchDeleteDevice_Click" />
+            <Button Name="btnAddDevice" HorizontalAlignment="Right"  Style="{StaticResource AddButtonStyle}" Click="btnAddDevice_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/IriskingAttend;component/images/Add.png"/>
+                <TextBlock FontSize="12" Text="添加设备" Margin="0,2,0,0" />
+            </StackPanel>
+        </Button>
+            <Button  Name="btnExportExcel" Click="btnExportExcel_Click" Style="{StaticResource ExportExcelButtonStyle}"/>
+    </StackPanel>
+</Grid>    
+</navigation:Page>

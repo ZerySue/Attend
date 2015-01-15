@@ -1,0 +1,214 @@
+﻿<navigation:Page xmlns:my="clr-namespace:IriskingAttend.CustomUI"  x:Class="IriskingAttend.ZhouYuanShan.LunchSubsidy.PageQueryLunchRecord" 
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:Primitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Data"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:local="clr-namespace:IriskingAttend.View"
+           xmlns:local1="clr-namespace:IriskingAttend.ZhouYuanShan.LunchSubsidy"
+           d:DesignWidth="1040" d:DesignHeight="480"
+           Title="" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+    <UserControl.Resources>
+        <local:MarkObject x:Key="MarkObjectPersonLunchRecord" />
+        <local:MarkObject x:Key="MarkObjectDepartLunchRecord" />
+        <local:MarkObject x:Key="MarkObjectClassOrderLunchRecord" />
+        <local1:StringArrayConverterMultiRow x:Key="StringArrayConverterMultiRow" />
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Style="{StaticResource GridStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="时间："  Margin="10,0,0,0" VerticalAlignment="Center"> </TextBlock>
+            <sdk:DatePicker Name="dateBegin" Height="23" Margin="5,0,0,0" 
+                            SelectedDate="{Binding BeginTime,Mode=TwoWay}"
+                            CalendarClosed="dateBegin_CalendarClosed" 
+                            DateValidationError="dateBegin_DateValidationError"/>
+            <TextBlock Text="~" VerticalAlignment="Center" Foreground="Red" FontSize="16" />
+            <sdk:DatePicker Name="dateEnd" Height="23" Margin="2,0,0,0" 
+                            SelectedDate="{Binding EndTime,Mode=TwoWay}"
+                            CalendarClosed="dateEnd_CalendarClosed" 
+                            DateValidationError="dateBegin_DateValidationError"/>
+            <TextBlock Text="选择班次：" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+            <my:TextComboBox Height="23" MaxWidth="225"  x:Name="textCmbClassOrder"  Margin="0" />
+            <HyperlinkButton Content="点此选择部门和人员" VerticalAlignment="Center" Margin="20,0,0,0" Command="{Binding SelectObjCmd}" />
+            <TextBox Height="23" Text="{Binding TextSelectedObj}" IsReadOnly="True"  Name="textSelectedObj"  MaxWidth="200" />
+            <Button Command="{Binding QueryCmd}"  
+                        Height="25" MinWidth="70" Name="btnQuery" Style="{StaticResource ButtonStyle}"
+                    HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="20,5,5,5" Width="70">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/binoculars.png" />
+                    <TextBlock Text="查  询"   Margin="0,2,0,0"/>
+                </StackPanel>
+            </Button>
+
+        </StackPanel>
+        <sdk:TabControl SelectedIndex="{Binding TabSelectedIndex,Mode=TwoWay}"  Grid.Row="1">
+            <sdk:TabItem Header="个人班中餐差异记录详情" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="372*" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <sdk:DataGrid  ItemsSource="{Binding LunchRecordInfoOnPerson}" SelectedItem="{Binding SelectedLunchRecordInfoOnPerson,Mode=TwoWay}" 
+                       CanUserSortColumns="False"
+                       Name="dgPersonLunchRecord" Style="{StaticResource DataGridStyle}"
+                       ColumnWidth="Auto" MouseLeftButtonDown="dgPersonLunchRecord_MouseLeftButtonDown"
+                       MouseMove="dataGrid_MouseMove" LoadingRow="dgPersonLunchRecord_LoadingRow" 
+                       LayoutUpdated="dataGrid_LayoutUpdated" Grid.RowSpan="1">
+                        <sdk:DataGrid.Columns >
+                            <sdk:DataGridCheckBoxColumn Visibility="Collapsed"  Header="全选" IsReadOnly="True"  CanUserReorder="False" CanUserResize="True" CanUserSort="False" MinWidth="70" Binding="{Binding isSelected, Mode=TwoWay}" Width="auto">
+                                <sdk:DataGridCheckBoxColumn.HeaderStyle>
+                                    <Style TargetType="Primitives:DataGridColumnHeader">
+                                        <Setter Property="ContentTemplate">
+                                            <Setter.Value>
+                                                <DataTemplate>
+                                                    <StackPanel>
+                                                        <!-- 如何在代码中控制该CheckBox的状态 -->
+                                                        <CheckBox Content="全选"  IsChecked="{Binding Selected,Mode=TwoWay,Source={StaticResource MarkObjectPersonLunchRecord}}" Click="chkSelectAllPersonLunchRecord_Click">
+                                                            <!--Command="{Binding SelectAllDepartCommand}" CommandParameter="{Binding ElementName=chkSelectAll}"-->
+                                                        </CheckBox>
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </sdk:DataGridCheckBoxColumn.HeaderStyle>
+                            </sdk:DataGridCheckBoxColumn>
+                            <sdk:DataGridTextColumn Header="序 号" Binding="{Binding }" IsReadOnly="True"  MinWidth="60" Width="*" />
+                            <sdk:DataGridTextColumn Header="工 号" Binding="{Binding work_sn}" IsReadOnly="True" MinWidth="70" Width="2*" />
+                            <sdk:DataGridTextColumn Header="人 员" Binding="{Binding name}" IsReadOnly="True" MinWidth="70" Width="2*" />
+                            <sdk:DataGridTextColumn Header="所属部门" Binding="{Binding depart_name}" IsReadOnly="True" MinWidth="70" Width="2*" />
+                            <sdk:DataGridTextColumn Header="上报部门" Binding="{Binding report_depart_name}" IsReadOnly="True" MinWidth="70" Width="2*" />
+                            <sdk:DataGridTextColumn Header="差异次数" Binding="{Binding diff_count}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                            <sdk:DataGridTextColumn Header="日 期" Binding="{Binding report_day,StringFormat=yyyy-MM-dd}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                            <sdk:DataGridTextColumn Header="班 次" Binding="{Binding attend_sign}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button  HorizontalAlignment="Right"  Style="{StaticResource ExportExcelButtonStyle}" Click="ExportExlPersonLunchRecord_Click" />
+                    </StackPanel>
+                </Grid>
+                
+            </sdk:TabItem>
+            <sdk:TabItem Header="班次班中餐记录统计" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="372*" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <sdk:DataGrid  ItemsSource="{Binding LunchRecordInfoOnClassOrder}" SelectedItem="{Binding SelectedLunchRecordInfoOnClassOrder,Mode=TwoWay}" 
+                       CanUserSortColumns="False"
+                       Name="dgClassOrderLunchRecord" Style="{StaticResource DataGridStyle}"
+                       ColumnWidth="Auto" MouseLeftButtonDown="dgClassOrderLunchRecord_MouseLeftButtonDown"
+                       MouseMove="dataGrid_MouseMove" LoadingRow="dgClassOrderLunchRecord_LoadingRow" 
+                       LayoutUpdated="dataGrid_LayoutUpdated" Grid.RowSpan="1">
+                        <sdk:DataGrid.Columns >
+                            <sdk:DataGridCheckBoxColumn Visibility="Collapsed" Header="全选" IsReadOnly="True"  CanUserReorder="False" CanUserResize="True" CanUserSort="False" MinWidth="70" Binding="{Binding isSelected, Mode=TwoWay}" Width="auto">
+                                <sdk:DataGridCheckBoxColumn.HeaderStyle>
+                                    <Style TargetType="Primitives:DataGridColumnHeader">
+                                        <Setter Property="ContentTemplate">
+                                            <Setter.Value>
+                                                <DataTemplate>
+                                                    <StackPanel>
+                                                        <!-- 如何在代码中控制该CheckBox的状态 -->
+                                                        <CheckBox Content="全选"  IsChecked="{Binding Selected,Mode=TwoWay,Source={StaticResource MarkObjectClassOrderLunchRecord}}" Click="chkSelectAllClassOrderLunchRecord_Click">
+                                                            <!--Command="{Binding SelectAllDepartCommand}" CommandParameter="{Binding ElementName=chkSelectAll}"-->
+                                                        </CheckBox>
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </sdk:DataGridCheckBoxColumn.HeaderStyle>
+                            </sdk:DataGridCheckBoxColumn>
+                            <sdk:DataGridTextColumn Header="序 号" Binding="{Binding }" IsReadOnly="True"  MinWidth="60" Width="*" />
+                            <sdk:DataGridTextColumn Header="班 次" Binding="{Binding attend_sign}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                            <sdk:DataGridTextColumn Header="部 门" Binding="{Binding depart_name}" IsReadOnly="True" MinWidth="70" Width="2*" />
+                            <sdk:DataGridTextColumn Header="考勤人数" Binding="{Binding attend_person_count}" IsReadOnly="True" MinWidth="70" Width="2*" />
+                            <sdk:DataGridTextColumn Header="日 期" Binding="{Binding attend_day,StringFormat=yyyy-MM-dd}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                            <sdk:DataGridTextColumn Header="上报人数" Binding="{Binding reported_count}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                            <sdk:DataGridTextColumn Header="差异人员" Binding="{Binding diff_person_names,Converter={StaticResource StringArrayConverterMultiRow}}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                            
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button  HorizontalAlignment="Right"  Style="{StaticResource ExportExcelButtonStyle}" Click="ExportExlClassOrderLunchRecord_Click" />
+                    </StackPanel>
+                </Grid>
+
+            </sdk:TabItem>
+            <sdk:TabItem Header="部门班中餐记录统计" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="372*" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <sdk:DataGrid  ItemsSource="{Binding LunchRecordInfoOnDepart}" SelectedItem="{Binding SelectedLunchRecordInfoOnDepart,Mode=TwoWay}" 
+                       CanUserSortColumns="False"
+                       Name="dgDepartLunchRecord" Style="{StaticResource DataGridStyle}"
+                       ColumnWidth="Auto" MouseLeftButtonDown="dgDepartLunchRecord_MouseLeftButtonDown"
+                       MouseMove="dataGrid_MouseMove" LoadingRow="dgDepartLunchRecord_LoadingRow" 
+                       LayoutUpdated="dataGrid_LayoutUpdated" Grid.RowSpan="1">
+                        <sdk:DataGrid.Columns >
+                            <sdk:DataGridCheckBoxColumn Visibility="Collapsed" Header="全选" IsReadOnly="True"  CanUserReorder="False" CanUserResize="True" CanUserSort="False" MinWidth="70" Binding="{Binding isSelected, Mode=TwoWay}" Width="auto">
+                                <sdk:DataGridCheckBoxColumn.HeaderStyle>
+                                    <Style TargetType="Primitives:DataGridColumnHeader">
+                                        <Setter Property="ContentTemplate">
+                                            <Setter.Value>
+                                                <DataTemplate>
+                                                    <StackPanel>
+                                                        <!-- 如何在代码中控制该CheckBox的状态 -->
+                                                        <CheckBox Content="全选"  IsChecked="{Binding Selected,Mode=TwoWay,Source={StaticResource MarkObjectDepartLunchRecord}}" Click="chkSelectAllDepartLunchRecord_Click">
+                                                            <!--Command="{Binding SelectAllDepartCommand}" CommandParameter="{Binding ElementName=chkSelectAll}"-->
+                                                        </CheckBox>
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </sdk:DataGridCheckBoxColumn.HeaderStyle>
+                            </sdk:DataGridCheckBoxColumn>
+                            <sdk:DataGridTextColumn Header="序 号" Binding="{Binding }" IsReadOnly="True"  MinWidth="60" Width="*" />
+                           
+                            <sdk:DataGridTextColumn Header="部 门" Binding="{Binding depart_name}" IsReadOnly="True" MinWidth="70" Width="2*" />
+                            <sdk:DataGridTextColumn Header="考勤人次" Binding="{Binding attend_person_count}" IsReadOnly="True" MinWidth="70" Width="2*" />
+
+                            <sdk:DataGridTextColumn Header="上报次数" Binding="{Binding reported_count}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                            <sdk:DataGridTextColumn Header="差异人员" Binding="{Binding diff_person_names,Converter={StaticResource StringArrayConverterMultiRow}}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                            <sdk:DataGridTextColumn Header="差异次数" Binding="{Binding diff_count_per_person,Converter={StaticResource StringArrayConverterMultiRow}}" IsReadOnly="True"  MinWidth="70" Width="2*" />
+                            
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button  HorizontalAlignment="Right"  Style="{StaticResource ExportExcelButtonStyle}" Click="ExportExlDepartLunchRecord_Click" />
+                    </StackPanel>
+                </Grid>
+
+            </sdk:TabItem>
+        </sdk:TabControl>
+       
+        <!--<StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button IsEnabled="{Binding IsBatchBtnEnable}" 
+                    Command ="{Binding BatchDeleteCommand}" HorizontalAlignment="Center" 
+                    Style="{StaticResource DelButtonStyle}" />
+            <Button Command="{Binding AddCommand}" HorizontalAlignment="Center" 
+                    Style="{StaticResource AddButtonStyle}" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/Add.png"/>
+                    <TextBlock FontSize="12" Text="添加工种" Margin="0,2,0,0" />
+                </StackPanel>
+            </Button>
+            <Button Name="ExportExl" HorizontalAlignment="Right"  Style="{StaticResource ExportExcelButtonStyle}" Click="ExportExl_Click" />
+        </StackPanel>-->
+
+    </Grid>
+</navigation:Page>

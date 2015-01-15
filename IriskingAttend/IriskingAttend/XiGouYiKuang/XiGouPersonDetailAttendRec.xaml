@@ -1,0 +1,47 @@
+﻿<controls:ChildWindow x:Class="IriskingAttend.XiGouYiKuang.XiGouPersonDetailAttendRec"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="900" Height="600" 
+           Title="个人带班出勤明细" FontSize="12" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <sdk:Label  Grid.Row="0" Margin="0,8,0,8"  Name="lblTitle" VerticalAlignment="Top" Width="auto" HorizontalAlignment="Center" />
+        <sdk:DataGrid Grid.Row="1" Style="{StaticResource DataGridStyle}" Name="dgPersonAttend" CanUserSortColumns="False" IsReadOnly="True" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding AttendDayStr,Mode=TwoWay}"  Header="日期" IsReadOnly="True" MinWidth="50" Width="100"/>
+                <sdk:DataGridTextColumn Binding="{Binding ClassTypeName,Mode=TwoWay}" Header="班制" IsReadOnly="True" MinWidth="50" Width="100"/>
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrderName,Mode=TwoWay}" Header="班次" IsReadOnly="True" MinWidth="50" Width="100"/>
+                <sdk:DataGridTemplateColumn Header="入井时间" IsReadOnly="True" MinWidth="110" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding InWellTime,Mode=TwoWay}" Foreground ="{Binding color}" HorizontalContentAlignment="Left"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn Header="出井时间" IsReadOnly="True" MinWidth="110" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding OutWellTime,Mode=TwoWay}" Foreground ="{Binding color}" HorizontalContentAlignment="Left"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn Header="出入井时长" IsReadOnly="True" MinWidth="110" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding WorkTime,Mode=TwoWay}" Foreground ="{Binding color}" HorizontalContentAlignment="Left"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+
+                <sdk:DataGridTextColumn Binding="{Binding OnDutyPersonName,Mode=TwoWay}" Header="值班领导1" IsReadOnly="True" MinWidth="120" Width="*"/>
+                <sdk:DataGridTextColumn Binding="{Binding OnDutyPersonName2,Mode=TwoWay}" Header="值班领导2" IsReadOnly="True" MinWidth="120" Width="*"/>
+
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+    </Grid>
+</controls:ChildWindow>

@@ -1,0 +1,82 @@
+﻿<navigation:Page x:Class="IriskingAttend.FrmMain" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
+           mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480" Title="FrmMain" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Grid x:Name="LayoutRoot" Loaded="LayoutRoot_Loaded">
+       
+        <Grid.Background >
+            <ImageBrush  ImageSource="/IriskingAttend;component/images/background.png"/>
+        </Grid.Background>
+        <Grid Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <ContentControl Name="leftFuntionControl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0">
+                <ContentControl.Content>
+                    <Border x:Name="leftContentBorder" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <navigation:Frame x:Name="leftContentFrame" Style="{StaticResource ContentFrameStyle}" 
+                              Source="/Home" Padding="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                            <navigation:Frame.UriMapper>
+                                <uriMapper:UriMapper>
+                                    <uriMapper:UriMapping Uri="/Home" MappedUri="/View/AttendView/InWellPerson.xaml"/>
+                                    <uriMapper:UriMapping Uri="/AttendRecord" MappedUri="/View/AttendView/AttendRecord.xaml"/>
+                                    <uriMapper:UriMapping Uri="/InWellPerson" MappedUri="/View/AttendView/InWellPerson.xaml"/>
+                                    <uriMapper:UriMapping Uri="/RecogManage" MappedUri="/View/AttendView/RecogManage.xaml"/>
+                                    <uriMapper:UriMapping Uri="/AttendLeave" MappedUri="/View/AttendView/AttendLeave.xaml"/>
+                                    <uriMapper:UriMapping Uri="/AttendRecord" MappedUri="/View/AttendView/AttendRecord.xaml"/>
+                                    <uriMapper:UriMapping Uri="/RebuildAttend" MappedUri="/View/AttendView/RebuildAttend.xaml"/>
+                                    <uriMapper:UriMapping Uri="/Page_peopleMng" MappedUri="/View/PeopleView/Page_peopleMng.xaml"/>
+                                    <!--<uriMapper:UriMapping Uri="/Page_peopleQuery" MappedUri="/View/PeopleView/Page_peopleQuery.xaml"/>-->
+                                    <uriMapper:UriMapping Uri="/Page_childDepartMng" MappedUri="/View/PeopleView/Page_childDepartMng.xaml"/>
+                                    <uriMapper:UriMapping Uri="/Page_departMng" MappedUri="/View/PeopleView/Page_departMng.xaml"/>
+                                    <uriMapper:UriMapping Uri="/Page_classTypeMng" MappedUri="/View/PeopleView/Page_classTypeMng.xaml"/>
+                                    <uriMapper:UriMapping Uri="/Page_classOrderMng" MappedUri="/View/PeopleView/Page_classOrderMng.xaml"/>
+                                    <uriMapper:UriMapping Uri="/System_Device" MappedUri="/View/SystemView/System_Device.xaml"/>
+                                    <uriMapper:UriMapping Uri="/Xls_OriginRecSumReport" MappedUri="/View/ReportView/Xls_OriginRecSumReport.xaml"/>
+                                    <uriMapper:UriMapping Uri="/ModifyPassword" MappedUri="/View/SystemView/ModifyPassword.xaml"/>
+                                    <uriMapper:UriMapping Uri="/OperatorManage" MappedUri="/View/SystemView/OperatorManage.xaml"/>
+                                    <uriMapper:UriMapping Uri="/ParameterConfig" MappedUri="/View/SystemView/ParameterConfig.xaml"/>
+                                    <uriMapper:UriMapping Uri="/DeviceInfoExcel" MappedUri="/View/ExportExcelView/DeviceInfoExcel.xaml"/>                                  
+                                    <uriMapper:UriMapping Uri="/{pageName}" MappedUri="/View/MainFrmView/{pageName}.xaml"/>
+                                </uriMapper:UriMapper>
+                            </navigation:Frame.UriMapper>
+                        </navigation:Frame>
+                    </Border>
+                </ContentControl.Content>
+            </ContentControl>
+            <ContentControl Name="rightFuntionControl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0">
+                <ContentControl.Content>
+                    <Border x:Name="rightContentBorder" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <navigation:Frame x:Name="rightContentFrame" Style="{StaticResource ContentFrameStyle}" 
+                              Source="/Home" Padding="0"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                           <navigation:Frame.UriMapper>
+                                <uriMapper:UriMapper>
+                                    <uriMapper:UriMapping Uri="/Home" MappedUri="/View/MainFrmView/Welcome.xaml"/>
+                                    <uriMapper:UriMapping Uri="/AttendRecord" MappedUri="/View/AttendView/AttendRecord.xaml"/>
+                                    <uriMapper:UriMapping Uri="/InWellPerson" MappedUri="/View/AttendView/InWellPerson.xaml"/>
+                                    <uriMapper:UriMapping Uri="/RecogManage" MappedUri="/View/AttendView/RecogManage.xaml"/>
+                                    <uriMapper:UriMapping Uri="/AttendLeave" MappedUri="/View/AttendView/AttendLeave.xaml"/>
+                                    <uriMapper:UriMapping Uri="/AttendRecord" MappedUri="/View/AttendView/AttendRecord.xaml"/>
+                                    <uriMapper:UriMapping Uri="/RebuildAttend" MappedUri="/View/AttendView/RebuildAttend.xaml"/> 
+                                    <uriMapper:UriMapping Uri="/Page_peopleMng" MappedUri="/View/PeopleView/Page_peopleMng.xaml"/>
+                                    <uriMapper:UriMapping Uri="/Page_classTypeMng" MappedUri="/View/PeopleView/Page_classTypeMng.xaml"/>
+                                    <uriMapper:UriMapping Uri="/Page_classOrderMng" MappedUri="/View/PeopleView/Page_classOrderMng.xaml"/>
+                                    <uriMapper:UriMapping Uri="/Page_departMng" MappedUri="/View/PeopleView/Page_departMng.xaml"/>
+                                    <uriMapper:UriMapping Uri="/Page_childDepartMng" MappedUri="/View/PeopleView/Page_childDepartMng.xaml"/>
+                                    <uriMapper:UriMapping Uri="/System_Device" MappedUri="/View/SystemView/System_Device.xaml"/>
+                                    <uriMapper:UriMapping Uri="/Xls_OriginRecSumReport" MappedUri="/View/ReportView/Xls_OriginRecSumReport.xaml"/>
+                                    <uriMapper:UriMapping Uri="/ModifyPassword" MappedUri="/View/SystemView/ModifyPassword.xaml"/>
+                                    <uriMapper:UriMapping Uri="/OperatorManage" MappedUri="/View/SystemView/OperatorManage.xaml"/>
+                                    <uriMapper:UriMapping Uri="/ParameterConfig" MappedUri="/View/SystemView/ParameterConfig.xaml"/>
+                                    <uriMapper:UriMapping Uri="/DeviceInfoExcel" MappedUri="/View/ExportExcelView/DeviceInfoExcel.xaml"/>
+                                    <uriMapper:UriMapping Uri="/{pageName}" MappedUri="/View/MainFrmView/{pageName}.xaml"/> 
+                                </uriMapper:UriMapper>
+                        </navigation:Frame.UriMapper>
+                    </navigation:Frame>
+                </Border>
+                </ContentControl.Content>
+            </ContentControl>           
+        </Grid>
+    </Grid>
+</navigation:Page>

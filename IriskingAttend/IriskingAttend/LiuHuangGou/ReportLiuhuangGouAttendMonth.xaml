@@ -1,0 +1,546 @@
+﻿<navigation:Page x:Class="IriskingAttend.LiuHuangGou.ReportLiuhuangGouAttendMonth" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:local="clr-namespace:IriskingAttend.LiuHuangGou"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="1600" d:DesignHeight="480"
+           Title="月考勤报表" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot" Background="#FFDBDBDB">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid VerticalAlignment="Center" Grid.Row="0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <sdk:Label Content="开始时间" FontSize="12"  Margin="2" />
+                <sdk:DatePicker Name="dtpBegin" Margin="2" />
+                <sdk:Label Content="*" Foreground="#FFF50909" />
+                <sdk:Label Content="结束时间" FontSize="12"  Margin="2" />
+                <sdk:DatePicker Name="dtpEnd" Margin="2" />
+                <sdk:Label Content="部门" FontSize="12"  Margin="10,2,2,2" />
+                <TextBox  Margin="2" Name="txtDepart" FontSize="12" Height="23" MinWidth="80" MaxWidth="105"/>
+                <Button Name="btnSelectDepart" Height="23" Width="auto" Content="选取" FontSize="12" Margin="0,0,5,0" Click="btnSelectDepart_Click" />
+
+                <sdk:Label Content="姓名" FontSize="12" Margin="2" />
+                <TextBox Margin="2" Name="txtPersonName" FontSize="12" Height="23" MinWidth="80" MaxWidth="105"/>
+                <Button Name="btnSelectName" Height="23" Width="auto" Content="选取" FontSize="12" Margin="0,0,5,0" Click="btnSelectName_Click" />
+                                
+                <Button Name="btnQuery" Height="23" Width="75" Margin="2" FontSize="12" Click="btnQuery_Click" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/IriskingAttend;component/images/binoculars.png" />
+                        <TextBlock FontSize="12" Text="查  询" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <sdk:DataGrid Style="{StaticResource DataGridStyle}" AutoGenerateColumns="False" CanUserSortColumns="False" Grid.Row="1" Name="dgPersonOriginList"  Margin="0,2,0,2">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Index,Mode=TwoWay}"  Header="序号" MinWidth="45" IsReadOnly="True"/>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="内部关联号"  TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding WorkSn,Mode=TwoWay}" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn Binding="{Binding DepartName, Mode=TwoWay}" Header="单位" Width="auto" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding PersonName,Mode=TwoWay}" Header="姓名" Width="auto" IsReadOnly="True"/>
+                
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="出勤工数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding InOutTimes,Mode=TwoWay}"  HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="出勤总时长" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding WorkTotalTimes,Mode=TwoWay}"  HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="下井总时长" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding WellTotalTimes,Mode=TwoWay}" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="加班工数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding OverTimes,Mode=TwoWay}" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="大班值班工数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding BigDutyTimes,Mode=TwoWay}"  HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="大班入井工数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding BigInWellTimes,Mode=TwoWay}"  HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="小班入井工数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding SmallInWellTimes,Mode=TwoWay}"  HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="地面大班工数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding GroupBigTimes,Mode=TwoWay}"  HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="地面早班工数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding GroupMorningTimes,Mode=TwoWay}" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="地面中班工数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding GroupMiddleTimes,Mode=TwoWay}" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="地面夜班工数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding GroupNightTimes,Mode=TwoWay}" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="井下早班工数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding InWellMorningTimes,Mode=TwoWay}"  HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="井下中班工数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding InWellMiddleTimes,Mode=TwoWay}" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="井下夜班工数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding InWellNightTimes,Mode=TwoWay}"  HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="大班公出工数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding BigClassOutTimes,Mode=TwoWay}" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="婚丧探天数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding WeddingsTimes,Mode=TwoWay}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="年休天数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding AnnualLeaveTimes,Mode=TwoWay}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="病假天数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding SickLeaveTimes,Mode=TwoWay}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="伤假天数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding FakeInjuryTimes,Mode=TwoWay}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="事假天数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding LeaveTimes,Mode=TwoWay}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="旷工天数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding AbsenteeismTimes,Mode=TwoWay}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="产假天数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding MaternityLeaveTimes,Mode=TwoWay}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="育儿假天数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding ParentalLeaveTimes,Mode=TwoWay}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="sdk:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="待岗学习天数" TextWrapping="Wrap" Width="15"></TextBlock>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding StudyDays,Mode=TwoWay}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[0],Mode=TwoWay}" Header="01" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[1],Mode=TwoWay}" Header="02" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[2],Mode=TwoWay}" Header="03" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[3],Mode=TwoWay}" Header="04" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[4],Mode=TwoWay}" Header="05" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[5],Mode=TwoWay}" Header="06" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[6],Mode=TwoWay}" Header="07" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[7],Mode=TwoWay}" Header="08" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[8],Mode=TwoWay}" Header="09" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[9],Mode=TwoWay}" Header="10" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[10],Mode=TwoWay}" Header="11" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[11],Mode=TwoWay}" Header="12" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[12],Mode=TwoWay}" Header="13" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[13],Mode=TwoWay}" Header="14" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[14],Mode=TwoWay}" Header="15" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[15],Mode=TwoWay}" Header="16" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[16],Mode=TwoWay}" Header="17" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[17],Mode=TwoWay}" Header="18" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[18],Mode=TwoWay}" Header="19" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[19],Mode=TwoWay}" Header="20" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[20],Mode=TwoWay}" Header="21" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[21],Mode=TwoWay}" Header="22" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[22],Mode=TwoWay}" Header="23" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[23],Mode=TwoWay}" Header="24" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[24],Mode=TwoWay}" Header="25" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[25],Mode=TwoWay}" Header="26" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[26],Mode=TwoWay}" Header="27" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[27],Mode=TwoWay}" Header="28" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[28],Mode=TwoWay}" Header="29" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[29],Mode=TwoWay}" Header="30" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrder[30],Mode=TwoWay}" Header="31" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding Remark}" Header="备注" IsReadOnly="True" MinWidth="44"  Width="auto"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="2" HorizontalAlignment="Right">
+            <!--<Button  Name="btnPrint" FontSize="12" Margin="10,0" Padding="2" MinWidth="80" Click="btnPrint_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/Printer.png" Width="20"/>
+                    <TextBlock FontSize="12" Text="打印预览" Margin="0,2" />
+                </StackPanel>
+            </Button>-->
+            <Button Name="btnExportExcel"   FontSize="12"  Margin="10,0,2,0" Padding="2" MinWidth="80" Click="btnExportExcel_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/ExportExcel.png" Width="20"/>
+                    <TextBlock FontSize="12" Text="导出Excel" Margin="0,2" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Grid>
+</navigation:Page>

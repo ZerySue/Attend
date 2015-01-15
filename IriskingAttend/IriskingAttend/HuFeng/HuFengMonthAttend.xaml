@@ -1,0 +1,100 @@
+﻿<navigation:Page x:Class="IriskingAttend.HuFeng.HuFengMonthAttend" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:local="clr-namespace:IriskingAttend.ZhongKeHongBa"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="1600" d:DesignHeight="480"
+           Title="虎峰煤矿月考勤查询" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <UserControl.Resources>
+        <local:ColorConverter x:Key="ColorConverter" DefaultBrush="{x:Null}" WeekendBrush="Gray" FestivalBrush="Yellow"/>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="#FFDBDBDB">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid VerticalAlignment="Center" Grid.Row="0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <sdk:Label Content="开始时间" FontSize="12"  Margin="2" />
+                <sdk:DatePicker Name="dtpBegin" Margin="2" />
+                <sdk:Label Content="*" Foreground="#FFF50909" />
+                <sdk:Label Content="~" FontSize="12" />
+                <sdk:Label Content="截止时间" FontSize="12" />
+                <sdk:DatePicker FontSize="12" Height="23" Name="dtpEnd" />
+                <sdk:Label Content="部门" FontSize="12"  Margin="10,2,2,2" />
+                <TextBox  Margin="2" Name="txtDepart" FontSize="12" Height="23" MinWidth="80" MaxWidth="105"/>
+                <Button Name="btnSelectDepart" Height="23" Width="auto" Content="选取" FontSize="12" Margin="0,0,5,0" Click="btnSelectDepart_Click" />
+
+                <sdk:Label Content="姓名" FontSize="12" Margin="5,2,2,2" />
+                <TextBox Margin="2" Name="txtPersonName" FontSize="12" Height="23" MinWidth="80" MaxWidth="105"/>
+                <sdk:Label Content="工号" FontSize="12" Margin="2" />
+                <TextBox Margin="2" Name="txtWorkSn" FontSize="12" Height="23" MinWidth="80" MaxWidth="105"/>
+                <Button Name="btnQuery" Height="23" Width="75" Margin="2" FontSize="12" Click="btnQuery_Click" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/IriskingAttend;component/images/binoculars.png" />
+                        <TextBlock FontSize="12" Text="查  询" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <sdk:DataGrid Style="{StaticResource DataGridStyle}" AutoGenerateColumns="False" CanUserSortColumns="False" Grid.Row="1" Name="dgMonthAttend"  Margin="0,2,0,2">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Index,Mode=TwoWay}" Header="序号" MinWidth="45" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding WorkSn,Mode=TwoWay}" Header="工号" MinWidth="60" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding PersonName,Mode=TwoWay}" Header="姓名" MinWidth="60" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding DepartName, Mode=TwoWay}" Header="部门" MinWidth="60" IsReadOnly="True"/>                
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[0],Mode=TwoWay}" Header="01" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[1],Mode=TwoWay}" Header="02" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[2],Mode=TwoWay}" Header="03" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[3],Mode=TwoWay}" Header="04" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[4],Mode=TwoWay}" Header="05" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[5],Mode=TwoWay}" Header="06" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[6],Mode=TwoWay}" Header="07" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[7],Mode=TwoWay}" Header="08" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[8],Mode=TwoWay}" Header="09" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[9],Mode=TwoWay}" Header="10" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[10],Mode=TwoWay}" Header="11" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[11],Mode=TwoWay}" Header="12" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[12],Mode=TwoWay}" Header="13" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[13],Mode=TwoWay}" Header="14" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[14],Mode=TwoWay}" Header="15" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[15],Mode=TwoWay}" Header="16" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[16],Mode=TwoWay}" Header="17" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[17],Mode=TwoWay}" Header="18" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[18],Mode=TwoWay}" Header="19" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[19],Mode=TwoWay}" Header="20" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[20],Mode=TwoWay}" Header="21" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[21],Mode=TwoWay}" Header="22" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[22],Mode=TwoWay}" Header="23" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[23],Mode=TwoWay}" Header="24" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[24],Mode=TwoWay}" Header="25" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[25],Mode=TwoWay}" Header="26" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[26],Mode=TwoWay}" Header="27" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[27],Mode=TwoWay}" Header="28" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[28],Mode=TwoWay}" Header="29" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[29],Mode=TwoWay}" Header="30" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding DisplayInfo[30],Mode=TwoWay}" Header="31" IsReadOnly="True"/>                
+                <sdk:DataGridTextColumn Binding="{Binding AttendCount}" Header="出勤次数" IsReadOnly="True" MinWidth="44"  Width="auto"/>
+                <sdk:DataGridTextColumn Binding="{Binding TotalWorkTime}" Header="总工时" IsReadOnly="True" MinWidth="44"  Width="auto"/>               
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="2" HorizontalAlignment="Right">
+            <Button  Name="btnPrint" FontSize="12" Margin="10,0" Padding="2" MinWidth="80" Click="btnPrint_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/Printer.png" Width="20"/>
+                    <TextBlock FontSize="12" Text="打印预览" Margin="0,2" />
+                </StackPanel>
+            </Button>
+            <Button Name="btnExportExcel"   FontSize="12"  Margin="10,0,2,0" Padding="2" MinWidth="80" Click="btnExportExcel_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/ExportExcel.png" Width="20"/>
+                    <TextBlock FontSize="12" Text="导出Excel" Margin="0,2" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Grid>
+</navigation:Page>

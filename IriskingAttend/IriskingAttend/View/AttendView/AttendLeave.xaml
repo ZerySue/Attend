@@ -1,0 +1,123 @@
+﻿<navigation:Page x:Class="IriskingAttend.View.AttendLeave" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"            
+           xmlns:vm="clr-namespace:IriskingAttend.ViewModel"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="800" d:DesignHeight="480"  HorizontalAlignment="Left" VerticalAlignment="Top"           
+           Title="人员请假" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <navigation:Page.Resources >
+        <vm:VmAttendLeave x:Key="vmAttendLeave"></vm:VmAttendLeave>
+    </navigation:Page.Resources>
+
+    <Grid x:Name="LayoutRoot" Style="{StaticResource GridStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <Grid Name="gSelectRegion" DataContext="{StaticResource vmAttendLeave}" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="87*" MinWidth="80"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Name="spDateTime" Orientation="Horizontal" Style="{StaticResource MyStackPanelStyle}" Margin="5,5,1,5">
+                <sdk:Label Content="时间" Margin="2,0" />
+                <StackPanel Margin="5,0,0,0" Name="spDateTimeBegin" Orientation="Horizontal">
+                    <sdk:DatePicker Background="{x:Null}" CalendarClosed="dateBegin_CalendarClosed" 
+                                DateValidationError="dateBegin_DateValidationError" Height="22" 
+                                Margin="0" Name="dateBegin" Width="110" Text="{Binding QueryConditionForLeave.BeginDateTime,Mode=TwoWay}"  /><!---->
+                </StackPanel>
+                <!--<sdk:Label Content="*" Foreground="#FFF50909" Name="label1" />-->
+                <StackPanel Name="spDateTimeEnd" Orientation="Horizontal">
+                    <sdk:Label Content="～" Foreground="Crimson" Margin="1,0" />
+                    <sdk:DatePicker Background="{x:Null}" CalendarClosed="dateEnd_CalendarClosed" 
+                                DateValidationError="dateBegin_DateValidationError"  
+                                Height="22" Name="dateEnd" Width="110" Text="{Binding QueryConditionForLeave.EndDateTime,StringFormat='yyyy/M/d',Mode=TwoWay}"/><!---->
+                </StackPanel>
+                <sdk:Label Name="lbDepart" Content="部门" Margin="4,0"></sdk:Label>
+                <ComboBox Name="cmbDepart" ItemsSource="{Binding DepartModle}"  DisplayMemberPath="depart_name" 
+                          SelectedItem="{Binding QueryConditionForLeave.Depart,Mode=TwoWay}" 
+                          Padding="5,0,20,0" MinWidth="60"></ComboBox>
+                
+                <sdk:Label Content="姓名" HorizontalContentAlignment="Right" Name="lblName" Padding="1,0,0,0" Margin="2,0" />
+                <TextBox Name="txtBoxName" Padding="1" Text="{Binding QueryConditionForLeave.Name,Mode=TwoWay}" MinWidth="80" MaxWidth="105" />
+                <sdk:Label Content="工号"  Name="lblWorkSn" Padding="1,0,0,0" Margin="2,0" />
+                <TextBox Name="txtWorkSN" Padding="2" Text="{Binding QueryConditionForLeave.WorkSN,Mode=TwoWay}" Margin="1,0,0,0" 
+                         MinWidth="80" MaxWidth="105" />
+
+            
+<!--Command="{Binding QueryAttendLeaveCmd,Source={StaticResource vmAttendLeave}}"-->
+            <Button Command="{Binding QueryAttendLeaveCommand,Source={StaticResource vmAttendLeave}}"  
+                    Height="25" MinWidth="85" Name="btnQuery" Style="{StaticResource ButtonStyle}"
+                HorizontalAlignment="Right" Grid.ColumnSpan="2" Margin="5,0,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/binoculars.png" />
+                    <TextBlock Text="查  询" />
+                </StackPanel>
+            </Button>
+                    </StackPanel>
+        </Grid>
+        
+        <sdk:DataGrid  Style="{StaticResource DataGridStyle}" CanUserSortColumns="False" AutoGenerateColumns="False" Grid.Row="1"  
+                       DataContext="{StaticResource vmAttendLeave}" 
+                        MouseLeftButtonDown="dgAttendLeave_MouseLeftButtonDown"
+                       MouseMove="dgAttendLeave_MouseMove"
+                       LayoutUpdated="dgAttendLeave_LayoutUpdated"
+                      ItemsSource="{Binding AttendLeaveModel}" IsReadOnly="True" SelectedItem="{Binding SelectAttendLeave,Mode=TwoWay}"
+                       Name="dgAttendLeave" >
+            <!--MouseLeftButtonDown="{Binding SortAttendLeave}"-->
+            <sdk:DataGrid.Columns>
+                <!--<sdk:DataGridTemplateColumn Header="序号" Width="1*">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock  TextAlignment="Center" VerticalAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>-->
+                <sdk:DataGridTextColumn  Binding="{Binding}"  Header="序  号" Width="1*" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding work_sn, Mode=TwoWay}" Header="工  号"   Width="1*" />
+                <sdk:DataGridTextColumn Binding="{Binding person_name, Mode=TwoWay}" Header="姓  名"  Width="1*" />         
+                <sdk:DataGridTextColumn Binding="{Binding depart_name, Mode=TwoWay}" Header="部  门"   Width="1.5*" />
+                <sdk:DataGridTextColumn Binding="{Binding leave_start_time,StringFormat='yyyy-MM-dd HH:mm:ss', Mode=TwoWay}"
+                                        Header="请假开始时间"  Width="2*"/>
+                <sdk:DataGridTextColumn Binding="{Binding leave_end_time,StringFormat='yyyy-MM-dd HH:mm:ss', Mode=TwoWay}"
+                                        Header="请假结束时间" Width="2*"/>
+                <sdk:DataGridTextColumn Binding="{Binding leave_type_name, Mode=TwoWay}" Header="请假类型" Width="1.2*" />       
+                <!--<sdk:DataGridTextColumn Binding="{Binding attend_state, Mode=TwoWay}" Header="是否批准" IsReadOnly="True" />-->
+                <sdk:DataGridTextColumn Binding="{Binding memo, Mode=OneWay}" Header="备  注" Width="2*" />
+                <sdk:DataGridTemplateColumn CanUserReorder="True" CanUserResize="True"  Header="操  作" Width="120">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <HyperlinkButton  Content=" [修改] " Margin="5"  x:Name="btnSetPurview"  
+                                                  Command="{Binding ShowUpdateDialogCommand,Source={StaticResource vmAttendLeave}}" />
+                                <!--Click="btnSetPurview_Click"-->
+                                <HyperlinkButton  Content=" [删除] " Margin="5" x:Name="btnDelUser" 
+                                                  Command="{Binding DelAttendLeaveCommand,Source={StaticResource vmAttendLeave}}" />
+                                <!--Click="btnDelUser_Click"-->
+                            </StackPanel>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+               
+            </sdk:DataGrid.Columns>            
+        </sdk:DataGrid>
+        <StackPanel Orientation="Horizontal"  Grid.Row="2" HorizontalAlignment="Center" >
+        <Button  Name="hyperlinkButton1" Command="{Binding ShowAddDialogCommand,Source={StaticResource vmAttendLeave}}"  
+                 Style="{StaticResource ButtonStyle}" Margin="5,5,20,5" Width="85">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/IriskingAttend;component/images/Add.png" Width="20"/>
+                <TextBlock FontSize="12" Text="添加请假"  />
+            </StackPanel>
+        </Button>
+        <Button  Name="btnExportExl" HorizontalAlignment="Right" Style="{StaticResource ExportExcelButtonStyle}" 
+                 Click="btnExportExl_Click">
+            
+        </Button>
+        </StackPanel>
+    </Grid>
+</navigation:Page>

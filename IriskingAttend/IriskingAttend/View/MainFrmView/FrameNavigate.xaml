@@ -1,0 +1,28 @@
+﻿<navigation:Page x:Class="IriskingAttend.FrameNavigate" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+           Title="登录">
+    <Grid x:Name="LayoutRoot">
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Border x:Name="ContentBorder" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                <navigation:Frame x:Name="ContentFrame" Background="Transparent" BorderBrush="Transparent" Padding="0,0,0,0" Source="/Login">
+                    <navigation:Frame.UriMapper>
+                        <uriMapper:UriMapper>                           
+                            <uriMapper:UriMapping Uri="/Login" MappedUri="/View/MainFrmView/Login.xaml"/>
+                            <uriMapper:UriMapping Uri="/MainPage" MappedUri="/View/MainFrmView/MainPage.xaml"/>
+                            <uriMapper:UriMapping Uri="/PersonList" MappedUri="/NewWuHuShan/AttendPersonList.xaml"/>
+                            <uriMapper:UriMapping Uri="/LeaderAttend" MappedUri="/XiGouYiKuang/XiGouLeaderAttendRec.xaml"/>
+                            <uriMapper:UriMapping Uri="/LeaderSchedule" MappedUri="/XiGouYiKuang/XiGouLeaderScheduleRec.xaml"/>
+                        </uriMapper:UriMapper>
+                    </navigation:Frame.UriMapper>
+                </navigation:Frame>
+            </Border>
+        </Grid>
+    </Grid>
+</navigation:Page>

@@ -1,0 +1,9 @@
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\BackUpDatabaseServer\bin\Debug\BackUpDatabaseServer.exe.manifest
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\BackUpDatabaseServer\bin\Debug\BackUpDatabaseServer.application
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\BackUpDatabaseServer\bin\Debug\BackUpDatabaseServer.exe
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\BackUpDatabaseServer\bin\Debug\BackUpDatabaseServer.pdb
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\BackUpDatabaseServer\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\BackUpDatabaseServer\obj\x86\Debug\BackUpDatabaseServer.exe.manifest
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\BackUpDatabaseServer\obj\x86\Debug\BackUpDatabaseServer.application
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\BackUpDatabaseServer\obj\x86\Debug\BackUpDatabaseServer.exe
+G:\IrisAttend\trunk\codes\CSharp\矿山考勤\03 Code\IriskingAttend\BackUpDatabaseServer\obj\x86\Debug\BackUpDatabaseServer.pdb

@@ -1,0 +1,69 @@
+﻿<navigation:Page x:Class="IriskingAttend.View.AttendView.FestivalMng" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           d:DesignWidth="800" d:DesignHeight="405"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:Primitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Data"
+           xmlns:local="clr-namespace:IriskingAttend.View"
+           Title="节假日管理" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+    <UserControl.Resources>
+        <local:MarkObject x:Key="MarkObject" />
+    </UserControl.Resources>
+    <Grid Style="{StaticResource GridStyle}">            
+    <Grid.RowDefinitions>    
+        <RowDefinition Height="10*" />
+        <RowDefinition Height="auto" />
+    </Grid.RowDefinitions>
+        <sdk:DataGrid Grid.Row="0" DataContext="{Binding}" SelectedItem="{Binding SelectDeviceInfoItem}" Name="dgFestival"
+            Style="{StaticResource DataGridStyle}" LoadingRow="dgFestival_LoadingRow" CanUserSortColumns="False" CanUserReorderColumns="False"
+            MouseLeftButtonDown="dgFestival_MouseLeftButtonDown" MouseMove="dgFestival_MouseMove" LayoutUpdated="dgFestival_LayoutUpdated">
+        <sdk:DataGrid.Columns >
+                <sdk:DataGridCheckBoxColumn Header="全选" IsReadOnly="True" CanUserReorder="False" CanUserResize="True" CanUserSort="False" Width="0.5*" MinWidth="70" Binding="{Binding isSelected, Mode=TwoWay}">
+                <sdk:DataGridCheckBoxColumn.HeaderStyle>
+                    <Style TargetType="Primitives:DataGridColumnHeader">
+                        <Setter Property="ContentTemplate">
+                            <Setter.Value>
+                                <DataTemplate>
+                                    <StackPanel>
+                                            <CheckBox Content="全选" Name="chkSelectAll" IsChecked="{Binding Selected,Mode=TwoWay,Source={StaticResource MarkObject}}" Click="chkSelectAll_Click"/> 
+                                    </StackPanel>
+                                </DataTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </sdk:DataGridCheckBoxColumn.HeaderStyle>
+            </sdk:DataGridCheckBoxColumn>
+                <sdk:DataGridTextColumn Header="序号" Binding="{Binding }" IsReadOnly="True" Width="0.5*" MinWidth="60"/>  
+                <sdk:DataGridTextColumn Header="名称" Binding="{Binding name}" IsReadOnly="True" Width="1*" MinWidth="80"/>
+                <sdk:DataGridTextColumn Header="开始时间" Binding="{Binding begin_time}" IsReadOnly="True"  Width="1*" MinWidth="80"/>
+                <sdk:DataGridTextColumn Header="结束时间" Binding="{Binding end_time}" IsReadOnly="True"  Width="1*" MinWidth="80"/>
+                <sdk:DataGridTextColumn Header="调休日期" Binding="{Binding ShiftHoliday}" IsReadOnly="True"  Width="1*" MinWidth="80"/>
+                <sdk:DataGridTextColumn Header="备注" Binding="{Binding memo}" IsReadOnly="True"  Width="1*" MinWidth="80"/>
+                <sdk:DataGridTemplateColumn Header="操作" IsReadOnly="True" Width="2*"  MinWidth="120">
+                <sdk:DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                                <HyperlinkButton Content=" [修改] " Margin="5"  Name="hbtnModifyFestival" Click="hbtnModifyFestival_Click" />
+                                <HyperlinkButton Content=" [删除] " Margin="5"  Name="hbtnDeleteFestival" Click="hbtnDeleteFestival_Click" />
+                        </StackPanel>
+                    </DataTemplate>
+                </sdk:DataGridTemplateColumn.CellTemplate>
+            </sdk:DataGridTemplateColumn>                     
+        </sdk:DataGrid.Columns>
+    </sdk:DataGrid>
+    <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+            <Button Name="btnBatchDeleteFestival" IsEnabled="{Binding IsBatchDeleteEnabled}" HorizontalAlignment="Left"  Style="{StaticResource DelButtonStyle}" Click="btnBatchDeleteFestival_Click" />
+            <Button Name="btnAddFestival" HorizontalAlignment="Right"  Style="{StaticResource AddButtonStyle}" Click="btnAddFestival_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/IriskingAttend;component/images/Add.png"/>
+                <TextBlock FontSize="12" Text="添加节假日" Margin="0,2,0,0" />
+            </StackPanel>
+        </Button>
+            <Button  Name="btnExportExcel" Click="btnExportExcel_Click" Style="{StaticResource ExportExcelButtonStyle}"/>
+    </StackPanel>
+</Grid>    
+</navigation:Page>

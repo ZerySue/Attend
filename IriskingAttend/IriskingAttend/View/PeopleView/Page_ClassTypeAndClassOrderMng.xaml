@@ -1,0 +1,276 @@
+﻿<navigation:Page x:Class="IriskingAttend.View.PeopleView.PageClassTypeAndClassOrderMng" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:Primitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Data"
+           xmlns:local="clr-namespace:IriskingAttend.View"
+           mc:Ignorable="d"
+           d:DesignWidth="1100" d:DesignHeight="968"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"  
+           HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MinHeight="100">
+    <UserControl.Resources>
+        <local:MarkObject x:Key="SelectAllClassOrder" />
+        <local:MarkObject x:Key="SelectAllClassOrderSign" />
+        <local:MarkObject x:Key="SelectAllClassOrderJiGongShi" />
+        <local:MarkObject x:Key="SelectAllClasType" />
+        
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Style="{StaticResource GridStyle}"  VerticalAlignment="Stretch">     
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" MinHeight="240" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="2*" MinHeight="100"/>
+            <!--<RowDefinition Height="10" />-->
+            <!--<RowDefinition Height="auto" MinHeight="100" />-->
+        </Grid.RowDefinitions>
+
+        <Grid Name="gridClassType"  >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="147*" MinWidth="140" />
+                <ColumnDefinition Width="449*" MinWidth="300" />
+                <ColumnDefinition Width="287*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <sdk:DataGrid  Style="{StaticResource DataGridStyle}" ItemsSource="{Binding ClassTypeInfos}"  
+                           CanUserSortColumns="False" 
+                    Name="dataGridClassType"  CanUserReorderColumns="False" Grid.ColumnSpan="3" AutoGenerateColumns="False"
+                    VerticalAlignment="Stretch" Grid.Row="1" SelectedItem="{Binding SelectedClassType,Mode=TwoWay}"
+                    SelectionChanged="dataGridClassType_SelectionChanged" MouseMove="dataGridClassType_MouseMove" MouseLeftButtonDown="dataGridClassType_MouseLeftButtonDown" LayoutUpdated="dataGridClassType_LayoutUpdated" HorizontalScrollBarVisibility="Hidden">
+                <sdk:DataGrid.Columns >
+                    <sdk:DataGridCheckBoxColumn IsReadOnly="True"  Header="全选" CanUserReorder="False" CanUserResize="True" CanUserSort="False" MinWidth="70" Binding="{Binding isSelected, Mode=TwoWay}">
+                        <sdk:DataGridCheckBoxColumn.HeaderStyle>
+                            <Style TargetType="Primitives:DataGridColumnHeader">
+                                <Setter Property="ContentTemplate">
+                                    <Setter.Value>
+                                        <DataTemplate>
+                                            <StackPanel>
+                                                <!-- 如何在代码中控制该CheckBox的状态 -->
+                                                <CheckBox Content="全选" Name="ChkSelectAllClassType"   IsChecked="{Binding Selected,Mode=TwoWay,Source={StaticResource SelectAllClasType}}" Click="ChkSelectAllClassType_Click">
+                                                    <!--Command="{Binding SelectAllDepartCommand}" CommandParameter="{Binding ElementName=chkSelectAll}"-->
+                                                </CheckBox>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </sdk:DataGridCheckBoxColumn.HeaderStyle>
+                    </sdk:DataGridCheckBoxColumn>
+                    <sdk:DataGridTextColumn Header="序号" Binding="{Binding }" IsReadOnly="True" MinWidth="80" />
+                    <sdk:DataGridTextColumn Header="班制名称" Binding="{Binding class_type_name}" IsReadOnly="True" MinWidth="160" />
+                    <sdk:DataGridTextColumn Header="备注" Binding="{Binding memo}" IsReadOnly="True"  MinWidth="330"/>
+                    <sdk:DataGridTemplateColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="管理操作"  MinWidth="285" Width="*" >
+                        <!--Width="SizeToCells"-->
+                        <sdk:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <HyperlinkButton Content=" [修改]" Margin="5,0" VerticalAlignment="Center"  Name="btnModifyClassType" Click="btnModifyClassType_Click" />
+                                    <HyperlinkButton Content=" [删除]" Margin="5,0" VerticalAlignment="Center"  Name="btnDeleteClassType" Click="btnDeleteClassType_Click" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </sdk:DataGridTemplateColumn.CellTemplate>
+                    </sdk:DataGridTemplateColumn>                    
+                </sdk:DataGrid.Columns>
+            </sdk:DataGrid>        
+            <TextBlock HorizontalAlignment="Left" Margin="5,0,0,0" Name="label1" VerticalAlignment="Center" Text="班制信息列表" Style="{StaticResource ApplicationNameStyle}" MinWidth="150" />
+            <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" MinWidth="200" Grid.Row="2" Grid.ColumnSpan="6">              
+                <Button Command ="{Binding BatchDeleteClassTypeCommand}" IsEnabled="{Binding IsBatchOperateClassTypeBtnEnable}"  HorizontalAlignment="Left" Style="{StaticResource DelButtonStyle}" />
+                <Button Command="{Binding AddClassTypeCommand}"  HorizontalAlignment="Right"  Style="{StaticResource AddButtonStyle}" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/IriskingAttend;component/images/Add.png"/>
+                        <TextBlock FontSize="12" Text="添加班制" Margin="0,2,0,0" />
+                    </StackPanel>
+                </Button>
+                <Button Grid.Row="2" Name="ExportClassTypeExl" HorizontalAlignment="Right"  Style="{StaticResource ExportExcelButtonStyle}" Click="ExportClassTypeExl_Click" />
+            </StackPanel>
+        </Grid>
+
+        <sdk:GridSplitter  Name="gridSplitter"  Background="{StaticResource NavigationBackgroundColorBrush}" Height="10" HorizontalAlignment="Stretch"  Grid.Row="1" Grid.ColumnSpan="2" />
+        <Grid Name="gridClassOrder"  Grid.Row="2" Background="{x:Null}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="183*" MinWidth="140" />
+                <ColumnDefinition Width="127*" />
+                <ColumnDefinition Width="432*" />
+                <ColumnDefinition Width="358*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*" />
+                <RowDefinition Height="100*"/>
+                <RowDefinition Height="20*" MinHeight="40"/>
+               
+                
+            </Grid.RowDefinitions>
+            <sdk:DataGrid Style="{StaticResource DataGridStyle}" ItemsSource="{Binding ClassOrderInfos,Mode=TwoWay}"  CanUserSortColumns="False" 
+                    Name="dataGridClassOrder" Visibility="Collapsed"
+                    ColumnWidth="Auto" Grid.Row="1" AutoGenerateColumns="False" Grid.ColumnSpan="4"
+                    LayoutUpdated="dataGridClassOrder_LayoutUpdated" 
+                    MouseLeftButtonDown="dataGridClassOrder_MouseLeftButtonDown"
+                    MouseMove="dataGridClassOrder_MouseMove">               
+                <sdk:DataGrid.Columns >
+                    <sdk:DataGridCheckBoxColumn Header="全选" IsReadOnly="True"  CanUserReorder="False"  CanUserResize="True" CanUserSort="False" MinWidth="70" Binding="{Binding isSelected, Mode=TwoWay}">
+                        <sdk:DataGridCheckBoxColumn.HeaderStyle>
+                            <Style TargetType="Primitives:DataGridColumnHeader">
+                                <Setter Property="ContentTemplate">
+                                    <Setter.Value>
+                                        <DataTemplate>
+                                            <StackPanel>
+                                                <!-- 如何在代码中控制该CheckBox的状态 -->
+                                                <CheckBox Content="全选" Name="ChkSelectAllClassOrder"  IsChecked="{Binding Selected,Mode=TwoWay,Source={StaticResource SelectAllClassOrder}}" Click="ChkSelectAllClassOrder_Click">
+                                                </CheckBox>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </sdk:DataGridCheckBoxColumn.HeaderStyle>
+                    </sdk:DataGridCheckBoxColumn>
+                    <sdk:DataGridTextColumn Header="序号" Binding="{Binding }" IsReadOnly="True" MinWidth="60" />
+                    <sdk:DataGridTextColumn Header="班次名称" Binding="{Binding class_order_name, Mode=TwoWay}" IsReadOnly="True" MinWidth="100" />
+                    <sdk:DataGridTextColumn Header="班次简称" Binding="{Binding attend_sign, Mode=TwoWay}" IsReadOnly="True" MinWidth="80" />
+                    <sdk:DataGridTextColumn Header="上班开始时间" Binding="{Binding in_well_start_time_str, Mode=TwoWay}" IsReadOnly="True"  MinWidth="100"/>
+                    <sdk:DataGridTextColumn Header="上班结束时间" Binding="{Binding in_well_end_time_str, Mode=TwoWay}" IsReadOnly="True"  MinWidth="100"/>
+                    <sdk:DataGridTextColumn Header="下班开始时间" Binding="{Binding out_well_start_time_str, Mode=TwoWay}" IsReadOnly="True"  MinWidth="100"/>
+                    <sdk:DataGridTextColumn Header="下班结束时间" Binding="{Binding out_well_end_time_str, Mode=TwoWay}" IsReadOnly="True"  MinWidth="100"/>
+                    <sdk:DataGridTextColumn Header="最晚下班时间" Binding="{Binding attend_latest_worktime_str, Mode=TwoWay}" IsReadOnly="True"  MinWidth="100"/>
+                    <sdk:DataGridTextColumn Header="最大在岗时长" Binding="{Binding attend_max_minutes_str, Mode=TwoWay}" IsReadOnly="True"  MinWidth="100"/>
+                    <sdk:DataGridTextColumn Header="所属班制" Binding="{Binding class_type_name, Mode=TwoWay}" IsReadOnly="True"  MinWidth="120"/>
+                    <sdk:DataGridTextColumn Header="考勤归属" Binding="{Binding attend_off_minutes_str, Mode=TwoWay}" IsReadOnly="True"  MinWidth="80"/>
+                    <sdk:DataGridTemplateColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="管理操作" MinWidth="200" Width="*" >
+                        <sdk:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <HyperlinkButton Content=" [修改]" Margin="5,0"  Name="btnModifyClassOrder"  VerticalAlignment="Center" Click="btnModifyClassOrder_Click" />
+                                    <HyperlinkButton Content=" [删除]" Margin="5,0"  Name="btnDeleteClassOrder" VerticalAlignment="Center" Click="btnDeleteClassOrder_Click" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </sdk:DataGridTemplateColumn.CellTemplate>
+                    </sdk:DataGridTemplateColumn>
+                </sdk:DataGrid.Columns>
+            </sdk:DataGrid>
+            <TextBlock Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="5,0,0,0"  VerticalAlignment="Center" Text="当前正常班次信息列表"  Style="{StaticResource ApplicationNameStyle}" Visibility="Collapsed" />
+            <StackPanel Grid.Column="0" Grid.ColumnSpan="6" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2" Visibility="Collapsed">
+                <Button Command ="{Binding BatchDeleteClassOrderCommand}" IsEnabled="{Binding IsBatchOperateClassOrderBtnEnable}"  HorizontalAlignment="Left" Style="{StaticResource DelButtonStyle}" />
+                <Button Command="{Binding AddClassOrderCommand}"  IsEnabled="{Binding IsAddClassOrderBtnEnable}"  HorizontalAlignment="Right"  Style="{StaticResource AddButtonStyle}" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/IriskingAttend;component/images/Add.png"/>
+                        <TextBlock FontSize="12" Text="添加班次" Margin="0,2,0,0" />
+                    </StackPanel>
+                </Button>
+                <Button Grid.Row="2" Name="ExportClassOrderExl" HorizontalAlignment="Right"  Style="{StaticResource ExportExcelButtonStyle}" Click="ExportClassOrderExl_Click" />
+            </StackPanel>
+            <sdk:DataGrid Style="{StaticResource DataGridStyle}" ItemsSource="{Binding ClassOrderSignInfos,Mode=TwoWay}"  CanUserSortColumns="False" 
+                    Name="dgClassOrderSign" ColumnWidth="Auto" Grid.Row="4" AutoGenerateColumns="False" Grid.ColumnSpan="6" LayoutUpdated="dgClassOrderSign_LayoutUpdated"                  
+                    MouseLeftButtonDown="dgClassOrderSign_MouseLeftButtonDown"  MouseMove="dgClassOrderSign_MouseMove" Visibility="Collapsed">
+                <sdk:DataGrid.Columns >
+                    <sdk:DataGridCheckBoxColumn Header="全选" IsReadOnly="True"  CanUserReorder="False"  CanUserResize="True" CanUserSort="False" MinWidth="70" Binding="{Binding isSelected, Mode=TwoWay}">
+                        <sdk:DataGridCheckBoxColumn.HeaderStyle>
+                            <Style TargetType="Primitives:DataGridColumnHeader">
+                                <Setter Property="ContentTemplate">
+                                    <Setter.Value>
+                                        <DataTemplate>
+                                            <StackPanel>
+                                                <!-- 如何在代码中控制该CheckBox的状态 -->
+                                                <CheckBox Content="全选" Name="ChkSelectAllClassOrderSign"  IsChecked="{Binding Selected,Mode=TwoWay,Source={StaticResource SelectAllClassOrderSign}}" Click="ChkSelectAllClassOrderSign_Click">
+                                                </CheckBox>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </sdk:DataGridCheckBoxColumn.HeaderStyle>
+                    </sdk:DataGridCheckBoxColumn>
+                    <sdk:DataGridTextColumn Header="序号" Binding="{Binding }" IsReadOnly="True" MinWidth="60" />
+                    <sdk:DataGridTextColumn Header="班次名称" Binding="{Binding class_order_name, Mode=TwoWay}" IsReadOnly="True" MinWidth="100" />
+                    <sdk:DataGridTextColumn Header="班次简称" Binding="{Binding attend_sign, Mode=TwoWay}" IsReadOnly="True" MinWidth="80" />
+                    <sdk:DataGridTextColumn Header="签到时间段" Binding="{Binding section_time_str, Mode=TwoWay}" IsReadOnly="True"  MinWidth="150"/>
+                    <sdk:DataGridTextColumn Header="记工时长" Binding="{Binding min_work_time_str, Mode=TwoWay}" IsReadOnly="True"  MinWidth="100"/>
+                    <sdk:DataGridTextColumn Header="记工工数" Binding="{Binding work_cnt_str, Mode=TwoWay}" IsReadOnly="True"  MinWidth="100"/>
+                    <sdk:DataGridTextColumn Header="所属班制" Binding="{Binding class_type_name, Mode=TwoWay}" IsReadOnly="True"  MinWidth="120"/>
+                    <sdk:DataGridTemplateColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="管理操作" MinWidth="200" Width="*" >
+                        <sdk:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <HyperlinkButton Content=" [修改]" Margin="5,0"  Name="btnModifyClassOrderSign"  VerticalAlignment="Center" Click="btnModifyClassOrderSign_Click" />
+                                    <HyperlinkButton Content=" [删除]" Margin="5,0"  Name="btnDeleteClassOrderSign" VerticalAlignment="Center" Click="btnDeleteClassOrderSign_Click" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </sdk:DataGridTemplateColumn.CellTemplate>
+                    </sdk:DataGridTemplateColumn>
+                </sdk:DataGrid.Columns>
+            </sdk:DataGrid>
+            <TextBlock  Name="txtCurrentClassOrderSign" Grid.Row="3" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="5,0,0,0"  VerticalAlignment="Center" Text="当前签到班次信息列表"  Style="{StaticResource ApplicationNameStyle}" Visibility="Collapsed" />
+            <StackPanel Name="spClassOrderSignBtn" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="5" Grid.ColumnSpan="6" Visibility="Collapsed">
+                <Button Command ="{Binding BatchDeleteClassOrderSignCommand}" IsEnabled="{Binding IsBatchOperateClassOrderSignBtnEnable}"  HorizontalAlignment="Left" Style="{StaticResource DelButtonStyle}" />
+                <Button Command="{Binding AddClassOrderSignCommand}"  IsEnabled="{Binding IsAddClassOrderSignBtnEnable}"  HorizontalAlignment="Right"  Height="23" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/IriskingAttend;component/images/Add.png"/>
+                        <TextBlock FontSize="12" Text="添加签到班班次" Margin="0,2,0,0" />
+                    </StackPanel>
+                </Button>
+                <Button Grid.Row="2" Name="ExportClassOrderExlSign" HorizontalAlignment="Right"  Style="{StaticResource ExportExcelButtonStyle}" Click="ExportClassOrderExl_Click" />
+            </StackPanel>
+            <sdk:DataGrid Style="{StaticResource DataGridStyle}" ItemsSource="{Binding ClassOrderJiGongShiInfos,Mode=TwoWay}"    CanUserSortColumns="False" 
+                    Name="dgClassOrderJiGongShi" ColumnWidth="Auto" Grid.Row="1" AutoGenerateColumns="False" Grid.ColumnSpan="6" LayoutUpdated="dgClassOrderJiGongShi_LayoutUpdated"  MouseLeftButtonDown="dgClassOrderJiGongShi_MouseLeftButtonDown"  MouseMove="dgClassOrderJiGongShi_MouseMove">
+                <sdk:DataGrid.Columns >
+                    <sdk:DataGridCheckBoxColumn Header="全选"  IsReadOnly="True"  CanUserReorder="False"  CanUserResize="True" CanUserSort="False" MinWidth="70" Binding="{Binding isSelected, Mode=TwoWay}">
+                        <sdk:DataGridCheckBoxColumn.HeaderStyle>
+                            <Style TargetType="Primitives:DataGridColumnHeader">
+                                <Setter Property="ContentTemplate">
+                                    <Setter.Value>
+                                        <DataTemplate>
+                                            <StackPanel>
+                                                <!-- 如何在代码中控制该CheckBox的状态 -->
+                                                <CheckBox Content="全选" Name="ChkSelectAllClassOrderJiGongShi" IsChecked="{Binding Selected,Mode=TwoWay,Source={StaticResource SelectAllClassOrderJiGongShi}}" Click="ChkSelectAllClassOrderJiGongShi_Click" >
+                                                </CheckBox>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </sdk:DataGridCheckBoxColumn.HeaderStyle>
+                    </sdk:DataGridCheckBoxColumn>
+                    <sdk:DataGridTextColumn Header="序号" Binding="{Binding }" IsReadOnly="True" MinWidth="60" />
+                    <sdk:DataGridTextColumn Header="班次名称" Binding="{Binding class_order_name, Mode=TwoWay}" IsReadOnly="True" MinWidth="100" />
+                    <sdk:DataGridTextColumn Header="班次简称" Binding="{Binding attend_sign, Mode=TwoWay}" IsReadOnly="True" MinWidth="80" />
+                    <sdk:DataGridTextColumn Header="入井稽核起始时间" Binding="{Binding in_well_start_time_str,Mode=TwoWay}" IsReadOnly="True"  MinWidth="120"/>
+                    <sdk:DataGridTextColumn Header="入井稽核结束时间" Binding="{Binding in_well_end_time_str,Mode=TwoWay}" IsReadOnly="True"  MinWidth="120"/>
+                    <sdk:DataGridTextColumn Header="最晚下班时间" Binding="{Binding attend_latest_worktimeStr, Mode=TwoWay}"  IsReadOnly="True"  MinWidth="100"/>
+                    <sdk:DataGridTextColumn Header="最大在岗时长" Binding="{Binding attend_max_minutesStr, Mode=TwoWay}"  IsReadOnly="True"  MinWidth="100"/>
+                    <sdk:DataGridTextColumn Header="记工时长" Binding="{Binding avail_timeStr,Mode=TwoWay}" IsReadOnly="True"  MinWidth="100"/>
+                    <sdk:DataGridTextColumn Header="记工工数" Binding="{Binding work_cntStr,Mode=TwoWay}" IsReadOnly="True"  MinWidth="100"/>
+                    <sdk:DataGridTextColumn Header="所属班制" Binding="{Binding class_type_name,Mode=TwoWay}" IsReadOnly="True"  MinWidth="120"/>
+
+                    <sdk:DataGridTextColumn Header="考勤归属日" Binding="{Binding attend_off_minutesStr, Mode=TwoWay}" IsReadOnly="True"  MinWidth="150"/>
+                    <sdk:DataGridTemplateColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="管理操作" MinWidth="200" Width="*" >
+                        <sdk:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <HyperlinkButton Content=" [修改]" Margin="5,0"  Name="btnModifyClassOrderJiGongShi" Click="btnModifyClassOrderJiGongShi_Click"  VerticalAlignment="Center"  />
+                                    <HyperlinkButton Content=" [删除]" Margin="5,0"  Name="btnDeleteClassOrderJiGongShi"  Click="btnDeleteClassOrderJiGongShi_Click" VerticalAlignment="Center"  />
+                                </StackPanel>
+                            </DataTemplate>
+                        </sdk:DataGridTemplateColumn.CellTemplate>
+                    </sdk:DataGridTemplateColumn>
+                </sdk:DataGrid.Columns>
+            </sdk:DataGrid>
+            <StackPanel Name="spClassOrderJiGongShiBtn" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="8">
+                <Button Command ="{Binding BatchDeleteClassOrderJiGongShiCommand}" IsEnabled="{Binding IsBatchOperateClassOrderJiGongShiBtnEnable}"   HorizontalAlignment="Left" Style="{StaticResource DelButtonStyle}" />
+                <Button Command="{Binding AddClassOrderJiGongShiCommand}"  IsEnabled="{Binding IsAddClassOrderJiGongShiBtnEnable}"     HorizontalAlignment="Right"  Height="23" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/IriskingAttend;component/images/Add.png"/>
+                        <TextBlock FontSize="12" Text="添加记工时班次" Margin="0,2,0,0" />
+                    </StackPanel>
+                </Button>
+                <Button Grid.Row="8" Name="ExportClassOrderExlJiGongShi" HorizontalAlignment="Right"  Style="{StaticResource ExportExcelButtonStyle}" Click="ExportClassOrderExlJiGongShi_Click" />
+            </StackPanel>
+            <TextBlock  Name="txtCurrentClassOrderJiGongShi" Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="5,0,0,0"  VerticalAlignment="Center" Text="当前记工时班次信息列表"  Style="{StaticResource ApplicationNameStyle}"  />
+
+        </Grid>
+    </Grid>
+</navigation:Page>

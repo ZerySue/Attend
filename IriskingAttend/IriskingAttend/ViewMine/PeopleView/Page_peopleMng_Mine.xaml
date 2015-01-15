@@ -1,0 +1,161 @@
+﻿<navigation:Page x:Class="IriskingAttend.ViewMine.PeopleView.Page_peopleMng_Mine" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:my="clr-namespace:MvvmLightCommand.SL4.TriggerActions"
+                 xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+           mc:Ignorable="d"
+           d:DesignWidth="1000" d:DesignHeight="405"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:Primitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Data"
+           xmlns:local="clr-namespace:IriskingAttend.View"
+           Title="人员信息管理" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" HorizontalAlignment="Left" VerticalAlignment="Top" >
+
+    <UserControl.Resources>
+        <local:MarkObject x:Key="MarkObject" />
+    </UserControl.Resources>
+
+    <!--<HyperlinkButton Content="添加员工信息" Command="{Binding AddPersonInfoCommand}" HorizontalAlignment="Right" Margin="0,0,20,5" VerticalAlignment="Center" />-->
+    <Grid Style="{StaticResource GridStyle}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="119*" />
+            <ColumnDefinition Width="164*" />
+            <ColumnDefinition Width="124*" />
+            <ColumnDefinition Width="112*" />
+            <ColumnDefinition Width="66*" />
+            <ColumnDefinition Width="104*" />
+            <ColumnDefinition Width="88*" />
+            <ColumnDefinition Width="123*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="402*" />
+            <RowDefinition Height="auto" />
+            <!--<RowDefinition Height="50*" />-->
+        </Grid.RowDefinitions>   
+        <!--<StackPanel Orientation="Horizontal" Height="40" Grid.ColumnSpan="8" Margin="8,0">-->
+        <Grid Grid.Row="0" Grid.ColumnSpan="8" Height="33">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0">
+                <TextBlock HorizontalAlignment="Center"  Name="textBlock1" Text="部门" FontSize="12" VerticalAlignment="Center" Margin="5,0,0,0" Grid.Column="0"/>
+                <ComboBox Height="23" Name="comboBox1" Width="auto" ItemsSource="{Binding Departs, Mode=OneWay}" Margin="2,0,0,0" Grid.Column="1" FontSize="12"
+            SelectedIndex="{Binding Departs_SelectedIndex,Mode=TwoWay}" />
+                <TextBlock  Name="textBlock2" Text="虹膜状态" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="2" FontSize="12"/>
+                <ComboBox Height="23" Name="comboBox2" Width="auto"  ItemsSource="{Binding IrisStatus, Mode=OneWay}" Margin="2,0,0,0" Grid.Column="3" FontSize="12"
+            SelectedIndex="{Binding IrisStatusSelectedIndex,Mode=TwoWay}" />
+                <TextBlock  Name="textBlock3" Text="虹膜注册" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="4" FontSize="12"/>
+                <ComboBox Height="23" Name="comboBox3" Width="auto"  ItemsSource="{Binding IrisRegisters, Mode=OneWay}" Margin="2,0,0,0"  Grid.Column="5" FontSize="12"
+            SelectedIndex="{Binding IrisRegisters_SelectedIndex,Mode=TwoWay}"/>
+                <TextBlock  Name="textBlock4" Text="子部门" HorizontalAlignment="Center"  VerticalAlignment="Center"  Margin="20,0,0,0" Grid.Column="6" FontSize="12"/>
+                <ComboBox Height="23" Name="comboBox4" Width="auto"  ItemsSource="{Binding ChildDepartMode, Mode=OneWay}" Margin="2,0,0,0" Grid.Column="7" FontSize="12"
+            SelectedIndex="{Binding ChildDepartMode_SelectedIndex,Mode=TwoWay}"  />
+                <TextBlock Text="工号" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="8" FontSize="12"/>
+                <TextBox  Name="work_sn" MinWidth="80" Height="23" Text="{Binding PersonWorkSn,Mode=TwoWay}" Margin="2,0,0,0" Grid.Column="9" FontSize="12" MaxWidth="105" />
+                <TextBlock Text="姓名" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="10" FontSize="12"/>
+                <TextBox Name="name" MinWidth="80" Height="23" Text="{Binding PersonName, Mode=TwoWay}" Margin="2,0,2,0" Grid.Column="11" FontSize="12" MaxWidth="105"  />  
+            </StackPanel>
+            <Button Content="查询" Height="23" Width="75" Command="{Binding QueryPersonInfoCommand}" Margin="2,0,0,0" Grid.Column="2" FontSize="12"/>
+        </Grid>
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="8" Orientation="Horizontal" HorizontalAlignment="Center">
+
+            <Button Command="{Binding BatchModifyCommand}" IsEnabled="{Binding IsBatchOperateBtnEnable}"  Width="125" Grid.Row="3" Grid.Column="4"  Style="{StaticResource ButtonStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/BatchTransfer.png"/>
+                    <TextBlock FontSize="12" Text="批量修改人员属性" Margin="0,2,0,0"   />
+                </StackPanel>
+            </Button>
+            <Button Command="{Binding BatchStopIrisCommand}" IsEnabled="{Binding IsBatchOperateBtnEnable}" Width="100" Grid.Row="3" Grid.Column="3"  Style="{StaticResource ButtonStyle}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/StopIris.png"/>
+                    <TextBlock FontSize="12" Text="批量停用虹膜" Margin="0,2,0,0" />
+                </StackPanel>
+            </Button>
+            <Button IsEnabled="{Binding IsBatchOperateBtnEnable}" Command="{Binding BatchDeleteCommand}" Width="75" Grid.Row="3" Grid.Column="2"  Style="{StaticResource DelButtonStyle}" />
+            <Button Command="{Binding AddPersonInfoCommand}" Height="23" Width="75"  Style="{StaticResource ButtonStyle}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/Add.png"/>
+                    <TextBlock FontSize="12" Text="添加员工" Margin="0,2,0,0" />
+                </StackPanel>
+            </Button>
+
+            <Button Name="ExportExl" HorizontalAlignment="Right"  Style="{StaticResource ExportExcelButtonStyle}" Click="ExportExl_Click" />
+            <!--<Button Content="返回" Command="{Binding BackCommand}"  Width="69" Grid.Row="3" Grid.Column="4" Margin="5" Height="25" FontSize="13" />-->
+        </StackPanel>
+        <sdk:DataGrid Name="dataGridPerson"  Style="{StaticResource DataGridStyle}"  ItemsSource="{Binding UserPersonInfos,Mode=TwoWay}"   Grid.ColumnSpan="8" Grid.Row="1" CanUserSortColumns="False"
+                    SelectedItem="{Binding SelectPersonInfo,Mode=TwoWay}"  ColumnWidth="Auto"   
+                      HorizontalScrollBarVisibility="Visible" MinHeight="100" LoadingRow="dataGridPerson_LoadingRow" LayoutUpdated="dataGridPerson_LayoutUpdated" MouseLeftButtonDown="dataGridPerson_MouseLeftButtonDown" MouseMove="dataGridPerson_MouseMove"><!--MouseMove="dataGrid1_MouseMove" LayoutUpdated="dataGrid1_LayoutUpdated" MouseLeftButtonDown="dataGrid1_MouseLeftButtonDown" MouseLeftButtonUp="dataGrid1_MouseLeftButtonUp"--><!--Height="{Binding Height_data}"-->
+            <sdk:DataGrid.Columns >
+                <sdk:DataGridTemplateColumn CanUserReorder="False" CanUserResize="True" CanUserSort="False" MinWidth="65"   >
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="Primitives:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <!-- 如何在代码中控制该CheckBox的状态 -->
+                                            <CheckBox Content="全选" Name="chkSelectAll" IsChecked="{Binding Selected,Mode=TwoWay,Source={StaticResource MarkObject}}"  Click="chkSelectAll_Click" OpacityMask="{x:Null}">
+                                           
+                                            </CheckBox>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <CheckBox IsEnabled="False"  IsChecked="{Binding isSelected, Mode=OneWay}"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                             </StackPanel>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn Header="序号" Binding="{Binding }" IsReadOnly="True" MinWidth="50" />
+                <sdk:DataGridTextColumn Header="人员工号" Binding="{Binding work_sn}" IsReadOnly="True" MinWidth="80" />
+                <sdk:DataGridTextColumn Header="人员姓名" Binding="{Binding person_name}" IsReadOnly="True"  MinWidth="80"/>
+                <sdk:DataGridTextColumn Header="虹膜" Binding="{Binding iris_register}" IsReadOnly="True"  MinWidth="70" />
+                <sdk:DataGridTextColumn Header="虹膜状态" Binding="{Binding iris_status}"  IsReadOnly="True"  MinWidth="70" />
+                <sdk:DataGridTextColumn Header="部门" Binding="{Binding depart_name}"  IsReadOnly="True"  MinWidth="80" />
+                <sdk:DataGridTextColumn Header="上级部门" Binding="{Binding parent_depart_name}"  IsReadOnly="True"  MinWidth="80" />
+                <sdk:DataGridTextColumn Header="部门编号" Binding="{Binding depart_sn}"  IsReadOnly="True"  MinWidth="80" />
+                <sdk:DataGridTextColumn Header="性别" Binding="{Binding sex}"  IsReadOnly="True"  MinWidth="50" />
+                <sdk:DataGridTextColumn Header="地面班制" Binding="{Binding class_type_name_on_ground}"  IsReadOnly="True"  MinWidth="80" />
+                <sdk:DataGridTextColumn Header="井下班制" Binding="{Binding class_type_name}"  IsReadOnly="True"  MinWidth="80" />
+                <sdk:DataGridTemplateColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" MinWidth="400" Width="*" Header="操作" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <!--<HyperlinkButton Content="" Margin="5" Name="btnCheck_personInfo" Click="btnCheck_personInfo_Click" />--> <!--合并查看和修改按钮为详细信息按钮 by wz-->
+                                <HyperlinkButton Content="[详细信息]" VerticalAlignment="Center"  Margin="5,0" Name="btnModify_personInfo" Click="btnModify_personInfo_Click" />
+                                <HyperlinkButton Content="[删除]" VerticalAlignment="Center"  Margin="5,0" Name="btnDelete_personInfo" Click="btnDelete_personInfo_Click" />
+                                <HyperlinkButton Content="[记录]" VerticalAlignment="Center"  Margin="5,0" Name="btnRecord_personInfo" Click="btnRecord_personInfo_Click" />
+                                <HyperlinkButton Content="[停用虹膜]" VerticalAlignment="Center"  Margin="5,0" Name="btnStopIris_personInfo" Click="btnStopIris_personInfo_Click" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+            </sdk:DataGrid.Columns>
+            
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="LayoutUpdated">
+                    <i:InvokeCommandAction Command="{Binding LayoutUpdateCommand}"/>
+                </i:EventTrigger>
+                <i:EventTrigger EventName="MouseMove">
+                    <i:InvokeCommandAction Command="{Binding MouseMoveBehaviorCommand}" />
+                </i:EventTrigger>
+                <i:EventTrigger EventName="MouseLeftButtonDown">
+                    <my:MouseButtonEventToCommand Command="{Binding SortBehaviorCommand}" />
+                </i:EventTrigger>
+                <i:EventTrigger EventName="MouseLeftButtonUp">
+                    <my:MouseButtonEventToCommand Command="{Binding SortBehaviorUpCommand}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </sdk:DataGrid>
+    </Grid>
+    <!--<HyperlinkButton Content="添加员工信息" Command="{Binding AddPersonInfoCommand}" HorizontalAlignment="Right" Margin="0,5,20,0" VerticalAlignment="Center" />--> 
+</navigation:Page>

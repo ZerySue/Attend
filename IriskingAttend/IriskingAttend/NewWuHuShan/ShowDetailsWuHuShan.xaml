@@ -1,0 +1,32 @@
+﻿<controls:ChildWindow x:Class="IriskingAttend.NewWuHuShan.ShowDetailsWuHuShan"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="1180" Height="300" 
+           Title="详细信息" FontSize="12"  xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot" Background="{StaticResource UserDomainBackgroundColorBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <sdk:DataGrid Name="dgShowDetails"  Style="{StaticResource DataGridStyle}" CanUserSortColumns="False" IsReadOnly="True">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="序号" Binding="{Binding }" Width="auto"  />
+                <sdk:DataGridTextColumn Header="日期" Binding="{Binding AttendDay,StringFormat='yyyy-MM-dd'}" MinWidth="80" Width="auto" />
+                <sdk:DataGridTextColumn Header="工号" Binding="{Binding WorkSn}" MinWidth="80" Width="auto"/>
+                <sdk:DataGridTextColumn Header="姓名" Binding="{Binding PersonName}" MinWidth="80" Width="auto" />
+                <sdk:DataGridTextColumn Header="部门" Binding="{Binding DepartName}" MinWidth="100" Width="auto" />
+                <sdk:DataGridTextColumn Header="工种" Binding="{Binding WorkType}" MinWidth="80" Width="auto" />
+                <sdk:DataGridTextColumn Header="职务" Binding="{Binding PrincipalName}" MinWidth="80" Width="auto" />
+                <sdk:DataGridTextColumn Header="班制" Binding="{Binding ClassTypeName}" MinWidth="100" Width="auto" />
+                <sdk:DataGridTextColumn Header="班次" Binding="{Binding ClassOrderName}" MinWidth="100" Width="auto" />
+                <sdk:DataGridTextColumn Header="虹膜入井时间" Binding="{Binding InWellTime,StringFormat='yyyy-MM-dd HH:mm:ss'}" MinWidth="150" Width="auto" />
+                <sdk:DataGridTextColumn Header="虹膜出井时间" Binding="{Binding OutWellTime,StringFormat='yyyy-MM-dd HH:mm:ss'}" MinWidth="150" Width="auto" />
+                <sdk:DataGridTextColumn Header="出入井时长" Binding="{Binding IrisWorkTimeStr}" MinWidth="80" Width="*" />
+                <sdk:DataGridTextColumn Header="定位入井时间" Binding="{Binding InLocateTime,StringFormat='yyyy-MM-dd HH:mm:ss'}" MinWidth="150" Width="auto" />
+                <sdk:DataGridTextColumn Header="定位出井时间" Binding="{Binding OutLocateTime,StringFormat='yyyy-MM-dd HH:mm:ss'}" MinWidth="150" Width="auto" />
+                <sdk:DataGridTextColumn Header="出入井时长" Binding="{Binding LocateWorkTimeStr}" MinWidth="80" Width="*" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+    </Grid>
+</controls:ChildWindow>

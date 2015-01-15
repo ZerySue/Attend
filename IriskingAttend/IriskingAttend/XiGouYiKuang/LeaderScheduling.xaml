@@ -1,0 +1,99 @@
+﻿<navigation:Page x:Class="IriskingAttend.XiGouYiKuang.LeaderScheduling" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="800" d:DesignHeight="480" 
+           Title="领导排班" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot" Background="#FFDBDBDB">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+        <Grid VerticalAlignment="Center" Grid.Row="0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <sdk:Label Content="开始时间" FontSize="12" />
+                <sdk:DatePicker FontSize="12" Height="23" Name="dtpBegin" />
+                <sdk:Label Content="*" Foreground="#FFF50909" />
+                <sdk:Label Content="~" FontSize="12" />
+                <sdk:Label Content="截止时间" FontSize="12" />
+                <sdk:DatePicker FontSize="12" Height="23" Name="dtpEnd" />
+                <Button Name="btnQuery" Height="23" Width="75" Margin="5,2" FontSize="12" Click="btnQuery_Click" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/IriskingAttend;component/images/binoculars.png" />
+                        <TextBlock FontSize="12" Text="查  询" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>           
+        </Grid>
+        <sdk:DataGrid Style="{StaticResource DataGridStyle}" AutoGenerateColumns="False" Grid.Row="1" Name="dgLeaderSchdule"
+                      CanUserSortColumns="False" CanUserReorderColumns="False">
+             <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding DateId,Mode=TwoWay}" Header="日期"   IsReadOnly="True" MinWidth="60" Width="1*"/>
+                <sdk:DataGridTextColumn Binding="{Binding WeekDay, Mode=TwoWay}" Header="星期" IsReadOnly="True" MinWidth="60" Width="1*"/>
+                <sdk:DataGridTemplateColumn Header="当天值班领导1" IsReadOnly="True" MinWidth="60" Width="1*" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <ComboBox Name="cmbLeader" SelectedValue="{Binding TodayLeaderId1, Mode=TwoWay}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn Header="当天值班领导2" IsReadOnly="True" MinWidth="60" Width="1*">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <ComboBox Name="cmbLeader" SelectedValue="{Binding TodayLeaderId2, Mode=TwoWay}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn Header="早班带班领导" IsReadOnly="True" MinWidth="60" Width="1*">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <ComboBox Name="cmbLeader" SelectedValue="{Binding MorningLeaderId, Mode=TwoWay}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn Header="中班带班领导" IsReadOnly="True" MinWidth="60" Width="1*">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <ComboBox Name="cmbLeader" SelectedValue="{Binding MidLeaderId, Mode=TwoWay}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn Header="夜班带班领导" IsReadOnly="True" MinWidth="60" Width="1*">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <ComboBox Name="cmbLeader" SelectedValue="{Binding NigntLeaderId, Mode=TwoWay}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="2" HorizontalAlignment="Center">
+            <Button Name="btnSetLeaderSchedule"   FontSize="12"  Margin="10,0,2,0" Padding="2" MinWidth="80" Click="btnSetLeaderSchedule_Click" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/Images/ParaSet.png" Width="20"/>
+                    <TextBlock FontSize="12" Text="  设 置" Margin="0,2" />
+                </StackPanel>
+            </Button>
+            <Button Name="btnExportExcel"   FontSize="12"  Margin="10,0,2,0" Padding="2" MinWidth="80" Click="btnExportExcel_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/ExportExcel.png" Width="20"/>
+                    <TextBlock FontSize="12" Text="导出Excel" Margin="0,2" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Grid>
+</navigation:Page>

@@ -1,0 +1,56 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="IriskingAttend" EntryPointType="IriskingAttend.App" RuntimeVersion="5.0.61118.0">
+  <Deployment.InBrowserSettings>
+    <InBrowserSettings>
+      <InBrowserSettings.SecuritySettings>
+        <SecuritySettings ElevatedPermissions="Required" />
+      </InBrowserSettings.SecuritySettings>
+    </InBrowserSettings>
+  </Deployment.InBrowserSettings>
+  <Deployment.Parts>
+    <AssemblyPart x:Name="IriskingAttend" Source="IriskingAttend.dll" />
+    <AssemblyPart x:Name="AsyncControl" Source="AsyncControl.dll" />
+    <AssemblyPart x:Name="Cellbi.SvZLib" Source="Cellbi.SvZLib.dll" />
+    <AssemblyPart x:Name="GalaSoft.MvvmLight.Extras.SL4" Source="GalaSoft.MvvmLight.Extras.SL4.dll" />
+    <AssemblyPart x:Name="GalaSoft.MvvmLight.SL4" Source="GalaSoft.MvvmLight.SL4.dll" />
+    <AssemblyPart x:Name="IkReportWCFRia" Source="IkReportWCFRia.dll" />
+    <AssemblyPart x:Name="IriskingAttendBase" Source="IriskingAttendBase.dll" />
+    <AssemblyPart x:Name="Lite.ExcelLibrary" Source="Lite.ExcelLibrary.dll" />
+    <AssemblyPart x:Name="Lite.Library" Source="Lite.Library.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.Prism" Source="Microsoft.Practices.Prism.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.Prism.Interactivity" Source="Microsoft.Practices.Prism.Interactivity.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.Prism.MefExtensions" Source="Microsoft.Practices.Prism.MefExtensions.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.Prism.UnityExtensions" Source="Microsoft.Practices.Prism.UnityExtensions.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.ServiceLocation" Source="Microsoft.Practices.ServiceLocation.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.Unity.Silverlight" Source="Microsoft.Practices.Unity.Silverlight.dll" />
+    <AssemblyPart x:Name="ReportTemplate" Source="ReportTemplate.dll" />
+    <AssemblyPart x:Name="Silverlight.OutlookBar" Source="Silverlight.OutlookBar.dll" />
+    <AssemblyPart x:Name="SilverlightReport" Source="SilverlightReport.dll" />
+    <AssemblyPart x:Name="System.ComponentModel.Composition" Source="System.ComponentModel.Composition.dll" />
+    <AssemblyPart x:Name="System.ComponentModel.DataAnnotations" Source="System.ComponentModel.DataAnnotations.dll" />
+    <AssemblyPart x:Name="System.ServiceModel.DomainServices.Client" Source="System.ServiceModel.DomainServices.Client.dll" />
+    <AssemblyPart x:Name="System.ServiceModel.DomainServices.Client.Web" Source="System.ServiceModel.DomainServices.Client.Web.dll" />
+    <AssemblyPart x:Name="System.ServiceModel.Web.Extensions" Source="System.ServiceModel.Web.Extensions.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls.Data" Source="System.Windows.Controls.Data.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls.Data.Input" Source="System.Windows.Controls.Data.Input.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls" Source="System.Windows.Controls.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls.Input.Toolkit" Source="System.Windows.Controls.Input.Toolkit.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls.Navigation" Source="System.Windows.Controls.Navigation.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls.Toolkit" Source="System.Windows.Controls.Toolkit.dll" />
+    <AssemblyPart x:Name="System.Xml.Serialization" Source="System.Xml.Serialization.dll" />
+    <AssemblyPart x:Name="Microsoft.CSharp" Source="Microsoft.CSharp.dll" />
+    <AssemblyPart x:Name="System.Windows.Data" Source="System.Windows.Data.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls.Toolkit.Internals" Source="System.Windows.Controls.Toolkit.Internals.dll" />
+    <AssemblyPart Source="zh-Hans/System.ComponentModel.Composition.resources.dll" />
+    <AssemblyPart Source="zh-Hans/System.ComponentModel.DataAnnotations.resources.dll" />
+    <AssemblyPart Source="zh-Hans/System.ServiceModel.DomainServices.Client.resources.dll" />
+    <AssemblyPart Source="zh-Hans/System.ServiceModel.DomainServices.Client.Web.resources.dll" />
+    <AssemblyPart Source="zh-Hans/System.ServiceModel.Web.Extensions.resources.dll" />
+    <AssemblyPart Source="zh-Hans/System.Windows.Controls.resources.dll" />
+    <AssemblyPart Source="zh-Hans/System.Windows.Controls.Data.resources.dll" />
+    <AssemblyPart Source="zh-Hans/System.Windows.Controls.Data.Input.resources.dll" />
+    <AssemblyPart Source="zh-Hans/System.Windows.Controls.Navigation.resources.dll" />
+    <AssemblyPart Source="zh-Hans/System.Xml.Serialization.resources.dll" />
+    <AssemblyPart Source="zh-Hans/Microsoft.CSharp.resources.dll" />
+    <AssemblyPart Source="zh-Hans/System.Windows.Data.resources.dll" />
+  </Deployment.Parts>
+</Deployment>

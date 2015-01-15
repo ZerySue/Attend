@@ -1,0 +1,253 @@
+﻿<controls:ChildWindow 
+             xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+            x:Class="IriskingAttend.View.PeopleView.ChildWnd_OperateClassOrder"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+    xmlns:Primitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Data"
+           Width="806" Height="auto" 
+           Title="{Binding Title}" FontSize="12" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="710">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="Auto"/>
+            <RowDefinition  Height="Auto"/>
+            <RowDefinition  Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="35*" />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                <sdk:Label Content="班次名称" Margin="0" Foreground="Black" Padding="5,0,62,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <TextBox IsReadOnly="{Binding IsReadOnly}" Text="{Binding ClassOrderName,Mode=TwoWay}" Margin="10,5" Width="150" Height="23" FontSize="12" />
+                <TextBlock Text="*" Foreground="Red" VerticalAlignment="Center" Padding="5,5,15,0" FontSize="12" />
+                <sdk:Label Content="班次简称" Margin="75,0,0,0" Foreground="Black"  Padding="5,0,62,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <TextBox IsReadOnly="{Binding IsReadOnly}" Text="{Binding AttendSign,Mode=TwoWay}" Margin="10,5" Width="150" Height="23" FontSize="12" />
+            </StackPanel>
+           
+            <StackPanel Orientation="Horizontal" Margin="0" Height="36">
+            <sdk:Label Content="所属班制" Margin="0" Foreground="Black"  Padding="5,0,62,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+            <ComboBox Margin="10,5" IsEnabled="{Binding IsEditable}"  ItemsSource="{Binding ClassTypeNames}" SelectedIndex="{Binding ClassTypeNamesSelectedIndex,Mode=TwoWay}"  Width="150" Height="23" FontSize="12" />
+            <sdk:Label Content="考勤归属日" Margin="103,0,0,0" Foreground="Black"  Padding="4,0,51,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+            <ComboBox Name="Combobox_attend_day" Margin="10,5" IsEnabled="{Binding IsEditable}"   SelectedIndex="{Binding AttendOffMinutesSelectedIndex,Mode=TwoWay}"  Width="194" Height="23" FontSize="12">
+            </ComboBox>
+            </StackPanel>
+                
+                
+            <StackPanel Orientation="Horizontal" Margin="0" Height="36">
+            <sdk:Label Content="上班考勤起始时间" Margin="0" Foreground="Black"  Padding="5,0,14,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+            <ComboBox Name="Combobox_In_well_start_day" Margin="10,5" IsEnabled="{Binding IsEditable}" SelectedIndex="{Binding InWellStartTimeDayIndex,Mode=TwoWay}"  Width="70" Height="23" FontSize="12" />
+            <toolkit:TimePicker Height="23"  Name="tpOnStartTime" IsEnabled="{Binding IsEditable}" Value="{Binding InWellStartTime,Mode=TwoWay}" FontSize="12" />
+            <TextBlock Text="*" Foreground="Red" VerticalAlignment="Center" Padding="5,5,15,0" FontSize="12" />
+            <sdk:Label Content="上班考勤结束时间" Margin="30,0,0,0" Foreground="Black"  Padding="5,0,14,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+            <ComboBox Name="Combobox_In_well_end_day" Margin="10,5"  IsEnabled="{Binding IsEditable}"   Width="70" Height="23" SelectedIndex="{Binding InWellEndTimeDayIndex,Mode=TwoWay}" />
+            <toolkit:TimePicker Height="23" Name="tpOnEndTime" IsEnabled="{Binding IsEditable}" Value="{Binding InWellEndTime,Mode=TwoWay}"/>
+
+            </StackPanel>
+                
+            <StackPanel Orientation="Horizontal">
+            </StackPanel>
+                
+            <StackPanel Orientation="Horizontal" Margin="0" Height="36">
+            <sdk:Label Content="下班考勤起始时间" Margin="0" Foreground="Black"  Padding="5,0,14,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+            <ComboBox Name="Combobox_Out_well_start_day" Margin="10,5" IsEnabled="{Binding IsEditable}"   Width="70" Height="23" SelectedIndex="{Binding OutWellStartTimeDayIndex,Mode=TwoWay}" FontSize="12" />
+            <toolkit:TimePicker Height="23" Name="tpOffStartTime" IsEnabled="{Binding IsEditable}" Value="{Binding OutWellStartTime,Mode=TwoWay}" FontSize="12" />
+            <sdk:Label Content="下班考勤结束时间" Margin="58,0,0,0" Foreground="Black"  Padding="5,0,14,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+            <ComboBox Name="Combobox_Out_well_end_day" Margin="10,5"  IsEnabled="{Binding IsEditable}"   Width="70" Height="23" SelectedIndex="{Binding OutWellEndTimeDayIndex,Mode=TwoWay}" FontSize="12" />
+            <toolkit:TimePicker Height="23" Name="tpOffEndTime"  IsEnabled="{Binding IsEditable}" Value="{Binding OutWellEndTime,Mode=TwoWay}" FontSize="12" />
+
+            </StackPanel>
+                
+            <StackPanel Orientation="Horizontal">
+            </StackPanel>
+                
+                
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="36">
+                <sdk:Label Content="最晚下班时间" Margin="0" Foreground="Black"  Padding="5,0,38,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <StackPanel Orientation="Horizontal" Width="255">
+                    <CheckBox HorizontalAlignment="Stretch" IsChecked="{Binding AttendLatestWorktimeValid,Mode=TwoWay}" IsEnabled="{Binding IsEditable}"  VerticalAlignment="Center" Margin="10,0,0,0" FontSize="12" />
+                    <ComboBox Name="Combobox_Attend_work_time" Margin="10,5" IsEnabled="{Binding IsEditable}"  Visibility="{Binding AttendLatestWorktimeVisibility}"  Width="70" Height="23" SelectedIndex="{Binding AttendLatestWorktimeDayIndex,Mode=TwoWay}" FontSize="12">
+                    </ComboBox>
+                    <toolkit:TimePicker Height="23"  IsEnabled="{Binding IsEditable}"  Visibility="{Binding AttendLatestWorktimeVisibility}" Value="{Binding AttendLatestWorktime,Mode=TwoWay}" Width="11" FontSize="12" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Content="最大在岗时长" Margin="0" Foreground="Black"  Padding="5,0,38,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <StackPanel Orientation="Horizontal" Height="35">
+                    <CheckBox  IsChecked="{Binding AttendMaxMinutesValid,Mode=TwoWay}" IsEnabled="{Binding IsEditable}" HorizontalAlignment="Center"  VerticalAlignment="Center" Margin="10,0,0,0" FontSize="12" />
+                    <TextBox IsReadOnly="{Binding IsReadOnly}" Text="{Binding AttendMaxMinutes,Mode=TwoWay}" Visibility="{Binding AttendMaxMinutesVisibility}"  Margin="10,5" Width="79" Height="23" FontSize="12" />
+                    <TextBlock Text="分钟 (超过该时长时，新的识别记录将按入井计算) " Visibility="{Binding AttendMaxMinutesVisibility}" VerticalAlignment="Center" FontSize="12" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="36">
+                <sdk:Label Content="工数计算方式" Margin="0" Foreground="Black"  Padding="5,0,38,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <ComboBox Name="Combobox_Workcnt_method" Margin="10,5" IsEnabled="{Binding IsEditable}"   Width="100" Height="23" SelectedIndex="{Binding WorkCntMethodIndex,Mode=TwoWay}" FontSize="12">
+                        <!--<ComboBoxItem Content="标准" />-->
+                        <!--<ComboBoxItem Content="分时间段记工" />-->
+                    </ComboBox>
+                    <Button Content="添加" Command="{Binding AddWorkCntCmd}" IsEnabled="{Binding IsEditable}" Name="Add"
+                            Margin="10,7,0,7" Width="50" Visibility="{Binding AddWorkCnt_Visibility}" FontSize="12" /> 
+                </StackPanel>
+
+
+         
+        </StackPanel>
+        
+        
+        <StackPanel Grid.Row="1" Visibility="{Binding StandardWorkCntsVisibility}">
+            <StackPanel Orientation="Horizontal" >
+                <sdk:Label Content="标准记工时间长度" Margin="0" Foreground="Black"  Padding="5,0,14,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <toolkit:TimePicker Margin="10,5" Value="{Binding AvailTime,Mode=TwoWay}" Name="availTime" FontSize="12" IsEnabled="{Binding IsEditable}"/>
+                <TextBlock Text="*" Foreground="Red" VerticalAlignment="Center" Padding="5,5,15,0" />
+                <sdk:Label Content="标准记工工数" Margin="0,0,0,0" Foreground="Black"  Padding="5,0,38,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <TextBox Name="txtWorkCntstandard"  ToolTipService.ToolTip="请输入数字"
+                    Margin="10,5,0,5" IsEnabled="{Binding IsEditable}" Height="23" Text="{Binding WorkCnt,Mode=TwoWay}" 
+                         FontSize="12" MinWidth="70" MaxWidth="100" 
+                         KeyDown="txtWorkCntstandard_KeyDown"></TextBox>
+                <TextBlock Text="*" Foreground="Red" VerticalAlignment="Center" Padding="5,5,15,0" FontSize="12" />
+            </StackPanel>
+          
+        </StackPanel>
+        <Grid Grid.Row="2" Visibility="{Binding AddWorkCntVisibility}" Margin="125,0,0,0" HorizontalAlignment="Left" MaxHeight="200">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <sdk:DataGrid ItemsSource="{Binding WorkCntDatas,Mode=TwoWay}" AutoGenerateColumns="False"
+                                  Name="DG_ClassOrder" Margin="0,5" Width="410" IsEnabled="{Binding IsEditable}" 
+                                  FontSize="12">
+                    <sdk:DataGrid.Columns >
+                            <sdk:DataGridTemplateColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="记工时间长度" Width="4*" IsReadOnly="True">
+                            <sdk:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                            <toolkit:TimePicker Margin="10,0,0,0" Value="{Binding AvailTime,Mode=TwoWay}" Name="availTime" />
+                                        <TextBlock Text="*" Foreground="Red" VerticalAlignment="Center" Padding="5,5,15,0" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </sdk:DataGridTemplateColumn.CellTemplate>
+                        </sdk:DataGridTemplateColumn>
+                            <sdk:DataGridTemplateColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="记工工数" Width="4*" IsReadOnly="True">
+                            <sdk:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" >
+                                    <TextBox Name="txtWorkCntDuration"  Margin="10,5,0,5" Width="80" Height="23" Text="{Binding WorkCnt,Mode=TwoWay}" KeyDown="txtWorkCntstandard_KeyDown" />
+                                        
+                                    <TextBlock Text="*" Foreground="Red" VerticalAlignment="Center" Padding="5,5,15,0" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </sdk:DataGridTemplateColumn.CellTemplate>
+                        </sdk:DataGridTemplateColumn>
+                        <!--<sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="3*" Binding="{Binding bindingAvail_time,Mode=TwoWay}" Header="记工时间长度" IsReadOnly="True" />
+                        <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="3*" Binding="{Binding bindingWork_cnt,Mode=TwoWay}" Header="记工工数" IsReadOnly="True" />-->
+                        <sdk:DataGridTemplateColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="操作" Width="2*" IsReadOnly="True">
+                            <sdk:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <HyperlinkButton Content=" [删除]" Margin="5"  Name="btnDelete" Click="btnDelete_Click">
+                                            <!--<i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="Click">
+                                                    <my:MouseButtonEventToCommand Command="{Binding DelCommand}" />
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>-->
+                                        </HyperlinkButton>
+                                        <!--CommandParameter="{Binding ElementName=DG_ClassOrder}"-->
+                                    </StackPanel>
+                                </DataTemplate>
+                            </sdk:DataGridTemplateColumn.CellTemplate>
+                        </sdk:DataGridTemplateColumn>
+                    </sdk:DataGrid.Columns>
+                </sdk:DataGrid>
+
+
+            <!--<Border BorderBrush="Black" BorderThickness="0.5" Grid.Row="1">
+                <StackPanel Orientation="Horizontal" Margin="0" >
+                    <sdk:Label Content="备注信息" Margin="0" Foreground="Black"  Padding="5,0,62,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="13" />
+                    <TextBox IsReadOnly="{Binding IsReadOnly}" Text="{Binding Memo,Mode=TwoWay}" Margin="10" Width="612" Height="100" TextWrapping="Wrap" />
+                </StackPanel>
+            </Border>-->
+        </Grid>
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Margin="185,0" VerticalAlignment="Center">
+            <Button  Command="{Binding ContinueBtnCmd}" Visibility="{Binding ContinueBtnVisibility}" Width="85" Height="23" HorizontalAlignment="Right" Margin="10,5" Grid.Row="2" FontSize="12" >
+                <StackPanel Orientation="Horizontal" Margin="5,0">
+                    <Image Source="/IriskingAttend;component/Images/Add.png"/>
+                    <TextBlock FontSize="12" Text="继续添加" Margin="5,0,0,0" />
+                </StackPanel>
+            </Button>
+            <Button x:Name="OKButton" Visibility="{Binding OkButtonVisibility}"  Command="{Binding OkBtnCmd}"  Width="75" Height="23" HorizontalAlignment="Right" Margin="10,5" Grid.Row="2" FontSize="12" >
+                <StackPanel Orientation="Horizontal" Margin="5,0">
+                    <Image Source="/IriskingAttend;component/Images/Succeed.png"/>
+                    <TextBlock FontSize="12" Text="{Binding OkBtnContent}" Margin="5,0,0,0" />
+                </StackPanel>
+            </Button>
+            <Button x:Name="CancelButton"  Command="{Binding CancelBtnCmd}" Width="75" HorizontalAlignment="Right" Height="23" Margin="10,5" Grid.Row="2" FontSize="12" >
+                <StackPanel Orientation="Horizontal" Margin="5,0">
+                    <Image Source="/IriskingAttend;component/Images/Strop.png"/>
+                    <TextBlock FontSize="12" Text="{Binding CancelBtnContent}" Margin="5,0,0,0" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <!-- lzc 增加班次图示-->
+        <Grid  Grid.Row="3" HorizontalAlignment="Stretch" Name="grd" VerticalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="3" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
+            <Line StrokeThickness="2" Name="lineOnStart" Grid.Row="0"  Y2="50" Y1="0" Grid.RowSpan="2"
+                  Stroke="{Binding OnStartTimeChart.Brush}" 
+                  X1="{Binding OnStartTimeChart.X}" 
+                  X2="{Binding OnStartTimeChart.X}" 
+                  Visibility="{Binding OnStartTimeChart.IsVisibility,Mode=TwoWay}"
+                  ></Line>
+            <Line StrokeThickness="2" Name="lineOnEnd" Grid.Row="0" Y2="25" Y1="50" Grid.RowSpan="2"
+                  Stroke="{Binding OnEndTimeChart.Brush}" 
+                  X1="{Binding OnEndTimeChart.X}" 
+                  X2="{Binding OnEndTimeChart.X}"  
+                  Visibility="{Binding OnEndTimeChart.IsVisibility,Mode=TwoWay}"
+                  ></Line><!--{Binding OnEndTimeChart.Brush}-->
+            <Line StrokeThickness="4" Name="lineBase" Stroke="Black" Grid.Row="2" X2="800" Y2="3" Y1="3" 
+                  HorizontalAlignment="Stretch"></Line>
+            <Line StrokeThickness="2" Name="lineOffStart" Grid.Row="3"  Y2="0" Y1="50" Grid.RowSpan="2"
+                  Stroke="{Binding OffStartTimeChart.Brush}" 
+                  X1="{Binding OffStartTimeChart.X}" 
+                  X2="{Binding OffStartTimeChart.X}"  
+                  Visibility="{Binding OffStartTimeChart.IsVisibility,Mode=TwoWay}"
+                  ></Line>
+            <Line StrokeThickness="2" Name="lineOffEnd" Grid.Row="3"  Y2="0" Y1="25" Grid.RowSpan="2"
+                  Stroke="{Binding OffEndTimeChart.Brush}" 
+                  X1="{Binding OffEndTimeChart.X}" 
+                  X2="{Binding OffEndTimeChart.X}" 
+                  Visibility="{Binding OffEndTimeChart.IsVisibility,Mode=TwoWay}"
+                  ></Line>
+
+            <sdk:Label Height="28" HorizontalAlignment="Left"  Name="labOnStart"  VerticalAlignment="Top" Grid.Row="0" 
+                       Content="{Binding OnStartTimeChart.LabContext}" 
+                       Margin="{Binding OnStartTimeChart.LabMargin}"  
+                       Foreground="{Binding OnStartTimeChart.Brush}"  
+                       Visibility="{Binding OnStartTimeChart.IsVisibility,Mode=TwoWay}"
+                       />
+            <sdk:Label Height="28" HorizontalAlignment="Left" Name="labOnEnd"    VerticalAlignment="Top" Grid.Row="1" 
+                       Content="{Binding OnEndTimeChart.LabContext}"
+                       Margin="{Binding OnEndTimeChart.LabMargin}"  
+                       Foreground="{Binding OnEndTimeChart.Brush}" 
+                       Visibility="{Binding OnEndTimeChart.IsVisibility,Mode=TwoWay}"
+                       />
+            <sdk:Label Height="28" HorizontalAlignment="Left"  Name="labOffStart" VerticalAlignment="Top" Grid.Row="4" 
+                       Content="{Binding OffStartTimeChart.LabContext}"
+                       Margin="{Binding OffStartTimeChart.LabMargin}"  
+                       Foreground="{Binding OffStartTimeChart.Brush}"
+                       Visibility="{Binding OffStartTimeChart.IsVisibility,Mode=TwoWay}"
+                       />
+            <sdk:Label Height="28" HorizontalAlignment="Left"  Name="labOffEnd"   VerticalAlignment="Top" Grid.Row="3" 
+                       Content="{Binding OffEndTimeChart.LabContext}"
+                       Margin="{Binding OffEndTimeChart.LabMargin}"  
+                       Foreground="{Binding OffEndTimeChart.Brush}"  
+                       Visibility="{Binding OffEndTimeChart.IsVisibility,Mode=TwoWay}"
+                       />
+        </Grid>
+    </Grid>
+</controls:ChildWindow>

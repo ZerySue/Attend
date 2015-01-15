@@ -1,0 +1,123 @@
+﻿<navigation:Page x:Class="IriskingAttend.ViewMine.AttendRecordMine" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d" 
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="1200" d:DesignHeight="400"  HorizontalAlignment="Left" VerticalAlignment="Top"
+           Title="稽核记录查询" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit">
+
+    <Grid x:Name="LayoutRoot" Style="{StaticResource GridStyle}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="912*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="100*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Name="gSelectRegion" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />                
+            </Grid.ColumnDefinitions>
+            <StackPanel Name="spDateTime" Orientation="Horizontal" Style="{StaticResource MyStackPanelStyle}" Margin="5,5,1,5">
+            <sdk:Label Content="时间" Margin="2,0" />
+            <StackPanel Name="spDateTimeBegin" Orientation="Horizontal">
+                <sdk:DatePicker Background="{x:Null}" CalendarClosed="dateBegin_CalendarClosed" 
+                                DateValidationError="dateBegin_DateValidationError" Height="22" 
+                                Name="dateBegin" Width="100" />
+            </StackPanel>
+            <sdk:Label Content="*" Foreground="#FFF50909" Name="label1" />
+            <StackPanel Name="spDateTimeEnd" Orientation="Horizontal">
+                <sdk:Label Content="～" Foreground="Crimson" />
+                <sdk:DatePicker Background="{x:Null}" CalendarClosed="dateEnd_CalendarClosed" 
+                                DateValidationError="dateBegin_DateValidationError" 
+                                Height="22" Name="dateEnd" Width="100" />
+            </StackPanel>
+            <sdk:Label Name="lbDepart" Content="部门" Margin="2,0" Visibility="Collapsed"></sdk:Label>
+            <ComboBox Name="combDepart" Width="auto" Visibility="Collapsed"></ComboBox>
+            <sdk:Label Name="lbAttendType" Content="在岗类型" Margin="2,0" Visibility="Collapsed"></sdk:Label>
+                <ComboBox Name="combDevype" Width="auto" Visibility="Collapsed">
+                    <!--<ComboBoxItem Content="全部" />
+                    <ComboBoxItem Content="出入井" />
+                    <ComboBoxItem Content="上下班" />-->
+                </ComboBox>     
+            <sdk:Label Content="姓名" HorizontalContentAlignment="Right" Name="lblName" Padding="1,0,0,0" Margin="2,0" />
+            <TextBox Name="txtBoxName" Padding="1" Text="" MinWidth="60" MaxWidth="105" />
+            <sdk:Label Content="工号" Name="lblWorkSn" Padding="1,0,0,0" Margin="2,0" />
+            <TextBox Name="tbWorkSN" Padding="1" Text="" MinWidth="60" MaxWidth="105" />
+            <sdk:Label Content="职务" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="2,0" Visibility="Collapsed" />
+                <ComboBox Name="cmbPrincipal" Width="auto" Visibility="Collapsed"/>
+            <sdk:Label Content="工种" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="2,0" Visibility="Collapsed" />
+                <ComboBox Name="cmbWorkType" Width="auto" Visibility="Collapsed"/>
+            <sdk:Label Content="工作时长" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="2,0" Visibility="Collapsed"/>
+            <TextBox Name="txtWorkTime" Padding="1" Text="" MinWidth="40" MaxWidth="105" Visibility="Collapsed" />
+                <Button Click="btnQuery_Click" Height="25" MinWidth="85" Name="btnQuery" Style="{StaticResource ButtonStyle}" Margin="5,0">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/IriskingAttend;component/images/binoculars.png" />
+                        <TextBlock Text="查  询" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>        
+        </Grid>     
+        <sdk:DataGrid Style="{StaticResource DataGridStyle}" DataContext="{Binding}" CanUserReorderColumns="True" 
+                      CanUserSortColumns="False" SelectedItem="{Binding SelectAttendRec}"  Name="dgAttendRecAll" 
+                      AutoGenerateColumns="False" Grid.Row="1" MouseMove="dgAttendRecAll_MouseMove" 
+                      Width="auto"
+                      LayoutUpdated="dgAttendRecAll_LayoutUpdated" Margin="2,0" Grid.ColumnSpan="2" Grid.RowSpan="2" >
+            <sdk:DataGrid.Columns>             
+                <sdk:DataGridTextColumn  Binding="{Binding}"  Header="序  号" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding work_sn,Mode=TwoWay}" Header="工  号" IsReadOnly="True" Width="90*"/>
+                <sdk:DataGridTextColumn Binding="{Binding person_name,Mode=TwoWay}" Header="姓  名" IsReadOnly="True" Width="100*"/>
+                <sdk:DataGridTextColumn Binding="{Binding leave_type_name,Mode=TwoWay}" Header="考勤类型" IsReadOnly="True" Width="90*"/>
+                <sdk:DataGridTextColumn Binding="{Binding in_well_time_str,Mode=TwoWay}" Header="入井时间" IsReadOnly="True" Width="135*"/>
+                <sdk:DataGridTextColumn Binding="{Binding out_well_time_str,Mode=TwoWay}" Header="出井时间" IsReadOnly="True" Width="135*"/>
+                <sdk:DataGridTextColumn Binding="{Binding attend_day,Mode=TwoWay}" Header="稽核日期" IsReadOnly="True" Width="110*"/>
+                <sdk:DataGridTextColumn Binding="{Binding work_cnt,Mode=TwoWay}" Header="工数" IsReadOnly="True" Width="80*"/>
+                <sdk:DataGridTextColumn Binding="{Binding work_time_str,Mode=TwoWay}" Header="工 时" IsReadOnly="True" Width="100*"/>
+                <sdk:DataGridTextColumn Binding="{Binding attend_path,Mode=TwoWay}" Header="稽核路径" IsReadOnly="True"  Width="170*"/>
+                <sdk:DataGridTextColumn Binding="{Binding class_order_name,Mode=TwoWay}" Header="班 次" IsReadOnly="True" Width="100*"/>
+               </sdk:DataGrid.Columns>
+        </sdk:DataGrid>      
+
+        <Button Grid.Row="5"  Name="btnExportExl" Style="{StaticResource ExportExcelButtonStyle}" HorizontalAlignment="Center" 
+                Click="btnExportExl_Click" Margin="0,5,0,5">
+        </Button>
+        <TextBlock Visibility="Collapsed"  Name="txtAttendRecordSign" Grid.Row="3" HorizontalAlignment="Left" Margin="5,0,0,0"  VerticalAlignment="Center" Text="签到班次考勤列表"  Style="{StaticResource ApplicationNameStyle}"  />
+        <sdk:DataGrid Visibility="Collapsed" Style="{StaticResource DataGridStyle}" DataContext="{Binding}" CanUserReorderColumns="True" 
+                      CanUserSortColumns="False" SelectedItem="{Binding SelectAttendRecSign}"  Name="dgAttendRecSignAll" 
+                      AutoGenerateColumns="False" Grid.Row="4" Margin="2,0" Height="200" MouseMove="dgAttendRecSignAll_MouseMove" 
+                      LayoutUpdated="dgAttendRecSignAll_LayoutUpdated" Grid.ColumnSpan="2">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn  Binding="{Binding}"  Header="序  号" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding work_sn,Mode=TwoWay}" Header="工  号" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding person_name,Mode=TwoWay}" Header="姓  名" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding depart_name,Mode=TwoWay}" Header="部  门" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding principal_name,Mode=TwoWay}" Header="职  务" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding work_type_name,Mode=TwoWay}" Header="工  种" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding sum_count,Mode=TwoWay}" Header="出勤次数" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding sum_work_cnt,Mode=TwoWay}" Header="总 工 数" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding sum_work_time,Mode=TwoWay}" Header="总 工 时" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding avg_work_time,Mode=TwoWay}" Header="平均工时" IsReadOnly="True" />
+                <sdk:DataGridTemplateColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="操  作" Width="*" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <HyperlinkButton Content=" [查询详情] " Margin="5"  Name="btnShowDetailsSign" Click="btnShowDetailsSign_Click" 
+                                                 Command="{Binding ShowAttendRecSignDetailCommand}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+
+        <Button Grid.Row="5"  Name="btnExportExlSign" Style="{StaticResource ExportExcelButtonStyle}" HorizontalAlignment="Center" 
+                Click="btnExportExl_Click" Margin="558,5,270,5" Visibility="Collapsed" >
+        </Button>
+    </Grid>
+</navigation:Page>

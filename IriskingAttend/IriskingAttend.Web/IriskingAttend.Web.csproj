@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56306178-6718-41E8-B177-94DC24D6623C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IriskingAttend.Web</RootNamespace>
+    <AssemblyName>IriskingAttend.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SilverlightApplicationList>{E38FFAEC-08E8-4C53-B8E2-13C394720130}|..\IriskingAttend\IriskingAttend.csproj|ClientBin|False</SilverlightApplicationList>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseNewAttend|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\IriskingAttend.Web.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cellbi.SvZLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>refDll\Cellbi.SvZLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DataBaseOperate, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>refDll\DataBaseOperate.dll</HintPath>
+    </Reference>
+    <Reference Include="IkReportWCFRia.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>refDll\IkReportWCFRia.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mono.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>refDll\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.0.11.92, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>refDll\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="ServerCommunicationLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>refDll\ServerCommunicationLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Hosting.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Server, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientBin\IriskingAttend.xap" />
+    <Content Include="IriskingAttendTestPage.aspx" />
+    <Content Include="IriskingAttendTestPage.html" />
+    <Content Include="LiuHuangGou\硫磺沟出勤统计表.aspx" />
+    <Content Include="LiuHuangGou\月考勤报表.aspx" />
+    <Content Include="opt3.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="refDll\Divelements.SilverlightTools.dll" />
+    <Content Include="ShenShuoRailway\考勤统计表.aspx" />
+    <Content Include="Silverlight.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="ShenShuoRailway\个人出勤表.aspx" />
+    <Content Include="XiGouYiKuang\西沟一矿考勤日报表.aspx" />
+    <Content Include="XiGouYiKuang\西沟一矿考勤月报表.aspx" />
+    <Content Include="XinJuLong\新巨龙月度考勤报表.aspx" />
+    <Content Include="ZhouYuanShan\周源山煤矿个人考勤月报表.aspx" />
+    <Content Include="ZhouYuanShan\周源山煤矿部门月统计表.aspx" />
+    <Content Include="ZhouYuanShan\周源山矿当日考勤报表.aspx" />
+    <Content Include="ZhouYuanShan\周源山煤矿部门详单.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataModel\attend_for_leave.cs" />
+    <Compile Include="DataModel\CustomClass.cs" />
+    <Compile Include="DataModel\GuoDianReportData.cs" />
+    <Compile Include="DomainServiceIriskingAttend_People.cs" />
+    <Compile Include="DataModel\alert_log.cs" />
+    <Compile Include="DataModel\attend_multiple.cs" />
+    <Compile Include="DataModel\attend_param.cs" />
+    <Compile Include="DataModel\attend_record_base.cs" />
+    <Compile Include="DataModel\backup_param.cs" />
+    <Compile Include="DataModel\base_info.cs" />
+    <Compile Include="DataModel\class_order.standard.cs" />
+    <Compile Include="DataModel\class_order.timeduration.cs" />
+    <Compile Include="DataModel\class_order_base.cs" />
+    <Compile Include="DataModel\class_type.cs" />
+    <Compile Include="DataModel\commmon_menu.cs" />
+    <Compile Include="DataModel\depart.cs" />
+    <Compile Include="DataModel\depart_function.cs" />
+    <Compile Include="DataModel\depart_work_face.cs" />
+    <Compile Include="DataModel\depart_work_place_type.cs" />
+    <Compile Include="DataModel\dev_disabled_person.cs" />
+    <Compile Include="DataModel\employee_type.cs" />
+    <Compile Include="DataModel\family.cs" />
+    <Compile Include="DataModel\festal_attendance.cs" />
+    <Compile Include="DataModel\festival.cs" />
+    <Compile Include="DataModel\history_attend_rate.cs" />
+    <Compile Include="DataModel\in_out_well_base.cs" />
+    <Compile Include="DataModel\iris_device.cs" />
+    <Compile Include="DataModel\leave_type.cs" />
+    <Compile Include="DataModel\lunch_subsidy_type.cs" />
+    <Compile Include="DataModel\mine_area.cs" />
+    <Compile Include="DataModel\operator_info.cs" />
+    <Compile Include="DataModel\operator_potence.cs" />
+    <Compile Include="DataModel\operator_purview.cs" />
+    <Compile Include="DataModel\overtime.cs" />
+    <Compile Include="DataModel\person_alert.cs" />
+    <Compile Include="DataModel\person_base.cs" />
+    <Compile Include="DataModel\person_disable_info.cs" />
+    <Compile Include="DataModel\person_enroll_info.cs" />
+    <Compile Include="DataModel\person_image.cs" />
+    <Compile Include="DataModel\person_recog_base.cs" />
+    <Compile Include="DataModel\person_recog_proc_mark.cs" />
+    <Compile Include="DataModel\person_work_place_type.cs" />
+    <Compile Include="DataModel\principal.cs" />
+    <Compile Include="DataModel\principal_type.cs" />
+    <Compile Include="DataModel\purview.cs" />
+    <Compile Include="DataModel\system_param.cs" />
+    <Compile Include="DataModel\tbl_recog_to_leave_type.cs" />
+    <Compile Include="DataModel\technical.cs" />
+    <Compile Include="DataModel\user_operation_log.cs" />
+    <Compile Include="DataModel\weekend_to_work.cs" />
+    <Compile Include="DataModel\work_cnt_policy.cs" />
+    <Compile Include="DataModel\work_face.cs" />
+    <Compile Include="DataModel\work_face_type.cs" />
+    <Compile Include="DataModel\work_type.cs" />
+    <Compile Include="DomainServiceIriskingAttend.cs" />
+    <Compile Include="DomainServiceIriskingAttend_System.cs" />
+    <Compile Include="DomainServiceIriskingAttend_Xls.cs" />
+    <Compile Include="DomainService_ClassOrderSign.cs" />
+    <Compile Include="HuFeng\DomainServiceIriskingAttend_HuFeng.cs" />
+    <Compile Include="LinZhouZhuDuan\DomainServiceIriskingAttend_ZhuDuan.cs" />
+    <Compile Include="LiuHuangGou\DomainServiceIriskingAttend_LiuHuangGou.cs" />
+    <Compile Include="Manager\DbManager.cs" />
+    <Compile Include="Manager\Helper.cs" />
+    <Compile Include="Manager\IXMLSettings.cs" />
+    <Compile Include="Manager\LogManage.cs" />
+    <Compile Include="Manager\ProcessControl.cs" />
+    <Compile Include="Manager\XMLSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DomainServiceIriskingAttend_Depart.cs" />
+    <Compile Include="DomainServiceIriskingAttend_Principal.cs" />
+    <Compile Include="DomainServiceIriskingAttend_WorkType.cs" />
+    <Compile Include="ShenShuoRailway\DomainServiceIriskingAttend_ShenShuo.cs" />
+    <Compile Include="WuHuShan\AttendRecordInfo_WuhuShan.cs" />
+    <Compile Include="WuHuShan\DomainServiceIriskingAttend_WuHuShan.cs" />
+    <Compile Include="WuHuShan\LocateRecordAdded_WuHuShan.cs" />
+    <Compile Include="GuoDian\DomainServiceIriskingAttend_GuoDian.cs" />
+    <Compile Include="XiBeiDianLan\DomainServiceIriskingAttend_XiBeiDianLan.cs" />
+    <Compile Include="XiGouYiKuang\DomainServiceIriskingAttend_AttendReport.cs" />
+    <Compile Include="XiGouYiKuang\DomainServiceIriskingAttend_XiGouYiKuang.cs" />
+    <Compile Include="XinJuLong\DomainServiceIriskingAttend_XinJuLong.cs" />
+    <Compile Include="ZhongKeHongBa\DomainServicePersonFullAttend.cs" />
+    <Compile Include="ZhouYuanShan\DataModel_ZhouYuanShan.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ZhouYuanShan\DomainServiceIriskingAttend_ZhouYuanShan.cs" />
+    <Compile Include="ZhouYuanShan\WorkTypeInfo_ZhouYuanShan.cs" />
+    <Compile Include="ZhouYuanShan\DomainServiceZhouYuanShanReport.cs" />
+    <Compile Include="DomainServiceIriskingAttend_Public.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7316</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

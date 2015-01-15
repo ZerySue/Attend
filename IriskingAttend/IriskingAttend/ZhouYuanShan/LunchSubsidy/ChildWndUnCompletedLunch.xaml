@@ -1,0 +1,40 @@
+﻿<controls:ChildWindow xmlns:my="clr-namespace:IriskingAttend.ZhouYuanShan"  x:Class="IriskingAttend.ZhouYuanShan.LunchSubsidy.ChildWndUnCompletedLunch"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="530" Height="auto" 
+           Title="编辑未完成班中餐">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="130" />
+                <RowDefinition Height="320*" />
+            </Grid.RowDefinitions>
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="6,6,0,0"  Text="部 门：" VerticalAlignment="Top" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="163,35,0,0"  Text="日 期：" VerticalAlignment="Top" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="6,35,0,0"  Text="班次简称：" VerticalAlignment="Top" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="6,71,0,0"  Text="当班考勤人员：" VerticalAlignment="Top" />
+            <TextBox  AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" IsReadOnly="True" 
+                        Height="44" HorizontalAlignment="Left" Margin="83,59,0,0" Name="textAttendPersons" VerticalAlignment="Top" Width="410" />
+            <TextBlock Name="textDepart"  Height="23" HorizontalAlignment="Left" Margin="49,6,0,0"  Text="" VerticalAlignment="Top" />
+            <TextBlock Name="textClassOrder"  Height="23" HorizontalAlignment="Left" Margin="67,35,0,0"  Text="" VerticalAlignment="Top" />
+            <TextBlock Name="textAttendDay"  Height="23" HorizontalAlignment="Left" Margin="206,35,0,0"  Text="" VerticalAlignment="Top" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="163,6,0,0" Text="班次名称：" VerticalAlignment="Top" />
+            <TextBlock Name="textClassOrderName"  Height="23" HorizontalAlignment="Left" Margin="224,6,0,0"  Text="" VerticalAlignment="Top" />
+            
+            <TextBlock Height="23" Name="txtDiffPersonDiscrp"  HorizontalAlignment="Left" Margin="6,110,0,0" Text="选择差异人员：" VerticalAlignment="Top" />
+            <Grid x:Name="gridSelectDiffPerson"  Grid.Row="1" >
+                
+            </Grid>
+        </Grid>
+
+        <Button x:Name="CancelButton" Content="取消" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="确定" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,0,79,0" Grid.Row="1" />
+        
+    </Grid>
+</controls:ChildWindow>

@@ -1,0 +1,85 @@
+﻿<navigation:Page x:Class="IriskingAttend.ZhouYuanShan.DepartMonthReport" 
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"           
+           d:DesignWidth="800" d:DesignHeight="480"
+           Title="周源山煤矿部门月统计表" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:local="clr-namespace:IriskingAttend.ZhouYuanShan">
+    <UserControl.Resources>
+        <local:MinuteToHourConverter x:Key="MinuteToHourConverter"/>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="#FFDBDBDB">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text ="周源山煤矿部门月统计表(" FontSize="18"></TextBlock>
+            <TextBlock Name="txtDateDuration" FontSize="18"></TextBlock>
+            <TextBlock Text=")" FontSize="18"></TextBlock>
+        </StackPanel>
+        <sdk:DataGrid Style="{StaticResource DataGridStyle}" Name="dgDepartMonthAttend" Margin="2" Grid.Row="1" CanUserSortColumns="False" AutoGenerateColumns="False" MinHeight="100" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Index, Mode=TwoWay}" Header="序号" MinWidth="44" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding AttendMonth, Mode=TwoWay}" Header="月份"  MinWidth="44" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding DepartName, Mode=TwoWay}" Header="部门" MinWidth="60" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding TotalWorkTime,Converter={StaticResource MinuteToHourConverter}, Mode=TwoWay}" Header="总时长" MinWidth="60" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding AvgWorkTime, Converter={StaticResource MinuteToHourConverter}, Mode=TwoWay}" Header="井下均时" MinWidth="60" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding TotalTimes, Mode=TwoWay}" Header="总次数" MinWidth="44" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ValidTimes, Mode=TwoWay}" Header="有效次数" MinWidth="44" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ZaoTimes, Mode=TwoWay}" Header="早班" MinWidth="44" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ZhongTimes, Mode=TwoWay}" Header="中班" MinWidth="44" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding WanTimes, Mode=TwoWay}" Header="晚班" MinWidth="44" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding InvalidTimes, Mode=TwoWay}" Header="无效" MinWidth="44" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding Sum0To2, Mode=TwoWay}" Header="0-2" MinWidth="44" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding Sum2To4, Mode=TwoWay}" Header="2-4" MinWidth="44" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding Sum4To8, Mode=TwoWay}" Header="4-8" MinWidth="44" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding Sum8To12, Mode=TwoWay}" Header="8-12" MinWidth="44" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding Sum12Up, Mode=TwoWay}" Header=">12" MinWidth="44" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[0],Mode=TwoWay}" Header="01" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[1],Mode=TwoWay}" Header="02" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[2],Mode=TwoWay}" Header="03" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[3],Mode=TwoWay}" Header="04" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[4],Mode=TwoWay}" Header="05" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[5],Mode=TwoWay}" Header="06" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[6],Mode=TwoWay}" Header="07" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[7],Mode=TwoWay}" Header="08" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[8],Mode=TwoWay}" Header="09" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[9],Mode=TwoWay}" Header="10" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[10],Mode=TwoWay}" Header="11" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[11],Mode=TwoWay}" Header="12" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[12],Mode=TwoWay}" Header="13" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[13],Mode=TwoWay}" Header="14" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[14],Mode=TwoWay}" Header="15" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[15],Mode=TwoWay}" Header="16" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[16],Mode=TwoWay}" Header="17" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[17],Mode=TwoWay}" Header="18" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[18],Mode=TwoWay}" Header="19" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[19],Mode=TwoWay}" Header="20" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[20],Mode=TwoWay}" Header="21" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[21],Mode=TwoWay}" Header="22" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[22],Mode=TwoWay}" Header="23" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[23],Mode=TwoWay}" Header="24" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[24],Mode=TwoWay}" Header="25" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[25],Mode=TwoWay}" Header="26" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[26],Mode=TwoWay}" Header="27" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[27],Mode=TwoWay}" Header="28" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[28],Mode=TwoWay}" Header="29" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[29],Mode=TwoWay}" Header="30" IsReadOnly="True" MinWidth="33"/>
+                <sdk:DataGridTextColumn Binding="{Binding classOrderCount[30],Mode=TwoWay}" Header="31" IsReadOnly="True" MinWidth="33"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="2" HorizontalAlignment="Right">
+            <Button Name="btnExportExcel"   FontSize="12" Click="btnExportExcel_Click" Margin="10,0" Padding="2" MinWidth="80" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/ExportExcel.png" Width="20"/>
+                    <TextBlock FontSize="12" Text="导出Excel" Margin="0,2" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Grid>
+</navigation:Page>

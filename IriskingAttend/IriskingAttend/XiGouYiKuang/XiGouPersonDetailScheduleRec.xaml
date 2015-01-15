@@ -1,0 +1,129 @@
+﻿<controls:ChildWindow x:Class="IriskingAttend.XiGouYiKuang.XiGouPersonDetailScheduleRec"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+                      xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+                      xmlns:dataprimitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Data"
+           d:DesignWidth="535" d:DesignHeight="200" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+           Title="带班领导出勤明细" FontSize="12">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="55"/>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="55"/>
+            <ColumnDefinition Width="110" />
+            <ColumnDefinition Width="110" />
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <sdk:Label Content="开始时间" Width="50"  FontSize="12" Margin="2" />
+        <sdk:DatePicker Grid.Column="1" FontSize="12" Name="dtpBegin" Height="23" Width="110"/>
+        <sdk:Label Grid.Column="2" Content="* ~ " Foreground="#FFF50909" />
+        <sdk:Label Grid.Column="3" Content="截止时间" FontSize="12"  Margin="2" Width="50"/>
+        <sdk:DatePicker Grid.Column="4" FontSize="12" Name="dtpEnd" Height="23" Margin="2" Width="110" Grid.ColumnSpan="3" HorizontalAlignment="Left"/>
+
+
+        <sdk:Label Grid.Row="1" Content="姓名" FontSize="12" Margin="2" Width="50" HorizontalContentAlignment="Stretch"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Height="23" Name="txtName" Width="86" HorizontalAlignment="Left" />
+        <sdk:Label Grid.Row="1" Grid.Column="3" Content="部门" FontSize="12" Margin="2" Width="50"/>
+        <StackPanel Grid.Row="1" Grid.Column="4" Orientation="Horizontal" Grid.ColumnSpan="3">
+            <TextBox  HorizontalAlignment="Stretch" Margin="2" Name="txtDepart" FontSize="12" Height="23" Width="86" IsReadOnly="True"  />
+
+            <Button  Name="btnSelectDepart" Height="23" Width="auto" Content="选取" FontSize="12" Margin="2" Click="btnSelectDepart_Click" />
+
+            <Button  Name="btnQuery" Height="23" Width="75" Margin="10,2,2,2" FontSize="12" Click="btnQuery_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/IriskingAttend;component/images/binoculars.png" />
+                    <TextBlock FontSize="12" Text="查  询" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <sdk:DataGrid Grid.Row="2" Grid.ColumnSpan="10" Style="{StaticResource DataGridStyle}" Name="dgPersonSchedule" CanUserSortColumns="False" IsReadOnly="True" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding DepartName,Mode=TwoWay}"  Header="部门" IsReadOnly="True" Width="30*" />
+                <sdk:DataGridTextColumn Binding="{Binding ShiftPersonName,Mode=TwoWay}" Header="人员" IsReadOnly="True" Width="50*"/>
+
+                <sdk:DataGridTextColumn Binding="{Binding AttendDayStr,Mode=TwoWay}"  Header="日期" IsReadOnly="True" Width="50*" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassTypeName,Mode=TwoWay}" Header="班制" IsReadOnly="True" Width="50*" />
+                <sdk:DataGridTextColumn Binding="{Binding ClassOrderName,Mode=TwoWay}" Header="班次" IsReadOnly="True" Width="50*" />
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="45*" >
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="dataprimitives:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <sdk:Label  Content="入井"/>
+                                            <sdk:Label  Content="时间"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding InWellTime,Mode=TwoWay}" Foreground ="{Binding color}" HorizontalContentAlignment="Left"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="45*" >                    
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding OutWellTime,Mode=TwoWay}" Foreground ="{Binding color}" HorizontalContentAlignment="Left"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="dataprimitives:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <sdk:Label  Content="出井"/>
+                                            <sdk:Label  Content="时间"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn IsReadOnly="True" Width="50*" >
+                    <sdk:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="dataprimitives:DataGridColumnHeader">
+                            <Setter Property="ContentTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <sdk:Label  Content="出入井"/>
+                                            <sdk:Label  Content="时长"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </sdk:DataGridTemplateColumn.HeaderStyle>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sdk:Label  Content="{Binding WorkTime,Mode=TwoWay}" Foreground ="{Binding color}" HorizontalContentAlignment="Left"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+
+                <sdk:DataGridTextColumn Binding="{Binding OnDutyPersonName,Mode=TwoWay}" Header="值班领导1" IsReadOnly="True" Width="50*"/>
+
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+    </Grid>
+</controls:ChildWindow>

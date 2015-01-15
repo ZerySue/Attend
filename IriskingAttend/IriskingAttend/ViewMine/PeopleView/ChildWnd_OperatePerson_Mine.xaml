@@ -1,0 +1,162 @@
+﻿<controls:ChildWindow xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  
+                      x:Class="IriskingAttend.ViewMine.PeopleView.ChildWnd_OperatePerson_Mine"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="600" Height="auto" 
+           Title="{Binding Title}" FontSize="12">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180*" />
+            <ColumnDefinition Width="160*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="35" />
+        </Grid.RowDefinitions>    
+        <StackPanel VerticalAlignment="Top" Grid.Row="0">
+            <StackPanel Orientation="Horizontal" Margin="0">
+                <sdk:Label Content="部门名称" Margin="0"  Foreground="black" Padding="5,0,30,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <ComboBox Name="Comb_DepartName" IsEnabled="{Binding IsEditable}"  Width="150" ItemsSource ="{Binding DepartNames}" SelectedIndex="{Binding DepartNames_SelectedIndex,Mode=TwoWay}" Margin="10,7" FontSize="12" /><!--Margin="10,22.4,12,22"-->
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Content="是否注册" Margin="0" Foreground="black" Padding="5,0,30,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <sdk:Label Content="{Binding EnrollInfo}" Margin="10,5" FontSize="12" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Content="人员姓名" Margin="0"  Foreground="black" Padding="5,0,30,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <TextBox IsReadOnly="{Binding IsReadOnly}" Text="{Binding PersonName,Mode=TwoWay}" Margin="10,5" Width="150" FontSize="12" />
+                <TextBlock Text="*" Foreground="Red" VerticalAlignment="Center" Padding="5,5,0,0" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Content="人员工号" Margin="0"  Foreground="black" Padding="5,0,30,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <TextBox IsReadOnly="{Binding IsReadOnly}" Text="{Binding WorkSn,Mode=TwoWay}" Margin="10,5,0,5" Width="150" FontSize="12" />
+            </StackPanel>
+         
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Content="地面班制" Margin="0"  Foreground="black" Padding="5,0,30,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <ComboBox IsEnabled="{Binding IsEditable}" Margin="10,7"  ItemsSource="{Binding ClassTypeNamesAll}" 
+                            SelectedIndex="{Binding ClassTypeNames_SelectedIndex_OnGround,Mode=TwoWay}"  Width="150" FontSize="12" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Content="井下班制" Margin="0"  Foreground="black" Padding="5,0,30,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <ComboBox IsEnabled="{Binding IsEditable}" Margin="10,7"  ItemsSource="{Binding ClassTypeNamesAll}"
+                            SelectedIndex="{Binding ClassTypeNames_SelectedIndex,Mode=TwoWay}"  Width="150" FontSize="12" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Content="职务信息" Margin="0"  Foreground="black" Padding="5,0,30,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <ComboBox IsEnabled="{Binding IsEditable}" Margin="10,7"  ItemsSource="{Binding PrincipalInfos}"  DisplayMemberPath="principal_name" 
+                            SelectedItem="{Binding SelectedPrincipalInfo,Mode=TwoWay}"  Width="150" FontSize="12" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Content="工种信息" Margin="0"  Foreground="black" Padding="5,0,30,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <ComboBox IsEnabled="{Binding IsEditable}" Margin="10,7"  ItemsSource="{Binding WorkTypeInfos}"  DisplayMemberPath="work_type_name"
+                            SelectedItem="{Binding SelectedWorkTypeInfo,Mode=TwoWay}"  Width="150" FontSize="12" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Content="联系电话" Margin="0" Foreground="black" Padding="5,0,30,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <TextBox IsReadOnly="{Binding IsReadOnly}" Text="{Binding Phone,Mode=TwoWay}" Margin="10,5,0,5" Width="150" FontSize="12" />
+            </StackPanel>
+ 
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Content="邮政编码" Margin="0"  Foreground="black" Padding="5,0,30,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <TextBox IsReadOnly="{Binding IsReadOnly}" Text="{Binding ZipCode,Mode=TwoWay}" Margin="10,5,0,5" Width="150" FontSize="12" />
+            </StackPanel>
+  
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Content="身份证号码" Margin="0" Foreground="black" Padding="5,0,17,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <TextBox IsReadOnly="{Binding IsReadOnly}" Text="{Binding IDCardNumber,Mode=TwoWay}" Margin="10,5,0,5" Width="150" FontSize="12" />
+            </StackPanel>
+              
+           
+       
+        </StackPanel>
+        <StackPanel VerticalAlignment="Top" Grid.Row="0" Grid.Column="1">
+            <StackPanel Orientation="Horizontal" Margin="0">
+                <sdk:Label Content="个人照片" Margin="0" Foreground="black" Padding="5,0,27,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <Grid Height="173" Width="143">
+                    <Border Width="120" HorizontalAlignment="Center" VerticalAlignment="Center" Height="160" Padding="1" BorderBrush="Black" BorderThickness="0.5">
+                        <Image Name="img" Source="{Binding PersonImg}"  HorizontalAlignment="Stretch" Stretch="Fill" />
+                    </Border>
+                    <Button  IsEnabled="{Binding IsEditable}" Command="{Binding ChooseImgCmd}"  Height="159" HorizontalAlignment="Left" Margin="13,8,0,0" Name="btn_chooseImg" VerticalAlignment="Top" Width="119" Opacity="0" />
+                    <Button Content="X" IsEnabled="{Binding IsEditable}" Command="{Binding CancelChoosedImgCmd}" Height="20" HorizontalAlignment="Left" Margin="112,9,0,0" Name="btn_cancelChoosedImg" VerticalAlignment="Top" Width="20" Opacity="1" />
+                </Grid>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Content="出生日期" Margin="0"  Foreground="black" Padding="5,0,30,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <sdk:DatePicker IsEnabled="{Binding IsEditable}" SelectedDate="{Binding BirthDate,Mode=TwoWay}"  Margin="10,5" FontSize="12" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Content="参加工作日期" Margin="0"  Foreground="black" Padding="5,0,6,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <sdk:DatePicker IsEnabled="{Binding IsEditable}" SelectedDate="{Binding WorkDate,Mode=TwoWay}"  Margin="10,5" FontSize="12" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Content="性别" Margin="0"  Foreground="black" Padding="5,0,56,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <ComboBox IsEnabled="{Binding IsEditable}" Margin="10,7,12,7" SelectedIndex="{Binding Sex,Mode=TwoWay}" FontSize="12">
+                    <ComboBoxItem Content="男" />
+                    <ComboBoxItem Content="女" />
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Content="血型" Margin="0"  Foreground="black" Padding="5,0,56,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <ComboBox IsEnabled="{Binding IsEditable}" Margin="10,7,12,7" SelectedIndex="{Binding BloodType,Mode=TwoWay}" FontSize="12">
+                    <ComboBoxItem Content="不详" /><!--Bug2674 ComboBox默认显示第一个，所以将“不详”一行放到最前面 by蔡天雨-->
+                    <ComboBoxItem Content="a" />
+                    <ComboBoxItem Content="b" />
+                    <ComboBoxItem Content="ab" />
+                    <ComboBoxItem Content="o" />
+                    <ComboBoxItem Content="其他" />
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Content="电子邮箱" Margin="0" Foreground="black" Padding="5,0,30,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <TextBox IsReadOnly="{Binding IsReadOnly}" Text="{Binding Email,Mode=TwoWay}" Margin="10,5,0,5" Width="150" FontSize="12" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Content="联系地址" Margin="0"  Foreground="black" Padding="5,0,30,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+                <TextBox IsReadOnly="{Binding IsReadOnly}" Text="{Binding Address,Mode=TwoWay}" Margin="10,5,0,5" Width="150" FontSize="12" />
+            </StackPanel>
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Row="1">
+            <sdk:Label Content="备注" Margin="0"  Foreground="black" Padding="5,0,55,0" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" FontSize="12" />
+            <TextBox IsReadOnly="{Binding IsReadOnly}" Text="{Binding TagInfo,Mode=TwoWay}"  Margin="8,5,10,5" Width="400" TextWrapping="Wrap"  Height="74" FontSize="12" />
+            <Image Name="imageNone"  Stretch="Fill" Opacity="0" Source="/IriskingAttend;component/images/NoneImg.png" Width="1" Height="1" />
+            <Image Name="imageSelect"  Stretch="Fill" Opacity="0" Source="/IriskingAttend;component/images/SelectImg.png" Width="1" Height="1" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="2">
+            <Button x:Name="OKContinueAdd" Visibility ="{Binding OKContinueVisibility}"  Command="{Binding OkContinueAddCmd}" Width="85" Height="23" HorizontalAlignment="Left" FontSize="12" >
+                <StackPanel Orientation="Horizontal" Margin="5,0">
+                    <Image Source="/IriskingAttend;component/Images/Add.png"/>
+                    <TextBlock FontSize="12" Text="继续添加" Margin="5,0,0,0" />
+                </StackPanel>
+            </Button>
+            <Button x:Name="OKButton" Visibility ="{Binding OKButtonVisibility}"  Command="{Binding OkBtnCmd}" Width="75" Height="23" HorizontalAlignment="Left" Margin="20,0" FontSize="12" >
+                <StackPanel Orientation="Horizontal" Margin="5,0">
+                    <Image Source="/IriskingAttend;component/Images/Succeed.png"/>
+                    <TextBlock FontSize="12" Text="{Binding OkBtnContent}" Margin="5,0,0,0" />
+                </StackPanel>
+            </Button>
+            <Button x:Name="CancelButton" Command="{Binding CancelBtnCmd}"  Width="75" Height="23" HorizontalAlignment="Left" Margin="0,0" FontSize="12" >
+                <StackPanel Orientation="Horizontal" Margin="5,0">
+                    <Image Source="/IriskingAttend;component/Images/Strop.png"/>
+                    <TextBlock FontSize="12" Text="{Binding CancelBtnContent}" Margin="5,0,0,0" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Grid>
+</controls:ChildWindow>
